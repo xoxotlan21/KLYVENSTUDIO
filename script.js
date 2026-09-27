@@ -1,4 +1,6 @@
 import { translations } from './translations.js';
+import logoLightUrl from './logo.png';
+import logoDarkUrl from './logo-dark.png';
 
 (function () {
   var d = document.documentElement;
@@ -464,10 +466,10 @@ import { translations } from './translations.js';
     // Swap logos to dark mode logo if theme is dark
     var isDark = theme === 'dark';
     document.querySelectorAll('.hero-logo, .dock-logo, .footer-logo-img').forEach(function (img) {
-      img.src = isDark ? 'logo-dark.png' : 'logo.png';
+      img.src = isDark ? logoDarkUrl : logoLightUrl;
     });
     var fav = document.querySelector('link[rel="icon"]');
-    if (fav) fav.href = isDark ? 'logo-dark.png' : 'logo.png';
+    if (fav) fav.href = isDark ? logoDarkUrl : logoLightUrl;
 
     var metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) metaTheme.setAttribute('content', isDark ? '#000000' : '#E6EDF6');
