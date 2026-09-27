@@ -674,6 +674,51 @@ a, button { font: inherit; }
   font-weight: 600;
 }
 
+/* ==========================================================================
+   UNAVAILABLE / OFFLINE STUDIO STATUS (HOURS SCHEDULE)
+   ========================================================================== */
+
+.is-unavailable .status-pulse-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.85);
+}
+
+.is-unavailable .status-pulse-ring {
+  border-color: #f59e0b;
+  animation: statusRadarPingAmber 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes statusRadarPingAmber {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.85;
+  }
+  70%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.hero-status-pill.is-unavailable .status-pill-tag {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Dark Mode Unavailable Styles */
+[data-theme="dark"] .hero-status-pill.is-unavailable .status-pill-tag {
+  background: rgba(245, 158, 11, 0.16) !important;
+  color: #fcd34d !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+[data-theme="dark"] .whatsapp-direct-status.is-unavailable {
+  border-color: rgba(245, 158, 11, 0.25) !important;
+}
+
+[data-theme="dark"] .footer-status-badge.is-unavailable {
+  border-color: rgba(245, 158, 11, 0.2) !important;
+}
+
 .hero-selected-work-badge {
   display: inline-flex;
   align-items: center;

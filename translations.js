@@ -22,9 +22,14 @@ export const translations = {
     "hero.createItem3": "Clear paths to contact",
     "hero.selectedWorkBadge": "View selected work",
     "status.available": "Available for new projects",
+    "status.unavailable": "Unavailable right now",
     "status.response": "Avg. response < 2h",
     "status.timezone": "GMT-6",
     "status.startProject": "Start a project →",
+    "status.openMonday": "Opens Monday 9:00 AM",
+    "status.openTomorrow": "Opens tomorrow 9:00 AM",
+    "status.openToday": "Opens today 9:00 AM",
+    "status.whatsappOffline": "Currently offline • Leave your message",
 
     // The Klyven Approach
     "approach.kicker": "THE KLYVEN APPROACH",
@@ -219,9 +224,14 @@ export const translations = {
     "hero.createItem3": "Caminos claros para contactarte",
     "hero.selectedWorkBadge": "Ver proyectos seleccionados",
     "status.available": "Disponible para nuevos proyectos",
+    "status.unavailable": "No disponible por ahora",
     "status.response": "Respuesta promedio < 2h",
     "status.timezone": "GMT-6",
     "status.startProject": "Iniciar proyecto →",
+    "status.openMonday": "Abre el lunes 9:00 AM",
+    "status.openTomorrow": "Abre mañana 9:00 AM",
+    "status.openToday": "Abre hoy 9:00 AM",
+    "status.whatsappOffline": "Fuera de horario • Deja tu mensaje",
 
     // The Klyven Approach
     "approach.kicker": "EL ENFOQUE KLYVEN",

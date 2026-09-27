@@ -1888,47 +1888,142 @@ import logoDarkUrl from './logo-dark.png';
   }
 
   // ==========================================================================
-  // REAL-TIME STUDIO CLOCK (GMT-6 / CENTRAL TIME)
+  // REAL-TIME STUDIO CLOCK (GMT-6 / CENTRAL TIME) & AVAILABILITY SCHEDULE
   // ==========================================================================
   function initStudioLiveClock() {
     var clockEls = document.querySelectorAll('[data-live-clock]');
-    if (!clockEls.length) return;
+    var statusContainers = document.querySelectorAll('[data-status-container]');
+    var statusLabels = document.querySelectorAll('[data-status-label]');
+    var statusTags = document.querySelectorAll('[data-status-tag]');
+    var statusNotes = document.querySelectorAll('[data-status-whatsapp-note]');
 
-    function renderClock() {
+    if (!clockEls.length && !statusContainers.length) return;
+
+    function renderClockAndStatus() {
       var now = new Date();
-      var options = {
-        timeZone: 'America/Mexico_City',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-      };
+      var timeStr = '12:00:00';
+      var shortTime = '12:00';
+      var weekday = 'Mon';
+      var hour = 12;
 
       try {
-        var formatter = new Intl.DateTimeFormat('en-GB', options);
-        var timeStr = formatter.format(now);
-        var parts = timeStr.split(':');
-        var shortTime = parts[0] + ':' + parts[1];
+        var formatter = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'America/Mexico_City',
+          weekday: 'short',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        });
+        var parts = formatter.formatToParts(now);
+        var partMap = {};
+        for (var i = 0; i < parts.length; i++) {
+          partMap[parts[i].type] = parts[i].value;
+        }
 
-        clockEls.forEach(function (el) {
-          if (el.hasAttribute('data-clock-short')) {
-            el.textContent = shortTime;
-          } else {
-            el.textContent = timeStr;
-          }
-        });
+        var hStr = partMap.hour || '12';
+        var mStr = partMap.minute || '00';
+        var sStr = partMap.second || '00';
+        timeStr = hStr + ':' + mStr + ':' + sStr;
+        shortTime = hStr + ':' + mStr;
+        weekday = partMap.weekday || 'Mon';
+        hour = parseInt(hStr, 10) % 24;
       } catch (e) {
-        var h = String(now.getHours()).padStart(2, '0');
-        var m = String(now.getMinutes()).padStart(2, '0');
-        var s = String(now.getSeconds()).padStart(2, '0');
-        clockEls.forEach(function (el) {
-          el.textContent = el.hasAttribute('data-clock-short') ? (h + ':' + m) : (h + ':' + m + ':' + s);
-        });
+        var utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        var mxDate = new Date(utc - (6 * 3600000));
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        weekday = days[mxDate.getDay()];
+        hour = mxDate.getHours();
+        var fh = String(hour).padStart(2, '0');
+        var fm = String(mxDate.getMinutes()).padStart(2, '0');
+        var fs = String(mxDate.getSeconds()).padStart(2, '0');
+        shortTime = fh + ':' + fm;
+        timeStr = fh + ':' + fm + ':' + fs;
       }
+
+      // Render studio clock time
+      clockEls.forEach(function (el) {
+        if (el.hasAttribute('data-clock-short')) {
+          el.textContent = shortTime;
+        } else {
+          el.textContent = timeStr;
+        }
+      });
+
+      // Calculate availability based on Studio Schedule (America/Mexico_City):
+      // - Monday to Friday: 9:00 AM to 7:00 PM (19:00)
+      // - Saturday: 9:00 AM to 5:00 PM (17:00)
+      // - Sunday: Closed all day until Monday 9:00 AM
+      var isAvailable = false;
+      var reopenKey = 'status.openToday';
+
+      if (weekday === 'Sun') {
+        isAvailable = false;
+        reopenKey = 'status.openMonday';
+      } else if (weekday === 'Sat') {
+        if (hour >= 9 && hour < 17) {
+          isAvailable = true;
+        } else {
+          isAvailable = false;
+          reopenKey = hour >= 17 ? 'status.openMonday' : 'status.openToday';
+        }
+      } else {
+        // Monday through Friday
+        if (hour >= 9 && hour < 19) {
+          isAvailable = true;
+        } else {
+          isAvailable = false;
+          if (hour >= 19) {
+            reopenKey = (weekday === 'Fri') ? 'status.openTomorrow' : 'status.openTomorrow';
+          } else {
+            reopenKey = 'status.openToday';
+          }
+        }
+      }
+
+      // Current locale
+      var currentLang = document.documentElement.lang || 'en';
+      var t = translations[currentLang] || translations.en;
+
+      // Update status container classes (enables amber pulse and tags)
+      statusContainers.forEach(function (container) {
+        if (isAvailable) {
+          container.classList.remove('is-unavailable');
+        } else {
+          container.classList.add('is-unavailable');
+        }
+      });
+
+      // Update status labels
+      var labelKey = isAvailable ? 'status.available' : 'status.unavailable';
+      statusLabels.forEach(function (el) {
+        el.setAttribute('data-i18n', labelKey);
+        if (t && t[labelKey]) {
+          el.textContent = t[labelKey];
+        }
+      });
+
+      // Update status pill tag
+      var tagKey = isAvailable ? 'status.response' : reopenKey;
+      statusTags.forEach(function (el) {
+        el.setAttribute('data-i18n', tagKey);
+        if (t && t[tagKey]) {
+          el.textContent = t[tagKey];
+        }
+      });
+
+      // Update WhatsApp direct note
+      var whatsappNoteKey = isAvailable ? 'cta.whatsappNote' : 'status.whatsappOffline';
+      statusNotes.forEach(function (el) {
+        el.setAttribute('data-i18n', whatsappNoteKey);
+        if (t && t[whatsappNoteKey]) {
+          el.textContent = t[whatsappNoteKey];
+        }
+      });
     }
 
-    renderClock();
-    setInterval(renderClock, 1000);
+    renderClockAndStatus();
+    setInterval(renderClockAndStatus, 1000);
   }
 
   initTextScramble();
