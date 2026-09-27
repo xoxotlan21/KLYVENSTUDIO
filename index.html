@@ -1,0 +1,3202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#E6EDF6" />
+    <title>KLYVEN STUDIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=block" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <script>
+      (function() {
+        var t = localStorage.getItem('klyven_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+        if (t === 'dark') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#000000');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Ambient Glow for Dark Mode -->
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <div class="page" id="top">
+      <div class="card">
+        <video class="bg bg-video-light" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105822_bf7c2d53-9957-4521-bbbf-7c1ab7a70130.png" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105953_21ad8049-9088-4a00-bad3-aee6b5575a2b.mp4"></video>
+        <video class="bg bg-video-dark" autoplay muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" src="https://files.catbox.moe/1e30cl.mp4"></video>
+        <div class="tint"></div>
+
+        <div class="hero-container">
+          <!-- Top Floating Navigation Bar -->
+          <header class="hero-topbar">
+            <a class="hero-brand" href="#top" aria-label="KLYVEN STUDIO home">
+              <img class="hero-logo" src="logo.png" alt="KLYVEN STUDIO" />
+              <span class="hero-brand-name">KLYVEN <span class="studio-dim">STUDIO</span></span>
+            </a>
+
+            <nav class="hero-nav" aria-label="Main navigation">
+              <a class="hero-nav-item" href="#work">
+                <svg class="hero-nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <rect x="2.5" y="2.5" width="6" height="6" rx="1.5" />
+                  <rect x="11.5" y="2.5" width="6" height="6" rx="1.5" />
+                  <rect x="2.5" y="11.5" width="6" height="6" rx="1.5" />
+                  <rect x="11.5" y="11.5" width="6" height="6" rx="1.5" />
+                </svg>
+                <span data-i18n="nav.work">Work</span>
+              </a>
+              <a class="hero-nav-item" href="#services">
+                <svg class="hero-nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                  <line x1="3" y1="5.5" x2="17" y2="5.5" />
+                  <line x1="3" y1="10" x2="17" y2="10" />
+                  <line x1="3" y1="14.5" x2="11" y2="14.5" />
+                </svg>
+                <span data-i18n="nav.services">Services</span>
+              </a>
+              <a class="hero-nav-item" href="#pricing">
+                <svg class="hero-nav-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                  <rect x="2.5" y="4" width="15" height="12" rx="2" />
+                  <line x1="2.5" y1="8" x2="17.5" y2="8" />
+                  <line x1="5.5" y1="12" x2="8.5" y2="12" />
+                </svg>
+                <span data-i18n="nav.prices">Prices</span>
+              </a>
+            </nav>
+
+            <div class="hero-topbar-right">
+              <button class="theme-toggle-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+                <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+                <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </button>
+
+              <button class="lang-btn" type="button" aria-label="Cambiar a Español" title="Cambiar a Español">
+                <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <span class="lang-btn-text">ES</span>
+              </button>
+
+              <a class="hero-cta-btn" href="#contact">
+                <span data-i18n="nav.contact">Contact Us</span>
+                <span class="cta-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+                <i></i>
+                <i></i>
+              </button>
+            </div>
+
+            <!-- Mobile menu dropdown -->
+            <div class="menu" id="site-menu">
+              <nav class="mobile-nav-panel" aria-label="Mobile navigation">
+                <a href="#work" class="mobile-link" data-i18n="nav.work">Work</a>
+                <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
+                <a href="#pricing" class="mobile-link" data-i18n="nav.prices">Prices</a>
+                <a href="#contact" class="mobile-cta-link" data-i18n="nav.contactMobile">Contact Us →</a>
+                <div class="mobile-lang-wrap">
+                  <button class="theme-toggle-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+                    <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="4"/>
+                      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                    </svg>
+                    <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                  </button>
+                  <button class="lang-btn" type="button" aria-label="Cambiar a Español" title="Cambiar a Español">
+                    <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span class="lang-btn-text">ES</span>
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </header>
+
+          <!-- Main Hero Stage -->
+          <div class="hero-stage">
+            <div class="hero-content">
+              <p class="hero-kicker" data-i18n="hero.kicker">INDEPENDENT WEB DESIGN STUDIO</p>
+              <h1 class="hero-title" data-i18n="hero.title" data-i18n-html="true">
+                Websites that<br />
+                make your business<br />
+                impossible to overlook.
+              </h1>
+              <p class="hero-description" data-i18n="hero.description">
+                We design and build clear, modern websites that help people understand what you do and get in touch.
+              </p>
+
+              <div class="hero-actions">
+                <a class="hero-btn-primary" href="#contact">
+                  <span data-i18n="hero.btnStart">Start a project</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="hero-btn-secondary" href="#work">
+                  <span data-i18n="hero.btnExplore">Explore our work</span>
+                </a>
+              </div>
+
+              <div class="hero-services-line">
+                <span data-i18n="hero.serviceWebDesign">Web design</span>
+                <span class="divider">/</span>
+                <span data-i18n="hero.serviceRedesign">Website redesign</span>
+                <span class="divider">/</span>
+                <span data-i18n="hero.serviceLandingPages">Landing pages</span>
+              </div>
+            </div>
+
+            <!-- Right "What we create" Frosted Glass Card -->
+            <aside class="hero-create-card spotlight-card" aria-label="What we create">
+              <h2 class="create-card-title" data-i18n="hero.createTitle">What we create</h2>
+              <ul class="create-card-list">
+                <li class="create-card-item">
+                  <span class="create-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2.5" y="3" width="15" height="10.5" rx="1.5" />
+                      <path d="M7 17h6M10 13.5v3.5" />
+                    </svg>
+                  </span>
+                  <span class="create-item-text" data-i18n="hero.createItem1">Made for your business</span>
+                </li>
+                <li class="create-card-item">
+                  <span class="create-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="5.5" y="2.5" width="9" height="15" rx="2" />
+                      <line x1="9.5" y1="14.5" x2="10.5" y2="14.5" />
+                    </svg>
+                  </span>
+                  <span class="create-item-text" data-i18n="hero.createItem2">Works on every screen</span>
+                </li>
+                <li class="create-card-item">
+                  <span class="create-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2.5" y="4" width="15" height="12" rx="2" />
+                      <path d="m3.5 5.5 6.5 5 6.5-5" />
+                    </svg>
+                  </span>
+                  <span class="create-item-text" data-i18n="hero.createItem3">Clear paths to contact</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+
+          <!-- Bottom Floating Bar: Availability Status & Work Badge -->
+          <div class="hero-bottom-bar">
+            <a class="hero-status-pill" href="#contact" aria-label="Available for new projects — Contact KLYVEN STUDIO">
+              <span class="status-pulse-wrap" aria-hidden="true">
+                <span class="status-pulse-ring"></span>
+                <span class="status-pulse-dot"></span>
+              </span>
+              <span class="status-pill-text" data-i18n="status.available">Available for new projects</span>
+              <span class="status-pill-sep" aria-hidden="true">•</span>
+              <div class="status-clock-wrap" title="Studio Local Time (GMT-6)">
+                <svg class="status-clock-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="8" cy="8" r="6.25"></circle>
+                  <path d="M8 4.5v3.75l2.5 1.5"></path>
+                </svg>
+                <span class="status-clock-time" data-live-clock data-clock-short>18:55</span>
+                <span class="status-clock-tz" data-i18n="status.timezone">GMT-6</span>
+              </div>
+              <span class="status-pill-tag" data-i18n="status.response">Avg. response &lt; 2h</span>
+              <span class="status-pill-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hero-selected-work-badge" href="#work" aria-label="View selected work">
+              <span class="badge-thumb" aria-hidden="true">
+                <img src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105822_bf7c2d53-9957-4521-bbbf-7c1ab7a70130.png" alt="" />
+              </span>
+              <span class="badge-label" data-i18n="hero.selectedWorkBadge">View selected work</span>
+              <span class="badge-btn" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.5 11.5l7-7M5 4.5h6.5v6.5" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <header class="scroll-dock" aria-label="Persistent navigation">
+        <a class="dock-brand" href="#top" aria-label="KLYVEN STUDIO home">
+          <img class="dock-logo" src="logo.png" alt="KLYVEN STUDIO logo" />
+          <span class="dock-brand-text">KLYVEN <span>STUDIO</span></span>
+        </a>
+        <nav class="dock-nav" aria-label="Scroll navigation">
+          <a href="#work">
+            <svg class="dock-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="7" height="7" rx="1.5"></rect>
+              <rect x="11.5" y="1.5" width="7" height="7" rx="1.5"></rect>
+              <rect x="1.5" y="11.5" width="7" height="7" rx="1.5"></rect>
+              <rect x="11.5" y="11.5" width="7" height="7" rx="1.5"></rect>
+            </svg>
+            <span data-i18n="nav.work">Work</span>
+          </a>
+          <a href="#services">
+            <svg class="dock-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M3 5.5h14M3 10h14M3 14.5h9" stroke-linecap="round"></path>
+            </svg>
+            <span data-i18n="nav.services">Services</span>
+          </a>
+          <a href="#pricing">
+            <svg class="dock-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="2.5" y="4" width="15" height="12" rx="2"></rect>
+              <path d="M2.5 8h15M6 12h3" stroke-linecap="round"></path>
+            </svg>
+            <span data-i18n="nav.prices">Prices</span>
+          </a>
+        </nav>
+
+        <div class="dock-actions">
+          <button class="theme-toggle-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+            <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <button class="lang-btn" type="button" aria-label="Cambiar a Español" title="Cambiar a Español">
+            <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="lang-btn-text">ES</span>
+          </button>
+          <a class="dock-contact" href="#contact">
+            <span class="dock-contact-text" data-i18n="nav.contact">Contact Us</span>
+            <span class="dock-contact-arrow" aria-hidden="true">→</span>
+          </a>
+          <button class="dock-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="dock-mobile-menu">
+            <i></i>
+            <i></i>
+            <i></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="dock-backdrop" id="dock-backdrop" aria-hidden="true"></div>
+
+      <div class="dock-mobile-menu" id="dock-mobile-menu" aria-hidden="true">
+        <nav class="dock-mobile-nav" aria-label="Navegación móvil">
+          <a href="#work" class="dock-mobile-link">
+            <svg class="dock-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="7" height="7" rx="1.5"></rect>
+              <rect x="11.5" y="1.5" width="7" height="7" rx="1.5"></rect>
+              <rect x="1.5" y="11.5" width="7" height="7" rx="1.5"></rect>
+              <rect x="11.5" y="11.5" width="7" height="7" rx="1.5"></rect>
+            </svg>
+            <span data-i18n="nav.work">Work</span>
+          </a>
+          <a href="#services" class="dock-mobile-link">
+            <svg class="dock-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M3 5.5h14M3 10h14M3 14.5h9" stroke-linecap="round"></path>
+            </svg>
+            <span data-i18n="nav.services">Services</span>
+          </a>
+          <a href="#pricing" class="dock-mobile-link">
+            <svg class="dock-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="2.5" y="4" width="15" height="12" rx="2"></rect>
+              <path d="M2.5 8h15M6 12h3" stroke-linecap="round"></path>
+            </svg>
+            <span data-i18n="nav.prices">Prices</span>
+          </a>
+        </nav>
+        <div class="dock-mobile-footer">
+          <a class="dock-mobile-contact" href="#contact">
+            <span data-i18n="nav.contact">Contact Us</span>
+            <span class="dock-mobile-arrow" aria-hidden="true">→</span>
+          </a>
+          <div class="dock-mobile-lang-wrap">
+            <button class="theme-toggle-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+              <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+              </svg>
+              <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </button>
+            <button class="lang-btn" type="button" aria-label="Cambiar a Español" title="Cambiar a Español">
+              <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="lang-btn-text">ES</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Klyven Approach Section -->
+      <section class="approach-section" id="approach" aria-label="The Klyven Approach">
+        <div class="approach-inner">
+          <!-- Section Header -->
+          <header class="approach-header">
+            <span class="approach-kicker" data-i18n="approach.kicker">THE KLYVEN APPROACH</span>
+            <h2 class="approach-title" data-i18n="approach.title" data-i18n-html="true">
+              Clarity you can see.<br />
+              Confidence your customers can feel.
+            </h2>
+            <p class="approach-subtitle" data-i18n="approach.subtitle">
+              We turn scattered ideas into thoughtful websites that make it easier for people to choose your business.
+            </p>
+          </header>
+
+          <!-- Central Visual Flow: Idea -> Website -> Experience -->
+          <div class="approach-flow">
+            <!-- Left: The Idea Note Card -->
+            <div class="approach-card-wrap wrap-idea">
+              <span class="sparkle-doodle doodle-left" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#6082a6" stroke-width="1.8" stroke-linecap="round">
+                  <path d="M4 12h4M12 4v4M6 6l3 3" />
+                </svg>
+              </span>
+              <div class="approach-idea-card spotlight-card">
+                <div class="idea-card-header">
+                  <span class="idea-tag" data-i18n="approach.ideaTag">THE IDEA</span>
+                  <span class="idea-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="10" cy="10" r="7.5" />
+                      <path d="M10 6v8M6 10h8" />
+                    </svg>
+                  </span>
+                </div>
+                <ul class="idea-notes-list">
+                  <li data-i18n="approach.ideaNote1">Modern, trustworthy feel</li>
+                  <li data-i18n="approach.ideaNote2">Show our services clearly</li>
+                  <li data-i18n="approach.ideaNote3">Highlight what makes us different</li>
+                  <li data-i18n="approach.ideaNote4">Make it easy to get in touch</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Connector Arrow 1 -->
+            <div class="approach-connector connector-1" aria-hidden="true">
+              <svg viewBox="0 0 70 30" fill="none">
+                <path d="M2 15 C 24 2, 46 28, 64 15" stroke="#7e9bbd" stroke-width="1.6" stroke-linecap="round" fill="none" />
+                <path d="M59 10 L 65 15 L 59 20" stroke="#7e9bbd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <!-- Middle: The Website (Browser Mockup) -->
+            <div class="approach-browser-wrap">
+              <div class="approach-browser">
+                <!-- Browser Bar -->
+                <div class="approach-browser-bar">
+                  <div class="browser-dots" aria-hidden="true">
+                    <span class="b-dot b-red"></span>
+                    <span class="b-dot b-yellow"></span>
+                    <span class="b-dot b-green"></span>
+                  </div>
+                  <div class="browser-url">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" class="lock-icon" aria-hidden="true">
+                      <rect x="3.5" y="6.5" width="9" height="7.5" rx="1.5" />
+                      <path d="M5.5 6.5V4.5a2.5 2.5 0 0 1 5 0v2" />
+                    </svg>
+                    <span>brighthome.co</span>
+                  </div>
+                  <div class="browser-actions" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" class="refresh-icon">
+                      <path d="M13 8A5 5 0 1 1 11.5 4.5L13 3v4H9" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Browser Viewport / Concept Website -->
+                <div class="approach-site">
+                  <div class="site-nav">
+                    <span class="site-logo">BRIGHTHOME</span>
+                    <div class="site-links">
+                      <span data-i18n="approach.siteNavServices">Services</span>
+                      <span data-i18n="approach.siteNavAbout">About</span>
+                      <span data-i18n="approach.siteNavWork">Work</span>
+                      <span data-i18n="approach.siteNavJournal">Journal</span>
+                    </div>
+                    <span class="site-cta-btn" data-i18n="approach.siteNavContact">Get in touch</span>
+                  </div>
+
+                  <div class="site-hero">
+                    <div class="site-hero-content">
+                      <span class="site-kicker" data-i18n="approach.siteKicker">THOUGHTFUL RENOVATIONS</span>
+                      <h3 class="site-headline" data-i18n="approach.siteHeadline" data-i18n-html="true">Spaces for<br />a brighter life.</h3>
+                      <p class="site-desc" data-i18n="approach.siteDesc">
+                        We design and build considered homes that feel better to live in.
+                      </p>
+                      <div class="site-actions">
+                        <span class="site-btn-primary" data-i18n="approach.siteBtnConsult">Book a consultation →</span>
+                        <span class="site-btn-link" data-i18n="approach.siteBtnWork">Our work</span>
+                      </div>
+                    </div>
+                    <div class="site-hero-visual">
+                      <img src="assets/approach-interior.png" alt="BrightHome modern architectural interior preview" class="site-img" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Connector Arrow 2 -->
+            <div class="approach-connector connector-2" aria-hidden="true">
+              <svg viewBox="0 0 70 30" fill="none">
+                <path d="M2 15 C 24 2, 46 28, 64 15" stroke="#7e9bbd" stroke-width="1.6" stroke-linecap="round" fill="none" />
+                <path d="M59 10 L 65 15 L 59 20" stroke="#7e9bbd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <!-- Right: The Experience Card -->
+            <div class="approach-card-wrap wrap-experience">
+              <span class="sparkle-doodle doodle-right" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#6082a6" stroke-width="1.8" stroke-linecap="round">
+                  <path d="M14 6l3-3M20 12h-4M18 18l-3-3" />
+                </svg>
+              </span>
+              <div class="approach-experience-card spotlight-card">
+                <div class="exp-card-header">
+                  <span class="exp-tag" data-i18n="approach.expTag">THE EXPERIENCE</span>
+                  <span class="exp-dots" aria-hidden="true">···</span>
+                </div>
+                <h3 class="exp-title" data-i18n="approach.expTitle">A website that works beautifully.</h3>
+                <ul class="exp-checklist">
+                  <li>
+                    <span class="chk-icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M13.8 4.2a1 1 0 0 0-1.4 0L6.5 10.1 3.6 7.2a1 1 0 0 0-1.4 1.4l3.6 3.6a1 1 0 0 0 1.4 0l6.6-6.6a1 1 0 0 0 0-1.4z"/>
+                      </svg>
+                    </span>
+                    <span data-i18n="approach.expCheck1">Looks considered</span>
+                  </li>
+                  <li>
+                    <span class="chk-icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M13.8 4.2a1 1 0 0 0-1.4 0L6.5 10.1 3.6 7.2a1 1 0 0 0-1.4 1.4l3.6 3.6a1 1 0 0 0 1.4 0l6.6-6.6a1 1 0 0 0 0-1.4z"/>
+                      </svg>
+                    </span>
+                    <span data-i18n="approach.expCheck2">Feels easy to navigate</span>
+                  </li>
+                  <li>
+                    <span class="chk-icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M13.8 4.2a1 1 0 0 0-1.4 0L6.5 10.1 3.6 7.2a1 1 0 0 0-1.4 1.4l3.6 3.6a1 1 0 0 0 1.4 0l6.6-6.6a1 1 0 0 0 0-1.4z"/>
+                      </svg>
+                    </span>
+                    <span data-i18n="approach.expCheck3">Gives people a reason to take the next step</span>
+                  </li>
+                </ul>
+                <div class="exp-cta-btn">
+                  <span data-i18n="approach.expBtn">Get in touch →</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Highlights (3 Columns separated by fine vertical lines) -->
+          <div class="approach-pillars">
+            <div class="pillar-col">
+              <div class="pillar-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <polygon points="14.5 9.5 9.5 11 9.5 14.5 14.5 13 14.5 9.5" />
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <span class="pillar-num">01</span>
+                <h4 class="pillar-title" data-i18n="approach.pillar1Title">Clear direction</h4>
+                <p class="pillar-desc" data-i18n="approach.pillar1Desc">A message people understand at a glance.</p>
+              </div>
+            </div>
+
+            <div class="pillar-divider" aria-hidden="true"></div>
+
+            <div class="pillar-col">
+              <div class="pillar-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1.5" />
+                  <rect x="14" y="3.5" width="6.5" height="6.5" rx="1.5" />
+                  <rect x="3.5" y="14" width="6.5" height="6.5" rx="1.5" />
+                  <rect x="14" y="14" width="6.5" height="6.5" rx="1.5" />
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <span class="pillar-num">02</span>
+                <h4 class="pillar-title" data-i18n="approach.pillar2Title">Thoughtful details</h4>
+                <p class="pillar-desc" data-i18n="approach.pillar2Desc">Design that feels considered on every screen.</p>
+              </div>
+            </div>
+
+            <div class="pillar-divider" aria-hidden="true"></div>
+
+            <div class="pillar-col">
+              <div class="pillar-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="21 7 13.5 14.5 8.5 9.5 3 15" />
+                  <polyline points="16 7 21 7 21 12" />
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <span class="pillar-num">03</span>
+                <h4 class="pillar-title" data-i18n="approach.pillar3Title">Built to move</h4>
+                <p class="pillar-desc" data-i18n="approach.pillar3Desc">Clear paths from interest to inquiry.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Action Button -->
+          <div class="approach-action-row">
+            <a class="approach-cta-btn" href="#work">
+              <span data-i18n="approach.ctaBtn">See selected work</span>
+              <span class="approach-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section" id="work" aria-label="Selected work">
+        <div class="work-inner">
+          <div class="work-showcase-grid">
+            <!-- Left Column: Header + Northwood -->
+            <div class="work-col-left">
+              <header class="work-header">
+                <span class="work-kicker" data-i18n="work.kicker">SELECTED WORK</span>
+                <h2 class="work-title" data-i18n="work.title">A closer look at what we create.</h2>
+                <p class="work-subtitle" data-i18n="work.subtitle">Distinct websites and identities shaped around each business.</p>
+              </header>
+
+              <!-- Northwood Featured Project -->
+              <article class="work-card work-card-northwood">
+                <div class="work-browser-frame" data-open-project="northwood" style="cursor: pointer;" title="Abrir concepto completo">
+                  <div class="work-browser-bar">
+                    <div class="work-dots" aria-hidden="true">
+                      <i></i><i></i><i></i>
+                    </div>
+                    <div class="work-address">
+                      <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                      <span>www.northwoodlandscapes.com</span>
+                    </div>
+                    <div class="work-kebab" aria-hidden="true">
+                      <i></i><i></i><i></i>
+                    </div>
+                  </div>
+                  <img src="assets/work-northwood.jpg" alt="Northwood — Landscape design website redesign preview" class="work-browser-img" loading="lazy" width="1024" height="535" />
+                </div>
+                <div class="work-card-info">
+                  <span class="work-badge" data-i18n="work.badgeConcept">Concept project</span>
+                  <div class="work-meta-row">
+                    <div class="work-text-col">
+                      <h3 class="work-card-title" data-i18n="work.p1Title">Northwood — Website Redesign</h3>
+                      <p class="work-card-desc" data-i18n="work.p1Desc">A clearer way to present services and guide visitors to contact.</p>
+                    </div>
+                    <div class="work-action-col">
+                      <span class="work-v-sep" aria-hidden="true"></span>
+                      <a href="#northwood-preview" class="work-link" data-open-project="northwood">
+                        <span data-i18n="work.viewConcept">View concept</span>
+                        <span class="work-arrow" aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Framnova + GetnoLock -->
+            <div class="work-col-right">
+              <!-- Card 1: Framnova -->
+              <article class="work-card work-card-framnova">
+                <div class="work-browser-frame" data-open-project="framnova" style="cursor: pointer;" title="Abrir concepto completo">
+                  <div class="work-browser-bar">
+                    <div class="work-dots" aria-hidden="true">
+                      <i></i><i></i><i></i>
+                    </div>
+                    <div class="work-address">
+                      <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                      <span>www.framnova.com</span>
+                    </div>
+                    <div class="work-kebab" aria-hidden="true">
+                      <i></i><i></i><i></i>
+                    </div>
+                  </div>
+                  <img src="assets/work-framnova.png" alt="Framnova — Product &amp; Design preview" class="work-browser-img" loading="lazy" width="1024" height="584" />
+                </div>
+                <div class="work-card-info">
+                  <span class="work-badge" data-i18n="work.badgeConcept">Concept project</span>
+                  <div class="work-meta-row">
+                    <div class="work-text-col">
+                      <h3 class="work-card-title" data-i18n="work.p2Title">Framnova</h3>
+                      <p class="work-card-desc" data-i18n="work.p2Desc">Intelligent visual context capture and product experience for focused workflows.</p>
+                    </div>
+                    <div class="work-action-col">
+                      <a href="#framnova-preview" class="work-link" data-open-project="framnova">
+                        <span data-i18n="work.viewConcept">View concept</span>
+                        <span class="work-arrow" aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2: GetnoLock -->
+              <article class="work-card work-card-getnolock">
+                <div class="work-browser-frame" data-open-project="nolock" style="cursor: pointer;" title="Abrir concepto completo">
+                  <div class="work-browser-bar">
+                    <div class="work-dots" aria-hidden="true">
+                      <i></i><i></i><i></i>
+                    </div>
+                    <div class="work-address">
+                      <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                      <span>www.getnolock.com</span>
+                    </div>
+                    <div class="work-kebab" aria-hidden="true">
+                      <i></i><i></i><i></i>
+                    </div>
+                  </div>
+                  <img src="assets/work-getnolock.png" alt="GetnoLock — Bypass Anything Honorlock design preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+                </div>
+                <div class="work-card-info">
+                  <span class="work-badge" data-i18n="work.badgeConcept">Concept project</span>
+                  <div class="work-meta-row">
+                    <div class="work-text-col">
+                      <h3 class="work-card-title" data-i18n="work.p3Title">GetnoLock — Design</h3>
+                      <p class="work-card-desc" data-i18n="work.p3Desc">A clean digital experience with bold messaging and clear calls to action.</p>
+                    </div>
+                    <div class="work-action-col">
+                      <a href="#nolock-preview" class="work-link" data-open-project="nolock">
+                        <span data-i18n="work.viewConcept">View concept</span>
+                        <span class="work-arrow" aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-section" id="services" aria-label="How It Works">
+        <div class="how-inner">
+          <header class="how-header">
+            <span class="how-kicker" data-i18n="how.kicker">HOW IT WORKS</span>
+            <h2 class="how-title" data-i18n="how.title">A clear path from idea to launch.</h2>
+            <p class="how-subtitle" data-i18n="how.subtitle">Here’s what working together looks like.</p>
+          </header>
+
+          <div class="how-stage-wrap">
+            <!-- Left Desktop Annotations -->
+            <div class="how-annot-col left-col">
+              <!-- Step 1: Discover -->
+              <div class="how-annot annot-discover">
+                <span class="annot-num">01</span>
+                <h3 class="annot-title" data-i18n="how.step1Title">Discover</h3>
+                <p class="annot-desc" data-i18n="how.step1Desc">We learn about your business and goals.</p>
+                <div class="annot-pointer to-chat" aria-hidden="true">
+                  <svg viewBox="0 0 110 50" fill="none">
+                    <path d="M 0 14 H 55 Q 70 14 74 24 L 92 45 H 104" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round"/>
+                    <circle cx="106" cy="45" r="2.8" fill="#64748b"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Step 2: Plan -->
+              <div class="how-annot annot-plan">
+                <span class="annot-num">02</span>
+                <h3 class="annot-title" data-i18n="how.step2Title">Plan</h3>
+                <p class="annot-desc" data-i18n="how.step2Desc">We map out your content and direction.</p>
+                <div class="annot-pointer to-sitemap" aria-hidden="true">
+                  <svg viewBox="0 0 110 40" fill="none">
+                    <path d="M 0 16 H 75 Q 86 16 90 22 L 96 28 H 104" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round"/>
+                    <circle cx="106" cy="28" r="2.8" fill="#64748b"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Central Navy Agency Board -->
+            <div class="how-board">
+              <div class="board-topbar">
+                <span class="board-dot dot-red" aria-hidden="true"></span>
+                <span class="board-dot dot-yellow" aria-hidden="true"></span>
+                <span class="board-dot dot-green" aria-hidden="true"></span>
+              </div>
+
+              <div class="board-grid">
+                <!-- Left Column of the Board: Chat + Sitemap -->
+                <div class="board-col-left">
+                  <!-- Mobile Step 01 Header -->
+                  <div class="mobile-step-header">
+                    <span class="annot-num">01</span>
+                    <div class="m-step-text">
+                      <h4 data-i18n="how.step1Title">Discover</h4>
+                      <p data-i18n="how.step1Desc">We learn about your business and goals.</p>
+                    </div>
+                  </div>
+
+                  <!-- 1. Kickoff Chat Card -->
+                  <div class="board-chat-card">
+                    <div class="chat-card-top">
+                      <div class="chat-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" width="13" height="13" fill="#475569">
+                          <circle cx="10" cy="6" r="3.8"/>
+                          <path d="M2 17.5a8 8 0 0 1 16 0z"/>
+                        </svg>
+                      </div>
+                      <span class="chat-card-title" data-i18n="how.chatTitle">Start with Klyven</span>
+                      <time class="chat-card-time">10:24 AM</time>
+                    </div>
+                    <div class="chat-bubble">
+                      <p data-i18n="how.chatBubble">Tell us about your business, who you serve, and what you want your website to do.</p>
+                    </div>
+                    <div class="chat-typing-row">
+                      <div class="chat-avatar small" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" width="11" height="11" fill="#64748b">
+                          <circle cx="10" cy="6" r="3.8"/>
+                          <path d="M2 17.5a8 8 0 0 1 16 0z"/>
+                        </svg>
+                      </div>
+                      <div class="chat-typing-bubble" aria-label="Typing response">
+                        <span class="dot-typing"></span>
+                        <span class="dot-typing"></span>
+                        <span class="dot-typing"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mobile Step 02 Header -->
+                  <div class="mobile-step-header">
+                    <span class="annot-num">02</span>
+                    <div class="m-step-text">
+                      <h4 data-i18n="how.step2Title">Plan</h4>
+                      <p data-i18n="how.step2Desc">We map out your content and direction.</p>
+                    </div>
+                  </div>
+
+                  <!-- 2. Sitemap Card -->
+                  <div class="board-sitemap-card">
+                    <div class="sitemap-top">
+                      <svg class="sitemap-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="9" y="3" width="6" height="4" rx="1.2"/>
+                        <rect x="2" y="17" width="5" height="4" rx="1.2"/>
+                        <rect x="9.5" y="17" width="5" height="4" rx="1.2"/>
+                        <rect x="17" y="17" width="5" height="4" rx="1.2"/>
+                        <path d="M12 7v4m0 0H4.5v6m7.5-6v6m0-6h7.5v6"/>
+                      </svg>
+                      <span class="sitemap-title" data-i18n="how.sitemapTitle">Sitemap</span>
+                    </div>
+
+                    <div class="sitemap-diagram">
+                      <div class="sitemap-root-wrap">
+                        <span class="sitemap-node-root" data-i18n="how.sitemapHome">Home</span>
+                      </div>
+                      <div class="sitemap-tree-lines" aria-hidden="true">
+                        <div class="sitemap-line-vert"></div>
+                        <div class="sitemap-line-horiz"></div>
+                        <div class="sitemap-drops">
+                          <span></span><span></span><span></span><span></span>
+                        </div>
+                      </div>
+                      <div class="sitemap-children-row">
+                        <span class="sitemap-child-node" data-i18n="how.sitemapAbout">About</span>
+                        <span class="sitemap-child-node" data-i18n="how.sitemapServices">Services</span>
+                        <span class="sitemap-child-node" data-i18n="how.sitemapWork">Work</span>
+                        <span class="sitemap-child-node" data-i18n="how.sitemapContact">Contact</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Column of the Board: Studio Workspace Preview -->
+                <div class="board-col-right">
+                  <!-- Mobile Step 03 Header -->
+                  <div class="mobile-step-header">
+                    <span class="annot-num">03</span>
+                    <div class="m-step-text">
+                      <h4 data-i18n="how.step3Title">Create</h4>
+                      <p data-i18n="how.step3Desc">We design, build, and share progress.</p>
+                    </div>
+                  </div>
+
+                  <div class="board-studio-wrap">
+                    <div class="board-studio">
+                      <!-- Studio Sidebar -->
+                      <aside class="studio-sidebar" aria-label="Studio tools">
+                        <div class="studio-brand">
+                          <span class="studio-brand-dot" aria-hidden="true"></span>
+                          <span>Acme Studio</span>
+                        </div>
+
+                        <nav class="studio-nav">
+                          <div class="studio-nav-item active">
+                            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="2" y="2" width="12" height="12" rx="2"/>
+                              <path d="M2 6h12"/>
+                            </svg>
+                            <span>Pages</span>
+                          </div>
+                          <div class="studio-nav-item">
+                            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="m11.5 2.5 2 2-7.5 7.5H4v-2z"/>
+                            </svg>
+                            <span data-i18n="how.flyoutDesign">Design</span>
+                          </div>
+                          <div class="studio-nav-item">
+                            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M3 3h10v10H3z"/>
+                              <path d="M6 7h4M6 10h3"/>
+                            </svg>
+                            <span>Content</span>
+                          </div>
+                          <div class="studio-nav-item">
+                            <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="8" cy="8" r="2.5"/>
+                              <path d="M8 1v2m0 10v2M1 8h2m10 0h2"/>
+                            </svg>
+                            <span>Settings</span>
+                          </div>
+                        </nav>
+                      </aside>
+
+                      <!-- Studio Canvas Preview -->
+                      <div class="studio-canvas">
+                        <div class="canvas-header">
+                          <span class="canvas-logo">Acme Studio</span>
+                          <div class="canvas-menu">
+                            <span data-i18n="how.canvasWork">Work</span>
+                            <span data-i18n="how.canvasAbout">About</span>
+                            <span data-i18n="how.canvasServices">Services</span>
+                            <span class="canvas-pill-btn" data-i18n="how.canvasContact">Contact</span>
+                          </div>
+                        </div>
+
+                        <div class="canvas-hero">
+                          <div class="canvas-hero-copy">
+                            <h4 class="canvas-title" data-i18n="how.canvasHeroTitle">Thoughtful websites for ambitious brands.</h4>
+                            <p class="canvas-desc" data-i18n="how.canvasHeroDesc">We design and build modern websites that help creative businesses grow.</p>
+                            <span class="canvas-cta" data-i18n="how.canvasHeroCta">View our work →</span>
+                          </div>
+                          <div class="canvas-hero-photo">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Studio preview showcase" loading="lazy" />
+                          </div>
+                        </div>
+
+                        <div class="canvas-subgrid" aria-hidden="true">
+                          <div class="canvas-card">
+                            <div class="canvas-thumb">
+                              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=300&q=80" alt="" />
+                            </div>
+                            <div class="canvas-lines">
+                              <div class="c-line c-line-lg"></div>
+                              <div class="c-line c-line-sm"></div>
+                            </div>
+                          </div>
+                          <div class="canvas-card">
+                            <div class="canvas-thumb">
+                              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=300&q=80" alt="" />
+                            </div>
+                            <div class="canvas-lines">
+                              <div class="c-line c-line-lg"></div>
+                              <div class="c-line c-line-sm"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 3. Floating Design Flyout -->
+                      <div class="studio-flyout">
+                        <div class="flyout-head">
+                          <svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                            <path d="M12 2a1.4 1.4 0 0 0-2 0L3.5 8.5v3.5h3.5L13.5 5.5a1.4 1.4 0 0 0 0-2z"/>
+                          </svg>
+                          <span data-i18n="how.flyoutDesign">Design</span>
+                        </div>
+                        <div class="flyout-list">
+                          <div class="flyout-row active">
+                            <svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M1.5 5.5 7 1.5l5.5 4V12a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1z"/>
+                            </svg>
+                            <span data-i18n="how.flyoutHome">Home</span>
+                          </div>
+                          <div class="flyout-row">
+                            <svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="2" y="2" width="10" height="10" rx="1.5"/>
+                            </svg>
+                            <span data-i18n="how.flyoutAbout">About</span>
+                          </div>
+                          <div class="flyout-row">
+                            <svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="2" y="2" width="10" height="10" rx="1.5"/>
+                            </svg>
+                            <span data-i18n="how.flyoutServices">Services</span>
+                          </div>
+                          <div class="flyout-row">
+                            <svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="2" y="2" width="10" height="10" rx="1.5"/>
+                            </svg>
+                            <span data-i18n="how.flyoutWork">Work</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mobile Step 04 Header -->
+                    <div class="mobile-step-header">
+                      <span class="annot-num">04</span>
+                      <div class="m-step-text">
+                        <h4 data-i18n="how.step4Title">Launch</h4>
+                        <p data-i18n="how.step4Desc">We refine the details and go live.</p>
+                      </div>
+                    </div>
+
+                    <!-- 4. Ready to Launch Status Badge -->
+                    <div class="board-launch-badge">
+                      <svg class="launch-icon" viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="10" cy="10" r="8"/>
+                        <path d="M2 10h16M10 2a13 13 0 0 1 4 8 13 13 0 0 1-4 8 13 13 0 0 1-4-8 13 13 0 0 1 4-8z"/>
+                      </svg>
+                      <span class="launch-title" data-i18n="how.launchReady">Ready to launch</span>
+                      <span class="launch-tag" data-i18n="how.launchPublished">Published</span>
+                      <span class="launch-check" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="15" height="15" fill="none">
+                          <circle cx="8" cy="8" r="8" fill="#16a34a"/>
+                          <path d="m4.8 8.2 2.2 2.2 4.4-4.4" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Desktop Annotations -->
+            <div class="how-annot-col right-col">
+              <!-- Step 3: Create -->
+              <div class="how-annot annot-create">
+                <div class="annot-pointer to-create" aria-hidden="true">
+                  <svg viewBox="0 0 110 50" fill="none">
+                    <circle cx="4" cy="26" r="2.8" fill="#64748b"/>
+                    <path d="M 6 26 L 24 16 Q 34 11 44 11 H 110" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <span class="annot-num">03</span>
+                <h3 class="annot-title" data-i18n="how.step3Title">Create</h3>
+                <p class="annot-desc" data-i18n="how.step3Desc">We design, build, and share progress.</p>
+              </div>
+
+              <!-- Step 4: Launch -->
+              <div class="how-annot annot-launch">
+                <div class="annot-pointer to-launch" aria-hidden="true">
+                  <svg viewBox="0 0 110 50" fill="none">
+                    <circle cx="4" cy="18" r="2.8" fill="#64748b"/>
+                    <path d="M 6 18 L 26 28 Q 36 33 46 33 H 110" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <span class="annot-num">04</span>
+                <h3 class="annot-title" data-i18n="how.step4Title">Launch</h3>
+                <p class="annot-desc" data-i18n="how.step4Desc">We refine the details and go live.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom CTA Button -->
+          <div class="how-cta-row">
+            <a class="how-cta-btn" href="#contact">
+              <span data-i18n="how.ctaBtn">Let’s build your website</span>
+              <svg viewBox="0 0 16 16" width="15" height="15" fill="none" aria-hidden="true">
+                <path d="M3 8h9.5M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="beforeafter-section" id="before-after" aria-label="Before and after comparison">
+        <div class="ba-inner">
+          <div class="ba-header">
+            <h2 class="ba-title" data-i18n="ba.title" data-i18n-html="true">
+              Your business has evolved.<br />
+              Your website should too.
+            </h2>
+            <p class="ba-subtitle" data-i18n="ba.subtitle">
+              We design clear, fast websites that turn visitors into customers.
+            </p>
+            <a class="ba-cta" href="#contact">
+              <span data-i18n="ba.cta">Redesign my website</span>
+              <svg viewBox="0 0 18 18" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M3.5 9h11M10 4.5l4.5 4.5L10 13.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="ba-interactive-slider" id="ba-interactive-slider">
+            <div class="ba-browser ba-slider-browser">
+              <!-- Browser Window Bar -->
+              <div class="ba-browser-bar">
+                <div class="ba-dots" aria-hidden="true">
+                  <i></i><i></i><i></i>
+                </div>
+                <div class="ba-address">
+                  <svg viewBox="0 0 24 24" width="9" height="9" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.orion-space.nexus</span>
+                </div>
+                <div class="ba-kebab" aria-hidden="true">
+                  <i></i><i></i><i></i>
+                </div>
+              </div>
+
+              <!-- Slider Viewport -->
+              <div class="ba-slider-viewport" id="ba-slider-viewport" style="--ba-split: 50%;">
+                <!-- Layer 1: AFTER (Functional Living ORION SPACE Mission Control Platform) -->
+                <div class="ba-slider-layer ba-layer-after" aria-hidden="false">
+                  <div class="ba-badge after-badge" data-i18n="ba.badgeAfter">After</div>
+                  <div class="after-page orion-live-app" id="orion-live-app">
+                    <!-- Top Half: Greenish-Grey Atmospheric Hero -->
+                    <div class="orion-top-section">
+                      <!-- Central 3D Pavilion Layer (Partially behind cards) -->
+                      <div class="orion-pavilion-layer" aria-hidden="true">
+                        <img src="assets/orion-3d-pavilion.png" alt="" class="orion-pavilion-img" />
+                      </div>
+
+                      <!-- Top Navigation Bar -->
+                      <nav class="orion-nav">
+                        <div class="orion-brand">
+                          <svg class="orion-logo-glyph" viewBox="0 0 28 28" width="22" height="22" fill="none">
+                            <circle cx="14" cy="14" r="11" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="55 18"/>
+                            <circle cx="14" cy="14" r="5" fill="#ffffff"/>
+                          </svg>
+                          <span class="orion-brand-text">ORION</span>
+                        </div>
+
+                        <!-- Translucent Search Bar -->
+                        <div class="orion-search-pill">
+                          <div class="orion-search-field">
+                            <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="m13 13 4 4"/></svg>
+                            <input type="text" value="Search missions, planets, or satellites" class="orion-input orion-input-query" spellcheck="false" />
+                            <svg class="orion-caret" viewBox="0 0 12 12" width="8" height="8" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg>
+                          </div>
+                          <div class="orion-search-divider" aria-hidden="true"></div>
+                          <div class="orion-search-field">
+                            <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M3 10h14"/><path d="M10 3a10 10 0 0 1 0 14"/><path d="M10 3a10 10 0 0 0 0 14"/></svg>
+                            <input type="text" value="Solar System" class="orion-input orion-input-loc" spellcheck="false" />
+                            <svg class="orion-caret" viewBox="0 0 12 12" width="8" height="8" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg>
+                          </div>
+                          <button type="button" class="orion-search-btn">Explore</button>
+                        </div>
+
+                        <!-- Top Right Controls -->
+                        <div class="orion-user-controls">
+                          <button type="button" class="orion-icon-btn" aria-label="Soporte y Telecomunicaciones">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
+                          </button>
+                          <button type="button" class="orion-icon-btn" aria-label="Configuración de Telemetría">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 4"/></svg>
+                          </button>
+                          <div class="orion-avatar" title="Astronaut / Commander">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Avatar" />
+                          </div>
+                        </div>
+                      </nav>
+
+                      <!-- Hero Grid with Floating Glass Cards -->
+                      <div class="orion-hero-grid">
+                        <!-- Left Column: Title & LAUNCH ACTIVITY -->
+                        <div class="orion-hero-left">
+                          <div class="orion-headline-wrap">
+                            <h2 class="orion-hero-title">
+                              <span class="orion-title-row-1">
+                                EXPLORE <span class="orion-ai-badge">Live Space Data</span>
+                              </span>
+                              <span class="orion-title-row-2">BEYOND</span>
+                            </h2>
+                          </div>
+
+                          <!-- Glass Card: LAUNCH ACTIVITY -->
+                          <div class="orion-glass-card orion-salary-card">
+                            <div class="orion-card-header">
+                              <span class="orion-card-title">LAUNCH ACTIVITY</span>
+                              <span class="orion-corner-arrow">↗</span>
+                            </div>
+                            <div class="orion-chart-body">
+                              <div class="orion-y-labels">
+                                <span>Deep</span>
+                                <span>Orbit</span>
+                              </div>
+                              <div class="orion-chart-canvas">
+                                <svg viewBox="0 0 280 90" preserveAspectRatio="none" class="orion-salary-svg">
+                                  <defs>
+                                    <pattern id="diagHatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                                      <line x1="0" y1="0" x2="0" y2="6" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+                                    </pattern>
+                                  </defs>
+                                  <path d="M 10,75 C 60,70 100,55 150,45 C 190,38 230,55 270,50" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+                                  <path d="M 10,70 C 60,65 110,48 150,38 C 190,30 220,40 270,30 L 270,52 C 220,62 190,50 150,56 C 110,65 60,78 10,80 Z" fill="url(#diagHatch)" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
+                                  <path d="M 10,70 C 60,65 110,48 150,38 C 190,30 220,40 270,30" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+                                  <circle cx="150" cy="38" r="4" fill="#a3e635"/>
+                                </svg>
+                                <div class="orion-salary-pill-tag">99.4%</div>
+                              </div>
+                            </div>
+                            <div class="orion-chart-months">
+                              <span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Right Column: ACTIVE MISSIONS & Metric Cards -->
+                        <div class="orion-hero-right">
+                          <!-- Glass Card: ACTIVE MISSIONS -->
+                          <div class="orion-glass-card orion-candidates-card">
+                            <div class="orion-card-header">
+                              <span class="orion-card-title">ACTIVE MISSIONS</span>
+                              <span class="orion-corner-arrow">↗</span>
+                            </div>
+
+                            <div class="orion-candidates-stats">
+                              <div class="orion-stat-item">
+                                <span class="orion-stat-num" id="orion-cand-1">2 574</span>
+                                <span class="orion-stat-pct">32%</span>
+                              </div>
+                              <div class="orion-stat-item">
+                                <span class="orion-stat-num" id="orion-cand-2">4 131</span>
+                                <span class="orion-stat-pct">54%</span>
+                              </div>
+                              <div class="orion-stat-item">
+                                <span class="orion-stat-num" id="orion-cand-3">998</span>
+                                <span class="orion-stat-pct">14%</span>
+                              </div>
+                            </div>
+
+                            <!-- Interactive Segmented Pill Tabs: Earth Orbit · Moon · Deep Space -->
+                            <div class="orion-level-tabs" role="tablist">
+                              <button type="button" class="orion-level-tab" data-level="earth">Earth Orbit</button>
+                              <button type="button" class="orion-level-tab" data-level="moon">Moon</button>
+                              <button type="button" class="orion-level-tab is-active-lime" data-level="deep">Deep Space</button>
+                            </div>
+                          </div>
+
+                          <!-- 2 Side-by-Side Small Metric Cards -->
+                          <div class="orion-sub-metrics-row">
+                            <!-- Center panel: NEXUS SIGNAL · Communication Status -->
+                            <div class="orion-glass-card orion-mini-card">
+                              <div class="orion-card-header">
+                                <span class="orion-card-title">NEXUS SIGNAL</span>
+                                <span class="orion-corner-arrow">↗</span>
+                              </div>
+                              <div class="orion-mini-val-row">
+                                <span class="orion-mini-val" id="orion-idx-val">99.8%</span>
+                                <span class="orion-mini-sup" id="orion-idx-sup">SYNC</span>
+                              </div>
+                              <div class="orion-progress-wrap">
+                                <div class="orion-progress-labels">
+                                  <span>Communication Status</span><span>Online</span>
+                                </div>
+                                <div class="orion-custom-track">
+                                  <div class="orion-track-pill" id="orion-idx-track"></div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Right panel: UPCOMING LAUNCHES -->
+                            <div class="orion-glass-card orion-mini-card">
+                              <div class="orion-card-header">
+                                <span class="orion-card-title">UPCOMING LAUNCHES</span>
+                                <span class="orion-corner-arrow">↗</span>
+                              </div>
+                              <div class="orion-mini-val-row">
+                                <span class="orion-mini-val" id="orion-vac-val">142</span>
+                                <span class="orion-mini-sup" id="orion-vac-sup">+18</span>
+                              </div>
+                              <div class="orion-mini-bars">
+                                <span style="height: 35%;"></span>
+                                <span style="height: 55%;"></span>
+                                <span style="height: 40%;"></span>
+                                <span style="height: 80%;"></span>
+                                <span style="height: 100%;" class="bar-lime"></span>
+                                <span style="height: 60%;"></span>
+                                <span style="height: 45%;"></span>
+                                <span style="height: 70%;"></span>
+                                <span style="height: 30%;"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bottom Half: Deep Black Job Cards & Filter Bar -->
+                    <div class="orion-bottom-section">
+                      <!-- Filter Row: Active · Destination · Agency · Mission Type · Upcoming -->
+                      <div class="orion-filter-bar">
+                        <div class="orion-filter-pills">
+                          <button type="button" class="orion-filter-pill is-active">Active ▾</button>
+                          <button type="button" class="orion-filter-pill">Destination ▾</button>
+                          <button type="button" class="orion-filter-pill">Agency ▾</button>
+                          <button type="button" class="orion-filter-pill">Mission Type ▾</button>
+                          <button type="button" class="orion-filter-pill">Upcoming ▾</button>
+                          <button type="button" class="orion-circle-action-btn" aria-label="Filtros avanzados">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#000000" stroke-width="2.5"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="8" cy="16" r="2"/><circle cx="16" cy="16" r="2"/></svg>
+                          </button>
+                        </div>
+
+                        <!-- Carousel Navigation -->
+                        <div class="orion-carousel-nav">
+                          <button type="button" class="orion-nav-circle-btn" id="orion-prev-btn" aria-label="Anterior">←</button>
+                          <span class="orion-carousel-counter"><strong id="orion-card-idx">03</strong> / 153</span>
+                          <button type="button" class="orion-nav-circle-btn" id="orion-next-btn" aria-label="Siguiente">→</button>
+                        </div>
+                      </div>
+
+                      <!-- 3 Horizontal Dark Cards Container -->
+                      <div class="orion-cards-track" id="orion-cards-track">
+                        <!-- Card 1: Lunar Mission · Exploration · In Progress · View Mission -->
+                        <article class="orion-job-card">
+                          <div class="orion-job-top">
+                            <div class="orion-company-mark mark-amazon">LM</div>
+                            <div class="orion-job-heading">
+                              <h3 class="orion-job-title">Lunar Mission</h3>
+                              <span class="orion-job-meta">Exploration · In Progress</span>
+                            </div>
+                          </div>
+
+                          <div class="orion-job-pill-tags">
+                            <span>Moon Orbit</span>
+                            <span>Artemis III</span>
+                            <span>Crewed</span>
+                            <span>Telemetry Stable</span>
+                          </div>
+
+                          <div class="orion-job-bottom-meta">
+                            <button type="button" class="orion-view-mission-btn">View Mission ↗</button>
+                          </div>
+
+                          <!-- Right Compatibility Cluster -->
+                          <div class="orion-compat-cluster">
+                            <div class="orion-node-buttons">
+                              <button type="button" class="orion-node-btn node-link" title="Expandir">⤢</button>
+                              <button type="button" class="orion-node-btn node-close" title="Descartar">✕</button>
+                              <button type="button" class="orion-node-btn node-heart is-liked" title="Seguir">♥</button>
+                              <button type="button" class="orion-node-btn node-check" title="Confirmar">✓</button>
+                            </div>
+                            <!-- 94% Circular Telemetry Gauge -->
+                            <div class="orion-gauge-wrap">
+                              <svg class="orion-gauge-svg" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                                <circle cx="40" cy="40" r="32" class="gauge-arc" style="stroke-dasharray: 201; stroke-dashoffset: 12;"/>
+                              </svg>
+                              <div class="orion-gauge-content">
+                                <span class="orion-gauge-pct">94%</span>
+                                <span class="orion-gauge-label">Live Link</span>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+
+                        <!-- Card 2: Observation Satellite · Earth Orbit · Active · View Mission -->
+                        <article class="orion-job-card">
+                          <div class="orion-job-top">
+                            <div class="orion-company-mark mark-bereal">OS</div>
+                            <div class="orion-job-heading">
+                              <h3 class="orion-job-title">Observation Satellite</h3>
+                              <span class="orion-job-meta">Earth Orbit · Active</span>
+                            </div>
+                          </div>
+
+                          <div class="orion-job-pill-tags">
+                            <span>Low Earth Orbit</span>
+                            <span>Sentinel-6</span>
+                            <span>SAR Imaging</span>
+                            <span>Real-time Feed</span>
+                          </div>
+
+                          <div class="orion-job-bottom-meta">
+                            <button type="button" class="orion-view-mission-btn">View Mission ↗</button>
+                          </div>
+
+                          <!-- Right Compatibility Cluster -->
+                          <div class="orion-compat-cluster">
+                            <div class="orion-node-buttons">
+                              <button type="button" class="orion-node-btn node-link" title="Expandir">⤢</button>
+                              <button type="button" class="orion-node-btn node-close" title="Descartar">✕</button>
+                              <button type="button" class="orion-node-btn node-heart" title="Seguir">♡</button>
+                              <button type="button" class="orion-node-btn node-check" title="Confirmar">✓</button>
+                            </div>
+                            <!-- 86% Circular Telemetry Gauge -->
+                            <div class="orion-gauge-wrap">
+                              <svg class="orion-gauge-svg" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                                <circle cx="40" cy="40" r="32" class="gauge-arc" style="stroke-dasharray: 201; stroke-dashoffset: 28;"/>
+                              </svg>
+                              <div class="orion-gauge-content">
+                                <span class="orion-gauge-pct">86%</span>
+                                <span class="orion-gauge-label">Live Link</span>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+
+                        <!-- Card 3: Deep Space Probe · Deep Space · Transmitting · View Mission -->
+                        <article class="orion-job-card">
+                          <div class="orion-job-top">
+                            <div class="orion-company-mark mark-wise">DP</div>
+                            <div class="orion-job-heading">
+                              <h3 class="orion-job-title">Deep Space Probe</h3>
+                              <span class="orion-job-meta">Deep Space · Transmitting</span>
+                            </div>
+                          </div>
+
+                          <div class="orion-job-pill-tags">
+                            <span>Kuiper Belt</span>
+                            <span>Voyager Link</span>
+                            <span>DSN Active</span>
+                            <span>Interstellar</span>
+                          </div>
+
+                          <div class="orion-job-bottom-meta">
+                            <button type="button" class="orion-view-mission-btn">View Mission ↗</button>
+                          </div>
+
+                          <!-- Right Compatibility Cluster -->
+                          <div class="orion-compat-cluster">
+                            <div class="orion-node-buttons">
+                              <button type="button" class="orion-node-btn node-link" title="Expandir">⤢</button>
+                              <button type="button" class="orion-node-btn node-close" title="Descartar">✕</button>
+                              <button type="button" class="orion-node-btn node-heart" title="Seguir">♡</button>
+                              <button type="button" class="orion-node-btn node-check" title="Confirmar">✓</button>
+                            </div>
+                            <!-- 91% Circular Telemetry Gauge -->
+                            <div class="orion-gauge-wrap">
+                              <svg class="orion-gauge-svg" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="32" class="gauge-bg"/>
+                                <circle cx="40" cy="40" r="32" class="gauge-arc" style="stroke-dasharray: 201; stroke-dashoffset: 18;"/>
+                              </svg>
+                              <div class="orion-gauge-content">
+                                <span class="orion-gauge-pct">91%</span>
+                                <span class="orion-gauge-label">Deep Signal</span>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Layer 2: BEFORE (Simple Basic Space Mission Directory) -->
+                <div class="ba-slider-layer ba-layer-before" id="ba-layer-before" aria-hidden="false">
+                  <div class="ba-badge before-badge" data-i18n="ba.badgeBefore">Before</div>
+                  <div class="before-page orion-before-page">
+                    <!-- Simple Nav -->
+                    <div class="simple-nav">
+                      <div class="simple-brand">
+                        <span class="simple-logo-circle"></span>
+                        <span class="simple-brand-name">ORION SPACE</span>
+                      </div>
+                      <div class="simple-nav-links">
+                        <span class="is-active">Missions</span>
+                        <span>Satellites</span>
+                        <span>Launches</span>
+                      </div>
+                      <span class="simple-signin-btn">Sign in</span>
+                    </div>
+
+                    <!-- Simple Hero Search -->
+                    <div class="simple-hero">
+                      <h3 class="simple-hero-title">Explore missions &amp; satellites.</h3>
+                      <p class="simple-hero-sub">Basic registry of active spacecraft and astronomical observation data.</p>
+                      <div class="simple-search-bar">
+                        <div class="simple-search-input">
+                          <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="#94a3b8" stroke-width="2" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="m13 13 4 4"/></svg>
+                          <span>Search missions, planets, or satellites</span>
+                        </div>
+                        <div class="simple-search-loc">
+                          <svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="#94a3b8" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M3 10h14"/></svg>
+                          <span>Solar System</span>
+                        </div>
+                        <button type="button" class="simple-search-btn">Explore</button>
+                      </div>
+                    </div>
+
+                    <!-- Simple Cards List -->
+                    <div class="simple-jobs-list">
+                      <div class="simple-job-card">
+                        <div class="simple-job-left">
+                          <div class="simple-company-avatar">LM</div>
+                          <div class="simple-job-info">
+                            <h4 class="simple-job-role">Lunar Mission</h4>
+                            <span class="simple-job-company">Exploration · In Progress</span>
+                          </div>
+                        </div>
+                        <div class="simple-job-tags">
+                          <span class="simple-tag">Moon Orbit</span>
+                          <span class="simple-tag">Artemis III</span>
+                          <span class="simple-tag">Crewed</span>
+                          <span class="simple-tag">Active</span>
+                        </div>
+                        <button type="button" class="simple-apply-btn">View Mission</button>
+                      </div>
+
+                      <div class="simple-job-card">
+                        <div class="simple-job-left">
+                          <div class="simple-company-avatar">OS</div>
+                          <div class="simple-job-info">
+                            <h4 class="simple-job-role">Observation Satellite</h4>
+                            <span class="simple-job-company">Earth Orbit · Active</span>
+                          </div>
+                        </div>
+                        <div class="simple-job-tags">
+                          <span class="simple-tag">Low Earth Orbit</span>
+                          <span class="simple-tag">Sentinel-6</span>
+                          <span class="simple-tag">SAR Imaging</span>
+                          <span class="simple-tag">Active</span>
+                        </div>
+                        <button type="button" class="simple-apply-btn">View Mission</button>
+                      </div>
+
+                      <div class="simple-job-card">
+                        <div class="simple-job-left">
+                          <div class="simple-company-avatar">DP</div>
+                          <div class="simple-job-info">
+                            <h4 class="simple-job-role">Deep Space Probe</h4>
+                            <span class="simple-job-company">Deep Space · Transmitting</span>
+                          </div>
+                        </div>
+                        <div class="simple-job-tags">
+                          <span class="simple-tag">Deep Space</span>
+                          <span class="simple-tag">Voyager Link</span>
+                          <span class="simple-tag">DSN Active</span>
+                          <span class="simple-tag">Transmitting</span>
+                        </div>
+                        <button type="button" class="simple-apply-btn">View Mission</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Vertical Draggable Divider Line & Handle -->
+                <div class="ba-slider-divider" id="ba-slider-divider" aria-hidden="true">
+                  <div class="ba-slider-handle">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Range input transparent for high-accuracy native dragging & accessibility -->
+                <input 
+                  type="range" 
+                  min="0" 
+                  max="100" 
+                  value="50" 
+                  class="ba-slider-range" 
+                  id="ba-slider-range" 
+                  aria-label="Deslizador de comparación antes y después"
+                />
+              </div>
+
+              <!-- Interactive Controls / Presets -->
+              <div class="ba-slider-controls">
+                <div class="ba-slider-hint">
+                  <span class="ba-hint-icon">↔</span>
+                  <span data-i18n="ba.sliderHint">Arrastra o desliza para ver la transformación</span>
+                </div>
+                <div class="ba-slider-presets">
+                  <button type="button" class="ba-preset-btn" data-preset="90" data-i18n="ba.presetBefore">Ver Antes</button>
+                  <button type="button" class="ba-preset-btn is-active" data-preset="50" data-i18n="ba.presetSplit">50 / 50</button>
+                  <button type="button" class="ba-preset-btn" data-preset="10" data-i18n="ba.presetAfter">Ver Después</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom 3 Benefits -->
+          <div class="ba-benefits-bar">
+            <div class="ba-benefit-card">
+              <div class="ba-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m18 2 4 4-12 12H6v-4L18 2z"/>
+                  <path d="m14 6 4 4"/>
+                </svg>
+              </div>
+              <div class="ba-benefit-text">
+                <h4 data-i18n="ba.b1Title">Professional design</h4>
+                <p data-i18n="ba.b1Desc">A visual identity that builds trust and credibility.</p>
+              </div>
+            </div>
+
+            <div class="ba-benefit-divider" aria-hidden="true"></div>
+
+            <div class="ba-benefit-card">
+              <div class="ba-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="3"/>
+                  <path d="M12 18h.01"/>
+                </svg>
+              </div>
+              <div class="ba-benefit-text">
+                <h4 data-i18n="ba.b2Title">Mobile friendly</h4>
+                <p data-i18n="ba.b2Desc">Looks and works great on any device.</p>
+              </div>
+            </div>
+
+            <div class="ba-benefit-divider" aria-hidden="true"></div>
+
+            <div class="ba-benefit-card">
+              <div class="ba-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 20V10"/>
+                  <path d="M12 20V4"/>
+                  <path d="M6 20v-6"/>
+                </svg>
+              </div>
+              <div class="ba-benefit-text">
+                <h4 data-i18n="ba.b3Title">Easy to contact</h4>
+                <p data-i18n="ba.b3Desc">More reservations, more messages, more customers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="why-section" id="why" aria-label="Why Klyven">
+        <div class="why-copy">
+          <span class="section-kicker" data-i18n="why.kicker">WHY KLYVEN</span>
+          <h2 data-i18n="why.title">A website that works as hard as you do.</h2>
+          <p data-i18n="why.subtitle">Designed around your business. Built for the people you want to reach.</p>
+          <a class="why-cta" href="#contact">
+            <span data-i18n="why.cta">Let’s build yours</span> <span>↗</span>
+          </a>
+        </div>
+
+        <div class="why-content">
+          <div class="why-visual">
+            <div class="site-window">
+              <div class="site-chrome">
+                <div class="chrome-dots">
+                  <i></i><i></i><i></i>
+                </div>
+                <div class="site-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>acme.co</span>
+                </div>
+                <div class="chrome-spacer"></div>
+              </div>
+              <div class="site-page">
+                <div class="site-nav">
+                  <span class="site-wordmark">ACME</span>
+                  <div class="site-nav-links">
+                    <span data-i18n="why.previewWork">Work</span>
+                    <span data-i18n="why.previewServices">Services</span>
+                    <span data-i18n="why.previewAbout">About</span>
+                    <span data-i18n="why.previewContact">Contact</span>
+                  </div>
+                  <div class="site-menu-icon" aria-hidden="true">
+                    <i></i><i></i>
+                  </div>
+                </div>
+                <div class="site-hero">
+                  <div class="site-hero-copy">
+                    <span class="site-overline" data-i18n="why.previewOverline">STRATEGY / DESIGN / DEVELOPMENT</span>
+                    <strong data-i18n="why.previewHeadline">Digital experiences for ambitious brands.</strong>
+                    <p data-i18n="why.previewDesc">We help growing businesses turn their ideas into websites that attract, convert and last.</p>
+                    <span class="site-button" data-i18n="why.previewBtn">See our work ↗</span>
+                  </div>
+                  <div class="architecture-art" aria-hidden="true">
+                    <svg viewBox="0 0 300 260" preserveAspectRatio="xMidYMid slice" class="arch-svg">
+                      <defs>
+                        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#d9e2ec" />
+                          <stop offset="60%" stop-color="#e8edf3" />
+                          <stop offset="100%" stop-color="#cfd8e3" />
+                        </linearGradient>
+                        <linearGradient id="wallLight" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#ffffff" />
+                          <stop offset="45%" stop-color="#f0f2f5" />
+                          <stop offset="100%" stop-color="#c8cdd6" />
+                        </linearGradient>
+                        <linearGradient id="wallShadow" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#5a6578" />
+                          <stop offset="50%" stop-color="#3d4756" />
+                          <stop offset="100%" stop-color="#242c38" />
+                        </linearGradient>
+                        <linearGradient id="wallFront" x1="0" y1="1" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#b8bec8" />
+                          <stop offset="30%" stop-color="#e3e6ec" />
+                          <stop offset="100%" stop-color="#ffffff" />
+                        </linearGradient>
+                      </defs>
+                      <rect width="300" height="260" fill="url(#skyGrad)" />
+                      <path d="M70,260 C80,140 140,50 300,30 L300,260 Z" fill="url(#wallShadow)" />
+                      <path d="M40,260 C50,110 130,20 300,0 L300,90 C180,105 110,170 95,260 Z" fill="url(#wallLight)" />
+                      <path d="M90,260 C105,185 165,115 300,100 L300,260 Z" fill="url(#wallFront)" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-preview" aria-hidden="true">
+              <div class="phone-screen">
+                <div class="phone-notch"></div>
+                <div class="phone-status">
+                  <span>9:41</span>
+                  <span>📶 🔋</span>
+                </div>
+                <div class="phone-nav">
+                  <span class="site-wordmark">ACME</span>
+                  <div class="site-menu-icon">
+                    <i></i><i></i>
+                  </div>
+                </div>
+                <span class="phone-overline" data-i18n="why.previewOverline">STRATEGY / DESIGN / DEVELOPMENT</span>
+                <strong data-i18n="why.previewHeadline">Digital experiences for ambitious brands.</strong>
+                <p data-i18n="why.previewDesc">We help growing businesses turn their ideas into websites that attract, convert and last.</p>
+                <span class="phone-button" data-i18n="why.previewBtn">See our work ↗</span>
+                <div class="phone-art">
+                  <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" class="arch-svg">
+                    <rect width="200" height="160" fill="url(#skyGrad)" />
+                    <path d="M40,160 C50,90 100,30 200,20 L200,160 Z" fill="url(#wallShadow)" />
+                    <path d="M20,160 C30,70 90,10 200,0 L200,60 C120,70 70,110 60,160 Z" fill="url(#wallLight)" />
+                    <path d="M60,160 C70,115 110,75 200,65 L200,160 Z" fill="url(#wallFront)" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-benefits">
+            <article class="why-item">
+              <span class="why-number">01</span>
+              <div class="why-item-content">
+                <h3 data-i18n="why.item1Title">Made for every screen</h3>
+                <p data-i18n="why.item1Desc">Seamless on mobile, tablet, and desktop.</p>
+              </div>
+            </article>
+
+            <article class="why-item">
+              <span class="why-number">02</span>
+              <div class="why-item-content">
+                <h3 data-i18n="why.item2Title">Direct collaboration</h3>
+                <p data-i18n="why.item2Desc">Work directly with the person designing your site.</p>
+              </div>
+            </article>
+
+            <article class="why-item">
+              <span class="why-number">03</span>
+              <div class="why-item-content">
+                <h3 data-i18n="why.item3Title">Clear timelines</h3>
+                <p data-i18n="why.item3Desc">Know what happens next, from kickoff to launch.</p>
+              </div>
+            </article>
+
+            <article class="why-item">
+              <span class="why-number">04</span>
+              <div class="why-item-content">
+                <h3 data-i18n="why.item4Title">Made for your brand</h3>
+                <p data-i18n="why.item4Desc">A look and experience shaped around your business.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing-section" id="pricing" aria-label="Website Pricing">
+        <div class="pricing-inner">
+          <div class="pricing-header">
+            <div class="pricing-kicker-row">
+              <span class="pricing-kicker" data-i18n="pricing.kicker">WEBSITE PRICING</span>
+              <span class="pricing-kicker-line" aria-hidden="true"></span>
+            </div>
+            <h2 class="pricing-title" data-i18n="pricing.title" data-i18n-html="true">
+              A website that fits where<br />
+              your business is today.
+            </h2>
+            <p class="pricing-subtitle" data-i18n="pricing.subtitle">
+              Choose a starting point. We’ll shape the final website around your goals.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Card 1: Landing Page -->
+            <article class="pricing-card spotlight-card">
+              <div class="pricing-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="3"/>
+                  <path d="M3 9h18"/>
+                  <path d="M7 6.5h.01"/>
+                  <path d="M10 6.5h.01"/>
+                </svg>
+              </div>
+              <h3 class="pricing-card-title" data-i18n="pricing.p1Title">Landing Page</h3>
+              <p class="pricing-card-desc" data-i18n="pricing.p1Desc">Launch one idea with a clear, focused page.</p>
+
+              <div class="pricing-divider" aria-hidden="true"></div>
+
+              <div class="pricing-price-wrap">
+                <span class="price-from" data-i18n="pricing.from">From</span>
+                <span class="price-amount">$1,500</span>
+                <span class="price-currency">MXN</span>
+              </div>
+
+              <ul class="pricing-features">
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p1Feat1">One-page website</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p1Feat2">Responsive design</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p1Feat3">Contact or WhatsApp CTA</span>
+                </li>
+              </ul>
+
+              <a class="pricing-btn secondary" href="#contact">
+                <span data-i18n="pricing.p1Btn">Discuss my project</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Card 2: Business Website (MOST POPULAR) -->
+            <article class="pricing-card popular spotlight-card">
+              <div class="pricing-card-top">
+                <div class="pricing-icon popular-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m12 2 10 5-10 5L2 7l10-5Z"/>
+                    <path d="m2 17 10 5 10-5"/>
+                    <path d="m2 12 10 5 10-5"/>
+                  </svg>
+                </div>
+                <span class="pricing-popular-badge" data-i18n="pricing.popularBadge">MOST POPULAR</span>
+              </div>
+
+              <h3 class="pricing-card-title" data-i18n="pricing.p2Title">Business Website</h3>
+              <p class="pricing-card-desc" data-i18n="pricing.p2Desc">Give customers a professional place to explore your business.</p>
+
+              <div class="pricing-divider" aria-hidden="true"></div>
+
+              <div class="pricing-price-wrap">
+                <span class="price-from" data-i18n="pricing.from">From</span>
+                <span class="price-amount">$3,000</span>
+                <span class="price-currency">MXN</span>
+              </div>
+
+              <ul class="pricing-features">
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p2Feat1">Up to 5 sections or pages</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p2Feat2">Custom visual direction</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p2Feat3">Forms and conversion CTAs</span>
+                </li>
+              </ul>
+
+              <a class="pricing-btn primary" href="#contact">
+                <span data-i18n="pricing.p2Btn">Discuss my project</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- Card 3: Website Redesign -->
+            <article class="pricing-card spotlight-card">
+              <div class="pricing-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                  <path d="M3 3v5h5"/>
+                  <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                  <path d="M16 21h5v-5"/>
+                </svg>
+              </div>
+              <h3 class="pricing-card-title" data-i18n="pricing.p3Title">Website Redesign</h3>
+              <p class="pricing-card-desc" data-i18n="pricing.p3Desc">Make your current website easier to use and understand.</p>
+
+              <div class="pricing-divider" aria-hidden="true"></div>
+
+              <div class="pricing-price-wrap">
+                <span class="price-from" data-i18n="pricing.from">From</span>
+                <span class="price-amount">$4,000</span>
+                <span class="price-currency">MXN</span>
+              </div>
+
+              <ul class="pricing-features">
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p3Feat1">Visual redesign</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p3Feat2">Mobile usability improvements</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
+                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
+                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span data-i18n="pricing.p3Feat3">Clearer structure and messaging</span>
+                </li>
+              </ul>
+
+              <a class="pricing-btn secondary" href="#contact">
+                <span data-i18n="pricing.p3Btn">Discuss my project</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </a>
+            </article>
+          </div>
+
+          <p class="pricing-footnote" data-i18n="pricing.footnote">
+            These are starting prices. Your final quote depends on the size and features of your project.
+          </p>
+        </div>
+      </section>
+
+      <section class="extra-section faq-section" aria-label="FAQ">
+        <div class="extra-inner narrow">
+          <span class="section-kicker" data-i18n="faq.kicker">FAQ</span>
+          <h2 class="section-title" data-i18n="faq.title">Questions people usually ask.</h2>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3 data-i18n="faq.q1">How long does a website take?</h3>
+              <p data-i18n="faq.a1">Usually 5–14 days depending on the project.</p>
+            </div>
+            <div class="faq-item">
+              <h3 data-i18n="faq.q2">Do I need my own domain?</h3>
+              <p data-i18n="faq.a2">No. I can help you connect an existing domain or set up a new one.</p>
+            </div>
+            <div class="faq-item">
+              <h3 data-i18n="faq.q3">Can you redesign my current website?</h3>
+              <p data-i18n="faq.a3">Yes. You can keep your current domain.</p>
+            </div>
+            <div class="faq-item">
+              <h3 data-i18n="faq.q4">Do you offer maintenance?</h3>
+              <p data-i18n="faq.a4">Yes, optional monthly maintenance is available.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="extra-section cta-section" id="contact" aria-label="Final call to action">
+        <div class="extra-inner narrow cta-inner">
+          <h2 class="section-title cta-title" data-i18n="cta.title">Have a website in mind?</h2>
+          <p class="section-copy center-copy cta-copy" data-i18n="cta.copy">Let’s build something your business can be proud of.</p>
+
+          <!-- Direct WhatsApp Contact Card -->
+          <div class="contact-form-card spotlight-card whatsapp-direct-card">
+            <div class="whatsapp-direct-inner">
+              <div class="whatsapp-icon-bubble" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.14-1.19-.06-.1-.23-.17-.48-.29z"/>
+                </svg>
+              </div>
+
+              <h3 class="whatsapp-direct-title" data-i18n="cta.whatsappTitle">Start a conversation</h3>
+              <p class="whatsapp-direct-desc" data-i18n="cta.whatsappDesc">
+                Talk directly with us about your project, timeline, or custom quote. We reply promptly.
+              </p>
+
+              <div class="whatsapp-action-wrap">
+                <a class="final-cta whatsapp-primary-btn" href="https://wa.me/message/HKV25RMEXSLPF1" target="_blank" rel="noopener noreferrer">
+                  <svg class="whatsapp-btn-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.14-1.19-.06-.1-.23-.17-.48-.29z"/>
+                  </svg>
+                  <span data-i18n="cta.whatsappBtn">Chat on WhatsApp</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <div class="whatsapp-direct-status">
+                <span class="status-pulse-wrap" aria-hidden="true">
+                  <span class="status-pulse-ring"></span>
+                  <span class="status-pulse-dot"></span>
+                </span>
+                <span data-i18n="cta.whatsappNote">Direct chat • Response in &lt; 2 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Site Footer with Navigation, Legal Links, and Copyright -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-top-grid">
+            <div class="footer-brand-col">
+              <a class="footer-logo" href="index.html" aria-label="KLYVEN STUDIO">
+                <img src="logo.png" alt="KLYVEN STUDIO logo" width="32" height="32" class="footer-logo-img" />
+                <span class="footer-brand-name">KLYVEN STUDIO</span>
+              </a>
+              <p class="footer-tagline" data-i18n="footer.tagline">
+                Websites that make your business impossible to overlook.
+              </p>
+              <div class="footer-status-badge">
+                <span class="status-pulse-wrap" aria-hidden="true">
+                  <span class="status-pulse-ring"></span>
+                  <span class="status-pulse-dot"></span>
+                </span>
+                <span class="footer-status-text" data-i18n="status.available">Available for new projects</span>
+                <span class="footer-status-sep" aria-hidden="true">•</span>
+                <span class="footer-status-clock" data-live-clock>18:55:00</span>
+                <span class="footer-status-tz" data-i18n="status.timezone">GMT-6</span>
+              </div>
+            </div>
+
+            <div class="footer-links-col">
+              <h4 class="footer-heading" data-i18n="footer.navTitle">Navigation</h4>
+              <ul class="footer-links-list">
+                <li><a href="#work" data-i18n="nav.work">Work</a></li>
+                <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="#pricing" data-i18n="nav.prices">Prices</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-col">
+              <h4 class="footer-heading" data-i18n="footer.legalTitle">Legal</h4>
+              <ul class="footer-links-list">
+                <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+                <li><a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a></li>
+                <li><a href="cookies.html" data-i18n="footer.cookies">Cookie Policy</a></li>
+                <li><a href="refund-policy.html" data-i18n="footer.refund">Refund &amp; Cancellation Policy</a></li>
+                <li><button type="button" class="cookie-settings-link" data-cookie-settings data-i18n="footer.cookieSettings">Cookie settings</button></li>
+                <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom-row">
+            <p class="footer-copyright" data-i18n="footer.copyright">
+              © 2026 Klyven Studio. All rights reserved.
+            </p>
+            <p class="footer-copyright-expanded" data-i18n="footer.copyrightExpanded">
+              Original content and visual materials owned by Klyven Studio are protected by applicable intellectual property law. Client logos, project screenshots, photographs, fonts, trademarks, and other third-party materials remain subject to the rights of their respective owners and to applicable permissions or licenses. No permission to reuse those third-party materials is granted by their appearance on this website.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Project Concept Preview Modal (Full UI Experience) -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="project-modal-backdrop" id="project-modal-backdrop"></div>
+      
+      <div class="project-modal-dialog">
+        <!-- Floating Browser Shell -->
+        <div class="project-browser-window" id="project-browser-window">
+          <!-- Window Header / Browser Bar -->
+          <div class="project-browser-bar">
+            <div class="project-browser-controls">
+              <button type="button" class="ctrl-dot ctrl-close" id="project-modal-close-dot" title="Cerrar ventana" aria-label="Cerrar ventana"></button>
+              <span class="ctrl-dot ctrl-min" aria-hidden="true"></span>
+              <span class="ctrl-dot ctrl-max" aria-hidden="true"></span>
+            </div>
+            
+            <div class="project-browser-url-pill">
+              <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor" aria-hidden="true">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+              <span class="project-browser-url">https://www.northwoodlandscapes.com</span>
+            </div>
+
+            <div class="project-browser-actions">
+              <a href="https://getnolock.com/" target="_blank" rel="noopener noreferrer" class="project-modal-live-link" id="project-modal-live-link" title="Abrir sitio web oficial en pestaña nueva" aria-label="Abrir web oficial" style="display: none;">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span class="live-link-text" data-i18n="work.openLiveSite">Abrir web oficial</span>
+              </a>
+              <button type="button" class="project-modal-close-btn" id="project-modal-close-btn" aria-label="Cerrar vista previa">
+                <span class="close-btn-text">ESC</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Scrollable Website Content Inside Browser Frame -->
+          <div class="project-browser-viewport" id="project-browser-viewport">
+            <!-- Northwood Full Website UI -->
+            <div class="project-site-container" id="project-site-northwood">
+              <div class="nw-site">
+
+              <!-- Spanish Language Block -->
+              <div class="nw-lang-block" data-lang-block="es">
+                <!-- Interactive Living Hero Section -->
+                <header class="nw-hero">
+                  <!-- Northwood Top Navigation -->
+                  <nav class="nw-nav">
+                    <div class="nw-nav-brand">
+                      <svg class="nw-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L4 14h4v6h8v-6h4L12 2z"/>
+                      </svg>
+                      <span class="nw-nav-logo">NORTHWOOD</span>
+                    </div>
+                    <div class="nw-nav-links">
+                      <a href="#nw-services-es" class="nw-nav-link">Servicios</a>
+                      <a href="#nw-portfolio-es" class="nw-nav-link">Proyectos</a>
+                      <a href="#nw-about-es" class="nw-nav-link">Nosotros</a>
+                    </div>
+                    <div class="nw-nav-cta">
+                      <a href="#nw-consult-es" class="nw-btn-quote">Pedir Presupuesto</a>
+                    </div>
+                  </nav>
+
+                  <!-- Main Hero Content -->
+                  <div class="nw-hero-content">
+                    <span class="nw-hero-kicker">ESPACIOS EXTERIORES PARA EL DÍA A DÍA</span>
+                    <h1 class="nw-hero-title">Paisajes pensados para un hogar con serenidad.</h1>
+                    <p class="nw-hero-subtitle">Diseño, construcción y cuidado de espacios exteriores hermosos que se sienten como un hogar.</p>
+
+                    <div class="nw-hero-actions">
+                      <a href="#nw-services-es" class="nw-hero-btn nw-hero-btn-primary">
+                        <span>Nuestros Servicios</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                      <a href="#nw-portfolio-es" class="nw-hero-btn nw-hero-btn-secondary">
+                        Ver Proyectos
+                      </a>
+                    </div>
+
+                    <!-- Bottom 3-Column Features -->
+                    <div class="nw-hero-features">
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Diseño de Paisaje</h4>
+                        <p class="nw-feat-desc">Del concepto al plano</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Construcción e Instalación</h4>
+                        <p class="nw-feat-desc">Elaborado con cuidado</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Mantenimiento Continuo</h4>
+                        <p class="nw-feat-desc">Espacios que perduran</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+
+                <!-- The Northwood Way / Editorial Bento Philosophy Section -->
+                <section class="nw-bento-section" id="nw-about-es">
+                  <!-- Header Area -->
+                  <div class="nw-bento-header">
+                    <div class="nw-bento-kicker-row">
+                      <span class="nw-bento-kicker">THE NORTHWOOD WAY</span>
+                      <span class="nw-bento-line" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="nw-bento-title-row">
+                      <h2 class="nw-bento-title">Paisajes creados<br />para vivirlos de verdad.</h2>
+                      <div class="nw-bento-intro">
+                        <p class="nw-bento-desc">
+                          Diseñamos jardines que conectan tu hogar con la belleza natural de California — creando espacios exteriores fluidos, duraderos y en total armonía con su entorno.
+                        </p>
+                        <a href="#nw-portfolio-es" class="nw-bento-btn">
+                          <span>Explorar proyectos</span>
+                          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bento Grid Mosaic -->
+                  <div class="nw-bento-grid">
+                    <!-- Left Tall Hero Card (01 / Considered Design) -->
+                    <div class="nw-bento-card nw-bento-hero-card">
+                      <img src="assets/nw-bento-hero.jpg" alt="Considered landscape design with illuminated stone stairs" class="nw-bento-img" loading="lazy" />
+                      <div class="nw-bento-overlay-pill">
+                        <span class="nw-bento-tag">01 / DISEÑO PENSADO</span>
+                        <a href="#nw-portfolio-es" class="nw-bento-circle-btn" aria-label="Ver diseño pensado">
+                          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Center Column (2 top cards + 2 metrics + 1 wide landscape) -->
+                    <div class="nw-bento-col-center">
+                      <!-- Center Top Row: Philosophy Card + Native Planting Card -->
+                      <div class="nw-bento-row-top">
+                        <!-- Card 2: Designed Around Nature (Dark Editorial Card) -->
+                        <div class="nw-bento-card nw-bento-nature-card">
+                          <div class="nw-bento-topo-pattern" aria-hidden="true">
+                            <svg viewBox="0 0 300 240" fill="none" stroke="rgba(52, 211, 153, 0.08)" stroke-width="1.2">
+                              <path d="M-20,40 Q60,10 140,50 T320,30" />
+                              <path d="M-20,80 Q70,40 150,90 T320,70" />
+                              <path d="M-20,120 Q80,70 160,130 T320,110" />
+                              <path d="M-20,160 Q90,100 170,170 T320,150" />
+                              <path d="M-20,200 Q100,130 180,210 T320,190" />
+                            </svg>
+                          </div>
+                          <div class="nw-bento-nature-body">
+                            <h3 class="nw-bento-nature-title">Diseñado<br />con la naturaleza.</h3>
+                            <p class="nw-bento-nature-text">
+                              Trabajamos con el microclima, la luz solar y la flora nativa de tu terreno para crear paisajes que pertenecen a este lugar — y florecen con los años.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Card 3: Native Planting Photo Card -->
+                        <div class="nw-bento-card nw-bento-planting-card">
+                          <img src="assets/nw-bento-planting.jpg" alt="Native California olive tree planting" class="nw-bento-img" loading="lazy" />
+                          <div class="nw-bento-overlay-pill">
+                            <span class="nw-bento-tag">02 / FLORA NATIVA</span>
+                            <a href="#nw-services-es" class="nw-bento-circle-btn" aria-label="Ver flora nativa">
+                              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Middle Row: 2 Metric Cards -->
+                      <div class="nw-bento-row-metrics">
+                        <!-- Card 4: 140+ spaces crafted -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">140+</span>
+                            <span class="nw-bento-metric-lbl">espacios creados</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.2A7 7 0 0 1 11 20z"></path>
+                              <path d="m2 21 9-9"></path>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- Card 5: 15 years experience -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">15</span>
+                            <span class="nw-bento-metric-lbl">años de trayectoria</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                              <path d="M12 2L5 13h3.5v7h7v-7H19L12 2z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Bottom Row: Stone Landscape Photo -->
+                      <div class="nw-bento-card nw-bento-stone-card">
+                        <img src="assets/nw-bento-stone.jpg" alt="Sculptural stone and native landscaping craftsmanship" class="nw-bento-img" loading="lazy" />
+                      </div>
+                    </div>
+
+                    <!-- Right Tall Water Feature Card -->
+                    <div class="nw-bento-card nw-bento-water-card">
+                      <img src="assets/nw-bento-water.jpg" alt="Architectural natural stone water fountain with warm backlighting" class="nw-bento-img" loading="lazy" />
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Featured Projects / Portfolio Highlights -->
+                <div class="nw-portfolio-section" id="nw-portfolio-es">
+                  <div class="nw-proj-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">TRABAJOS SELECCIONADOS / 01—03</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="nw-proj-title-row">
+                      <h3 class="nw-proj-title">Espacios moldeados por el lugar al que pertenecen.</h3>
+                      <a href="#nw-contact-es" class="nw-proj-btn-all">Ver todos los proyectos ↗</a>
+                    </div>
+                  </div>
+
+                  <div class="nw-proj-grid">
+                    <!-- Large Project Card Left -->
+                    <article class="nw-proj-card nw-proj-card-main" data-nw-project="meadow" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles de The Meadow House">
+                      <div class="nw-proj-media">
+                        <img src="assets/nw-proj-meadow.jpg" alt="The Meadow House — Carmel Valley Residence" class="nw-proj-img" loading="lazy" />
+                        <div class="nw-proj-overlay" aria-hidden="true"></div>
+                        <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                      </div>
+
+                      <div class="nw-proj-content">
+                        <div class="nw-proj-info">
+                          <div class="nw-proj-meta-row">
+                            <span class="nw-proj-badge">01</span>
+                            <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                            <span class="nw-proj-location">CARMEL VALLEY • RESIDENCIA</span>
+                          </div>
+                          <h4 class="nw-proj-card-title">The Meadow House</h4>
+                          <p class="nw-proj-card-sub">Pabellón contemporáneo y praderas nativas escalonadas con iluminación rasante</p>
+                        </div>
+                        <div class="nw-proj-action" aria-hidden="true">
+                          <span class="nw-proj-arrow-circle">
+                            <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- Stack of 2 Project Cards Right -->
+                    <div class="nw-proj-stack">
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="oakridge" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles de Oakridge Residence">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-oakridge.jpg" alt="Oakridge Residence — Napa Valley Vineyard" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">02</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">NAPA VALLEY • VIÑEDO</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Oakridge Residence</h4>
+                            <p class="nw-proj-card-sub">Estanque reflectante en piedra caliza y terrazas de olivos</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="hillside" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles de Hillside Sanctuary">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-hillside.jpg" alt="Hillside Sanctuary — Marin County Hillside Garden" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">03</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">CONDADO DE MARÍN • JARDÍN EN COLINA</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Hillside Sanctuary</h4>
+                            <p class="nw-proj-card-sub">Pérgola en madera noble y escalinatas pétreas iluminadas</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comprehensive Services / Capabilities -->
+                <div class="nw-capabilities-section" id="nw-services-es" data-nw-cap-section>
+                  <div class="nw-cap-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">CAPACIDADES / 01 — 04</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="nw-cap-title">Del primer trazo al cuidado duradero.</h3>
+                    <p class="nw-cap-subtitle">Diseño integral, construcción y cuidado del paisaje — concebidos para lugares extraordinarios y una forma de vida más vibrante.</p>
+                  </div>
+
+                  <!-- Panoramic Viewer -->
+                  <div class="nw-cap-viewer">
+                    <div class="nw-cap-banner-wrap">
+                      <img src="assets/nw-cap-banner-01.jpg" alt="01 · Planificación Maestra y Modelado 3D" class="nw-cap-banner-img" data-banner-idx="0" />
+                      <img src="assets/nw-cap-banner-02.jpg" alt="02 · Cantería Arquitectónica y Terrazas" class="nw-cap-banner-img is-active" data-banner-idx="1" />
+                      <img src="assets/nw-cap-banner-03.jpg" alt="03 · Elementos de Agua y Piscinas a Medida" class="nw-cap-banner-img" data-banner-idx="2" />
+                      <img src="assets/nw-cap-banner-04.jpg" alt="04 · Iluminación Escultural y Riego Inteligente" class="nw-cap-banner-img" data-banner-idx="3" />
+                    </div>
+
+                    <!-- Overlaid Left Glass Panel -->
+                    <div class="nw-cap-glass-panel">
+                      <div class="nw-cap-panel-num-row">
+                        <span class="nw-cap-panel-num">02</span>
+                        <span class="nw-cap-panel-line" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-panel-category">CANTERÍA ARQUITECTÓNICA Y TERRAZAS</span>
+                      <h4 class="nw-cap-panel-title">Arraigado en materiales imperecederos.</h4>
+                      <p class="nw-cap-panel-desc">Muros de piedra seca, caminos de granito, fogateros y terrazas en madera sostenible.</p>
+                    </div>
+
+                    <!-- Circular Next Arrow Button -->
+                    <button type="button" class="nw-cap-arrow-btn" aria-label="Siguiente capacidad" title="Siguiente capacidad">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- 4-Stage Horizontal Navigation -->
+                  <div class="nw-cap-nav" role="tablist" aria-label="Navegación de Capacidades">
+                    <!-- Stage 01 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="0">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-01.jpg" alt="Planificación Maestra y Modelado 3D" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">01</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">PLANIFICACIÓN MAESTRA Y MODELADO 3D</span>
+                    </button>
+
+                    <!-- Stage 02 (Active default) -->
+                    <button type="button" class="nw-cap-nav-item active" role="tab" aria-selected="true" data-cap-idx="1">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-02.jpg" alt="Cantería Arquitectónica y Terrazas" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">02</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">CANTERÍA ARQUITECTÓNICA Y TERRAZAS</span>
+                    </button>
+
+                    <!-- Stage 03 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="2">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-03.jpg" alt="Elementos de Agua y Piscinas a Medida" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">03</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">ELEMENTOS DE AGUA Y PISCINAS A MEDIDA</span>
+                    </button>
+
+                    <!-- Stage 04 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="3">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-04.jpg" alt="Iluminación Escultural y Riego Inteligente" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">04</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">ILUMINACIÓN ESCULTURAL Y RIEGO INTELIGENTE</span>
+                    </button>
+                  </div>
+                </div>
+
+
+                <!-- Testimonial Quote -->
+                <div class="nw-quote-box">
+                  <div class="nw-stars">★★★★★</div>
+                  <blockquote class="nw-quote-text">
+                    “Northwood transformó una ladera inclinada e inutilizable en el espacio favorito de nuestra familia. La iluminación rasante al caer la noche es sencillamente una obra de arte.”
+                  </blockquote>
+                  <div class="nw-quote-author">
+                    <strong>Julian &amp; Claire Vance</strong>
+                    <span>Propietarios en Carmel Valley, CA</span>
+                  </div>
+                </div>
+
+                <!-- Consultation / Contact Form Section -->
+                <div class="nw-consult-section" id="nw-consult-es">
+                  <div class="nw-consult-header">
+                    <span class="nw-kicker">INICIAR UN PROYECTO</span>
+                    <h3 class="nw-section-title">Comienza la transformación de tu espacio exterior.</h3>
+                    <p class="nw-desc">Agenda una sesión de consulta personalizada con nuestros arquitectos del paisaje.</p>
+                  </div>
+
+                  <form class="nw-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu interés en Northwood Landscapes! Esta es una demostración conceptual desarrollada por Klyven Studio.');">
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Nombre Completo</label>
+                        <input type="text" class="nw-input" placeholder="Tu nombre..." required />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Correo Electrónico</label>
+                        <input type="email" class="nw-input" placeholder="tu@correo.com" required />
+                      </div>
+                    </div>
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Ubicación de la Propiedad</label>
+                        <input type="text" class="nw-input" placeholder="Ej. Carmel, Napa, Valle de Bravo..." />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Tipo de Proyecto</label>
+                        <select class="nw-select">
+                          <option>Diseño Integral &amp; Construcción</option>
+                          <option>Rediseño de Patio &amp; Terrazas</option>
+                          <option>Piscinas &amp; Espejos de Agua</option>
+                          <option>Paisajismo &amp; Riego Sustentable</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="nw-form-group">
+                      <label class="nw-label">Detalles del Proyecto</label>
+                      <textarea class="nw-textarea" rows="3" placeholder="Cuéntanos brevemente sobre tu espacio o visión..."></textarea>
+                    </div>
+                    <button type="submit" class="nw-submit-btn">
+                      Solicitar Consulta de Diseño →
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Site Footer -->
+                <footer class="nw-footer" id="nw-contact-es">
+                  <div class="nw-footer-top">
+                    <div class="nw-footer-brand">
+                      <div class="nw-footer-logo">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                          <path d="M12 2L4 12h3v8h10v-8h3L12 2z"/>
+                        </svg>
+                        <span>NORTHWOOD</span>
+                      </div>
+                      <p class="nw-footer-tagline">Paisajes pensados para un hogar con serenidad.</p>
+                    </div>
+                    <div class="nw-footer-meta">
+                      <span class="nw-meta-item">Carmel • Napa Valley • Marin County</span>
+                      <span class="nw-meta-item">contacto@northwoodlandscapes.com</span>
+                    </div>
+                  </div>
+                  <div class="nw-footer-bottom">
+                    <span>&copy; 2026 Northwood Landscapes. Todos los derechos reservados.</span>
+                    <span class="nw-klyven-badge">Rediseño Web y Concepto por <strong>KLYVEN STUDIO</strong></span>
+                  </div>
+                </footer>
+              </div>
+
+              <!-- English Language Block -->
+              <div class="nw-lang-block" data-lang-block="en">
+                <!-- Interactive Living Hero Section -->
+                <header class="nw-hero">
+                  <!-- Northwood Top Navigation -->
+                  <nav class="nw-nav">
+                    <div class="nw-nav-brand">
+                      <svg class="nw-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L4 14h4v6h8v-6h4L12 2z"/>
+                      </svg>
+                      <span class="nw-nav-logo">NORTHWOOD</span>
+                    </div>
+                    <div class="nw-nav-links">
+                      <a href="#nw-services-en" class="nw-nav-link">Services</a>
+                      <a href="#nw-portfolio-en" class="nw-nav-link">Projects</a>
+                      <a href="#nw-about-en" class="nw-nav-link">About</a>
+                    </div>
+                    <div class="nw-nav-cta">
+                      <a href="#nw-consult-en" class="nw-btn-quote">Get a Quote</a>
+                    </div>
+                  </nav>
+
+                  <!-- Main Hero Content -->
+                  <div class="nw-hero-content">
+                    <span class="nw-hero-kicker">OUTDOOR SPACES FOR EVERYDAY LIVING</span>
+                    <h1 class="nw-hero-title">Thoughtful landscapes for a calmer home.</h1>
+                    <p class="nw-hero-subtitle">Design, build and maintain beautiful outdoor spaces that feel like home.</p>
+
+                    <div class="nw-hero-actions">
+                      <a href="#nw-services-en" class="nw-hero-btn nw-hero-btn-primary">
+                        <span>Our Services</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                      <a href="#nw-portfolio-en" class="nw-hero-btn nw-hero-btn-secondary">
+                        View Our Work
+                      </a>
+                    </div>
+
+                    <!-- Bottom 3-Column Features -->
+                    <div class="nw-hero-features">
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Landscape Design</h4>
+                        <p class="nw-feat-desc">From concept to plan</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Build &amp; Installation</h4>
+                        <p class="nw-feat-desc">Crafted with care</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Ongoing Maintenance</h4>
+                        <p class="nw-feat-desc">Spaces that last</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+
+                <!-- The Northwood Way / Editorial Bento Philosophy Section -->
+                <section class="nw-bento-section" id="nw-about-en">
+                  <!-- Header Area -->
+                  <div class="nw-bento-header">
+                    <div class="nw-bento-kicker-row">
+                      <span class="nw-bento-kicker">THE NORTHWOOD WAY</span>
+                      <span class="nw-bento-line" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="nw-bento-title-row">
+                      <h2 class="nw-bento-title">Landscapes made<br />to feel lived in.</h2>
+                      <div class="nw-bento-intro">
+                        <p class="nw-bento-desc">
+                          We design gardens that connect your home to the natural beauty of California — shaping outdoor spaces that feel effortless, enduring and part of the place.
+                        </p>
+                        <a href="#nw-portfolio-en" class="nw-bento-btn">
+                          <span>Explore our work</span>
+                          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bento Grid Mosaic -->
+                  <div class="nw-bento-grid">
+                    <!-- Left Tall Hero Card (01 / Considered Design) -->
+                    <div class="nw-bento-card nw-bento-hero-card">
+                      <img src="assets/nw-bento-hero.jpg" alt="Considered landscape design with illuminated stone stairs" class="nw-bento-img" loading="lazy" />
+                      <div class="nw-bento-overlay-pill">
+                        <span class="nw-bento-tag">01 / CONSIDERED DESIGN</span>
+                        <a href="#nw-portfolio-en" class="nw-bento-circle-btn" aria-label="View considered design">
+                          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Center Column (2 top cards + 2 metrics + 1 wide landscape) -->
+                    <div class="nw-bento-col-center">
+                      <!-- Center Top Row: Philosophy Card + Native Planting Card -->
+                      <div class="nw-bento-row-top">
+                        <!-- Card 2: Designed Around Nature (Dark Editorial Card) -->
+                        <div class="nw-bento-card nw-bento-nature-card">
+                          <div class="nw-bento-topo-pattern" aria-hidden="true">
+                            <svg viewBox="0 0 300 240" fill="none" stroke="rgba(52, 211, 153, 0.08)" stroke-width="1.2">
+                              <path d="M-20,40 Q60,10 140,50 T320,30" />
+                              <path d="M-20,80 Q70,40 150,90 T320,70" />
+                              <path d="M-20,120 Q80,70 160,130 T320,110" />
+                              <path d="M-20,160 Q90,100 170,170 T320,150" />
+                              <path d="M-20,200 Q100,130 180,210 T320,190" />
+                            </svg>
+                          </div>
+                          <div class="nw-bento-nature-body">
+                            <h3 class="nw-bento-nature-title">Designed<br />around nature.</h3>
+                            <p class="nw-bento-nature-text">
+                              We work with your site’s unique microclimates, sunlight and native flora to create landscapes that belong here — and thrive for years to come.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Card 3: Native Planting Photo Card -->
+                        <div class="nw-bento-card nw-bento-planting-card">
+                          <img src="assets/nw-bento-planting.jpg" alt="Native California olive tree planting" class="nw-bento-img" loading="lazy" />
+                          <div class="nw-bento-overlay-pill">
+                            <span class="nw-bento-tag">02 / NATIVE PLANTING</span>
+                            <a href="#nw-services-en" class="nw-bento-circle-btn" aria-label="View native planting">
+                              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Middle Row: 2 Metric Cards -->
+                      <div class="nw-bento-row-metrics">
+                        <!-- Card 4: 140+ spaces crafted -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">140+</span>
+                            <span class="nw-bento-metric-lbl">spaces crafted</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.2A7 7 0 0 1 11 20z"></path>
+                              <path d="m2 21 9-9"></path>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- Card 5: 15 years experience -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">15</span>
+                            <span class="nw-bento-metric-lbl">years of experience</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                              <path d="M12 2L5 13h3.5v7h7v-7H19L12 2z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Bottom Row: Stone Landscape Photo -->
+                      <div class="nw-bento-card nw-bento-stone-card">
+                        <img src="assets/nw-bento-stone.jpg" alt="Sculptural stone and native landscaping craftsmanship" class="nw-bento-img" loading="lazy" />
+                      </div>
+                    </div>
+
+                    <!-- Right Tall Water Feature Card -->
+                    <div class="nw-bento-card nw-bento-water-card">
+                      <img src="assets/nw-bento-water.jpg" alt="Architectural natural stone water fountain with warm backlighting" class="nw-bento-img" loading="lazy" />
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Featured Projects / Portfolio Highlights -->
+                <div class="nw-portfolio-section" id="nw-portfolio-en">
+                  <div class="nw-proj-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">SELECTED WORK / 01—03</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="nw-proj-title-row">
+                      <h3 class="nw-proj-title">Spaces shaped by the place they belong to.</h3>
+                      <a href="#nw-contact-en" class="nw-proj-btn-all">View all projects ↗</a>
+                    </div>
+                  </div>
+
+                  <div class="nw-proj-grid">
+                    <!-- Large Project Card Left -->
+                    <article class="nw-proj-card nw-proj-card-main" data-nw-project="meadow" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View The Meadow House details">
+                      <div class="nw-proj-media">
+                        <img src="assets/nw-proj-meadow.jpg" alt="The Meadow House — Carmel Valley Residence" class="nw-proj-img" loading="lazy" />
+                        <div class="nw-proj-overlay" aria-hidden="true"></div>
+                        <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                      </div>
+
+                      <div class="nw-proj-content">
+                        <div class="nw-proj-info">
+                          <div class="nw-proj-meta-row">
+                            <span class="nw-proj-badge">01</span>
+                            <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                            <span class="nw-proj-location">CARMEL VALLEY • RESIDENCE</span>
+                          </div>
+                          <h4 class="nw-proj-card-title">The Meadow House</h4>
+                          <p class="nw-proj-card-sub">Modern pavilion framed by stepped native meadows and warm path illumination</p>
+                        </div>
+                        <div class="nw-proj-action" aria-hidden="true">
+                          <span class="nw-proj-arrow-circle">
+                            <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- Stack of 2 Project Cards Right -->
+                    <div class="nw-proj-stack">
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="oakridge" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View Oakridge Residence details">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-oakridge.jpg" alt="Oakridge Residence — Napa Valley Vineyard" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">02</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">NAPA VALLEY • VINEYARD</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Oakridge Residence</h4>
+                            <p class="nw-proj-card-sub">Limestone reflection pool surrounded by century-old olive grove terraces</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="hillside" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View Hillside Sanctuary details">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-hillside.jpg" alt="Hillside Sanctuary — Marin County Hillside Garden" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">03</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">MARIN COUNTY • HILLSIDE GARDEN</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Hillside Sanctuary</h4>
+                            <p class="nw-proj-card-sub">Architectural timber pergola and illuminated stone steps carved into steep terrain</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comprehensive Services / Capabilities -->
+                <div class="nw-capabilities-section" id="nw-services-en" data-nw-cap-section>
+                  <div class="nw-cap-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">CAPABILITIES / 01 — 04</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="nw-cap-title">From first sketch to lasting care.</h3>
+                    <p class="nw-cap-subtitle">Integrated landscape design, build and stewardship — crafted for extraordinary places and a more vibrant way of living.</p>
+                  </div>
+
+                  <!-- Panoramic Viewer -->
+                  <div class="nw-cap-viewer">
+                    <div class="nw-cap-banner-wrap">
+                      <img src="assets/nw-cap-banner-01.jpg" alt="01 · Masterplanning &amp; 3D Modeling" class="nw-cap-banner-img" data-banner-idx="0" />
+                      <img src="assets/nw-cap-banner-02.jpg" alt="02 · Architectural Stonework &amp; Patios" class="nw-cap-banner-img is-active" data-banner-idx="1" />
+                      <img src="assets/nw-cap-banner-03.jpg" alt="03 · Water Features &amp; Custom Pools" class="nw-cap-banner-img" data-banner-idx="2" />
+                      <img src="assets/nw-cap-banner-04.jpg" alt="04 · Sculptural Lighting &amp; Smart Irrigation" class="nw-cap-banner-img" data-banner-idx="3" />
+                    </div>
+
+                    <!-- Overlaid Left Glass Panel -->
+                    <div class="nw-cap-glass-panel">
+                      <div class="nw-cap-panel-num-row">
+                        <span class="nw-cap-panel-num">02</span>
+                        <span class="nw-cap-panel-line" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-panel-category">ARCHITECTURAL STONEWORK &amp; PATIOS</span>
+                      <h4 class="nw-cap-panel-title">Grounded in lasting materials.</h4>
+                      <p class="nw-cap-panel-desc">Dry-stacked walls, granite walkways, fire hearths and sustainable timber decking.</p>
+                    </div>
+
+                    <!-- Circular Next Arrow Button -->
+                    <button type="button" class="nw-cap-arrow-btn" aria-label="Next capability" title="Next capability">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- 4-Stage Horizontal Navigation -->
+                  <div class="nw-cap-nav" role="tablist" aria-label="Capabilities Navigation">
+                    <!-- Stage 01 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="0">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-01.jpg" alt="Masterplanning & 3D Modeling" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">01</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">MASTERPLANNING &amp; 3D MODELING</span>
+                    </button>
+
+                    <!-- Stage 02 (Active default) -->
+                    <button type="button" class="nw-cap-nav-item active" role="tab" aria-selected="true" data-cap-idx="1">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-02.jpg" alt="Architectural Stonework & Patios" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">02</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">ARCHITECTURAL STONEWORK &amp; PATIOS</span>
+                    </button>
+
+                    <!-- Stage 03 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="2">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-03.jpg" alt="Water Features & Custom Pools" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">03</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">WATER FEATURES &amp; CUSTOM POOLS</span>
+                    </button>
+
+                    <!-- Stage 04 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="3">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-04.jpg" alt="Sculptural Lighting & Smart Irrigation" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">04</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">SCULPTURAL LIGHTING &amp; SMART IRRIGATION</span>
+                    </button>
+                  </div>
+                </div>
+
+
+                <!-- Testimonial Quote -->
+                <div class="nw-quote-box">
+                  <div class="nw-stars">★★★★★</div>
+                  <blockquote class="nw-quote-text">
+                    “Northwood transformed an unusable hillside into our family's favorite sanctuary. The architectural ground lighting at dusk is nothing short of breathtaking.”
+                  </blockquote>
+                  <div class="nw-quote-author">
+                    <strong>Julian &amp; Claire Vance</strong>
+                    <span>Homeowners in Carmel Valley, CA</span>
+                  </div>
+                </div>
+
+                <!-- Consultation / Contact Form Section -->
+                <div class="nw-consult-section" id="nw-consult-en">
+                  <div class="nw-consult-header">
+                    <span class="nw-kicker">START A PROJECT</span>
+                    <h3 class="nw-section-title">Bring your outdoor living space to life.</h3>
+                    <p class="nw-desc">Schedule a private site consultation with our lead landscape architects.</p>
+                  </div>
+
+                  <form class="nw-form" onsubmit="event.preventDefault(); alert('Thank you for exploring Northwood Landscapes! This is an interactive concept preview crafted by Klyven Studio.');">
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Full Name</label>
+                        <input type="text" class="nw-input" placeholder="Your name..." required />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Email Address</label>
+                        <input type="email" class="nw-input" placeholder="your@email.com" required />
+                      </div>
+                    </div>
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Property Location</label>
+                        <input type="text" class="nw-input" placeholder="e.g. Carmel, Napa, Marin County..." />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Project Scope</label>
+                        <select class="nw-select">
+                          <option>Full Architecture &amp; Construction</option>
+                          <option>Patio &amp; Terrace Redesign</option>
+                          <option>Pool &amp; Water Sanctuaries</option>
+                          <option>Sustainable Native Landscaping</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="nw-form-group">
+                      <label class="nw-label">Project Details</label>
+                      <textarea class="nw-textarea" rows="3" placeholder="Tell us briefly about your property or vision..."></textarea>
+                    </div>
+                    <button type="submit" class="nw-submit-btn">
+                      Request Design Consultation →
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Site Footer -->
+                <footer class="nw-footer">
+                  <div class="nw-footer-top">
+                    <div class="nw-footer-brand">
+                      <div class="nw-footer-logo">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                          <path d="M12 2L4 12h3v8h10v-8h3L12 2z"/>
+                        </svg>
+                        <span>NORTHWOOD</span>
+                      </div>
+                      <p class="nw-footer-tagline">Thoughtful landscapes for a calmer home.</p>
+                    </div>
+                    <div class="nw-footer-meta">
+                      <span class="nw-meta-item">Carmel • Napa Valley • Marin County</span>
+                      <span class="nw-meta-item">contact@northwoodlandscapes.com</span>
+                    </div>
+                  </div>
+                  <div class="nw-footer-bottom">
+                    <span>&copy; 2026 Northwood Landscapes. All rights reserved.</span>
+                    <span class="nw-klyven-badge">Website Redesign &amp; Concept by <strong>KLYVEN STUDIO</strong></span>
+                  </div>
+                </footer>
+              </div>
+
+              <!-- Northwood Project Detail Drawer / Quickview Modal -->
+              <div class="nw-drawer" id="nw-drawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="nw-drawer-title">
+                <div class="nw-drawer-backdrop" id="nw-drawer-backdrop"></div>
+                <div class="nw-drawer-dialog">
+                  <button type="button" class="nw-drawer-close-btn" id="nw-drawer-close-btn" aria-label="Cerrar vista de proyecto">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                  <div class="nw-drawer-hero">
+                    <img src="assets/nw-proj-meadow.jpg" alt="Detalle del proyecto" class="nw-drawer-hero-img" id="nw-drawer-img" />
+                    <div class="nw-drawer-hero-gradient" aria-hidden="true"></div>
+                  </div>
+                  <div class="nw-drawer-body">
+                    <div class="nw-drawer-header-row">
+                      <div class="nw-proj-meta-row">
+                        <span class="nw-proj-badge" id="nw-drawer-badge">01</span>
+                        <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                        <span class="nw-proj-location" id="nw-drawer-location">CARMEL VALLEY • RESIDENCIA</span>
+                      </div>
+                    </div>
+                    <h3 class="nw-drawer-title" id="nw-drawer-title">The Meadow House</h3>
+                    <p class="nw-drawer-narrative" id="nw-drawer-desc">Integración sutil entre arquitectura interior y praderas nativas escalonadas con iluminación rasante.</p>
+                    
+                    <div class="nw-drawer-specs-grid">
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-loc">Ubicación</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-loc">Carmel Valley, CA</span>
+                      </div>
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-area">Superficie</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-area">6,800 m²</span>
+                      </div>
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-year">Año de Ejecución</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-year">2024</span>
+                      </div>
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-scope">Alcance</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-scope">Arquitectura de Paisaje &amp; Iluminación</span>
+                      </div>
+                    </div>
+
+                    <div class="nw-drawer-footer-actions">
+                      <div class="nw-drawer-nav-group">
+                        <button type="button" class="nw-drawer-nav-btn" id="nw-drawer-prev-btn" aria-label="Proyecto anterior">
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                          </svg>
+                          <span id="nw-drawer-prev-text">Anterior</span>
+                        </button>
+                        <button type="button" class="nw-drawer-nav-btn" id="nw-drawer-next-btn" aria-label="Siguiente proyecto">
+                          <span id="nw-drawer-next-text">Siguiente</span>
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </button>
+                      </div>
+                      <a href="#nw-contact-es" class="nw-drawer-cta-btn" id="nw-drawer-cta-btn">
+                        <span id="nw-drawer-cta-text">Consultar proyecto similar</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Framnova Live Application UI -->
+          <div class="project-site-container is-iframe-container" id="project-site-framnova" style="display: none;">
+            <div class="project-iframe-loader" id="project-iframe-loader-framnova">
+              <div class="project-iframe-spinner"></div>
+              <span class="project-iframe-loading-text" data-i18n="work.loadingLive">Cargando aplicación en vivo...</span>
+            </div>
+            <iframe 
+              src="about:blank"
+              data-src="framnova-preview.html"
+              class="project-site-iframe"
+              id="project-framnova-iframe"
+              title="Framnova — Live Application Preview"
+              loading="lazy"
+              allow="clipboard-write"
+            ></iframe>
+          </div>
+
+            <!-- NoLock (GetNoLock) Live Application UI -->
+            <div class="project-site-container is-iframe-container" id="project-site-nolock" style="display: none;">
+              <div class="project-iframe-loader" id="project-iframe-loader">
+                <div class="project-iframe-spinner"></div>
+                <span class="project-iframe-loading-text" data-i18n="work.loadingLive">Cargando aplicación en vivo...</span>
+              </div>
+              <iframe 
+                src="about:blank"
+                data-src="https://getnolock.com/"
+                class="project-site-iframe"
+                id="project-nolock-iframe"
+                title="NoLock — Live Application Preview"
+                loading="lazy"
+                allow="clipboard-write"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Preferences Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title" hidden>
+      <div class="cookie-banner-inner">
+        <div class="cookie-banner-main">
+          <div class="cookie-banner-header">
+            <div class="cookie-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a10 10 0 0 0-1.8 19.8"/>
+                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+                <circle cx="15.5" cy="11.5" r="1" fill="currentColor"/>
+                <circle cx="10" cy="15" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="cookie-banner-text">
+              <h3 class="cookie-banner-title" id="cookie-banner-title" data-i18n="cookies.bannerTitle">Cookie Preferences</h3>
+              <p class="cookie-banner-desc" data-i18n="cookies.bannerDesc" data-i18n-html="true">
+                We use essential technologies to operate this website. With your choice, we may also use optional analytics or marketing cookies to measure visits and improve our services. You can change your preference at any time in <button type="button" class="cookie-settings-link" data-cookie-settings style="text-decoration: underline; color: inherit; font-weight: 600;">Cookie settings</button>. Read our <a href="cookies.html" class="cookie-policy-link">Cookie Policy</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="cookie-banner-actions">
+            <button type="button" class="cookie-btn cookie-btn-essential" id="cookie-btn-essential" data-i18n="cookies.essentialOnly">Reject optional</button>
+            <button type="button" class="cookie-btn cookie-btn-customize" id="cookie-btn-customize" data-i18n="cookies.customize">Customize</button>
+            <button type="button" class="cookie-btn cookie-btn-accept" id="cookie-btn-accept" data-i18n="cookies.acceptAll">Accept all</button>
+            <button type="button" class="cookie-btn cookie-btn-save" id="cookie-btn-save" data-i18n="cookies.savePreferences" hidden>Save preferences</button>
+          </div>
+        </div>
+
+        <!-- Preferences Toggles Panel (Shown when Customize is clicked) -->
+        <div class="cookie-details-panel" id="cookie-details-panel" hidden>
+          <div class="cookie-toggle-row">
+            <div class="cookie-toggle-info">
+              <span class="cookie-toggle-title" data-i18n="cookies.categoryEssential">Essential Storage</span>
+              <span class="cookie-toggle-desc" data-i18n="cookies.categoryEssentialDesc">Required for site navigation and storing your privacy preferences.</span>
+            </div>
+            <span class="cookie-always-active-badge" data-i18n="cookies.alwaysActive">Always active</span>
+          </div>
+
+          <div class="cookie-toggle-row">
+            <div class="cookie-toggle-info">
+              <label for="cookie-analytics-toggle" class="cookie-toggle-title" data-i18n="cookies.categoryAnalytics">Analytics Cookies</label>
+              <span class="cookie-toggle-desc" data-i18n="cookies.categoryAnalyticsDesc">Helps us understand how visitors interact with the site.</span>
+            </div>
+            <label class="switch-control">
+              <input type="checkbox" id="cookie-analytics-toggle" />
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <div class="cookie-toggle-row">
+            <div class="cookie-toggle-info">
+              <label for="cookie-marketing-toggle" class="cookie-toggle-title" data-i18n="cookies.categoryMarketing">Marketing Cookies</label>
+              <span class="cookie-toggle-desc" data-i18n="cookies.categoryMarketingDesc">Used to measure marketing effectiveness and campaigns.</span>
+            </div>
+            <label class="switch-control">
+              <input type="checkbox" id="cookie-marketing-toggle" />
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
