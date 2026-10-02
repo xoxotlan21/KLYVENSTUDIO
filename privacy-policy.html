@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E6EDF6" />
     <title>Privacy Policy — Klyven Studio</title>
     <meta name="description" content="Privacy Policy for Klyven Studio. Learn how we collect, use, and protect your personal information." />
     <link rel="icon" type="image/png" href="logo.png" />
@@ -12,6 +13,10 @@
         var t = localStorage.getItem('klyven_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', t);
         document.documentElement.style.colorScheme = t;
+        if (t === 'dark') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#000000');
+        }
       })();
     </script>
   </head>
@@ -52,169 +57,91 @@
     <!-- Main Content -->
     <main class="legal-container">
       <div class="legal-hero">
-        <span class="legal-kicker" data-i18n="legal.kicker">LEGAL &amp; COMPLIANCE</span>
-        <h1 class="legal-title" data-i18n="legal.privacyTitle">Privacy Policy — Klyven Studio</h1>
-        <p class="legal-updated" data-i18n="legal.updated" data-i18n-html="true">Effective date: September 10, 2026 &nbsp;|&nbsp; Last updated: September 10, 2026</p>
+        <span class="legal-kicker">LEGAL &amp; COMPLIANCE</span>
+        <h1 class="legal-title">Privacy Policy — Klyven Studio</h1>
+        <p class="legal-updated">Effective date: September 10, 2026 &nbsp;|&nbsp; Last updated: September 10, 2026</p>
 
         <!-- Quick Switch Tabs -->
         <nav class="legal-nav-chips" aria-label="Legal policies">
-          <a href="privacy-policy.html" class="legal-chip is-active" data-i18n="legal.navPrivacy">Privacy Policy</a>
-          <a href="terms.html" class="legal-chip" data-i18n="legal.navTerms">Terms &amp; Conditions</a>
-          <a href="cookies.html" class="legal-chip" data-i18n="legal.navCookies">Cookie Policy</a>
-          <a href="refund-policy.html" class="legal-chip" data-i18n="legal.navRefund">Refund &amp; Cancellation</a>
+          <a href="privacy-policy.html" class="legal-chip is-active">Privacy Policy</a>
+          <a href="terms.html" class="legal-chip">Terms &amp; Conditions</a>
+          <a href="cookies.html" class="legal-chip">Cookie Policy</a>
+          <a href="refund-policy.html" class="legal-chip">Refund &amp; Cancellation</a>
         </nav>
       </div>
 
       <article class="legal-card">
-        <!-- English Content -->
-        <div class="legal-content-en" data-lang-block="en">
-          <div class="legal-meta-banner">
-            <strong>Policy Notice:</strong> This privacy notice applies to Klyven Studio’s prospective clients and website visitors in accordance with Mexican data protection regulations and applicable law.
-          </div>
-
-          <h2><span class="legal-section-num">1</span> Identity of the data controller</h2>
-          <p>
-            Klyven Studio is an online web design studio operated by Andrés Peralta, with an address for privacy-related matters at Bosque de Duraznos No. 39, Col. Bosques de las Lomas, Alcaldía Miguel Hidalgo, C.P. 07460, Ciudad de México, México (the “Studio,” “we,” “our,” or “us”). The Studio processes personal data collected through klyvenstudio.com, its contact channels, and its business relationships. Privacy inquiries may be sent to <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>.
-          </p>
-
-          <h2><span class="legal-section-num">2</span> Scope of this notice</h2>
-          <p>
-            This notice applies when a person visits our website, submits an inquiry, asks for a quote, participates in a project discussion, purchases a service, or otherwise contacts the Studio. If a specific service requires a different notice or additional data, we will provide the relevant information when that data is collected. This notice does not automatically govern websites built for our clients; each client is responsible for determining the privacy practices and notices for its own website, subject to the parties’ agreement.
-          </p>
-
-          <h2><span class="legal-section-num">3</span> Categories of personal data</h2>
-          <p>Depending on the interaction, we may process the following information:</p>
-          <ul>
-            <li><strong>Identity and contact data:</strong> including name, email address, telephone number, business name, role, and preferred method of contact.</li>
-            <li><strong>Inquiry and project data:</strong> including messages, design requirements, timelines, estimated budget, content submitted for a project, meeting notes, approvals, and communications.</li>
-            <li><strong>Contract and payment administration data:</strong> including invoicing details, fiscal information needed to issue an invoice, amounts paid, invoice references, and service records. Payment card details are processed directly and securely by authorized third-party payment providers; Klyven Studio does not collect, receive, or store full credit or debit card numbers.</li>
-            <li><strong>Technical data arising from website operation:</strong> such as IP address, browser type, device information, security logs, and cookie identifiers, but only to the extent actually collected by our website or providers.</li>
-          </ul>
-          <p>
-            We do not intentionally request sensitive personal data through general contact forms. Please do not include health information, religious beliefs, or other sensitive information in a routine inquiry. If sensitive data becomes necessary for a particular service, we will explain the purpose and request the form of consent required by applicable law.
-          </p>
-
-          <h2><span class="legal-section-num">4</span> Primary and optional purposes</h2>
-          <p>
-            The Studio uses data to receive and answer inquiries; arrange meetings; assess a proposed project; prepare and communicate estimates and proposals; negotiate, perform, document, and support contracted services; issue invoices; administer payments; keep necessary records; address complaints and legal requests; and maintain the security and operation of its website and communications. These purposes are directly related to a request or service relationship.
-          </p>
-          <p>
-            Separately, and only where a person has chosen it, the Studio may send marketing emails or updates about its work and services. Marketing is optional and is not a condition of requesting a quote. A person can unsubscribe through the message or by contacting <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>.
-          </p>
-
-          <h2><span class="legal-section-num">5</span> Collection and consent</h2>
-          <p>
-            Data is provided directly through website forms, email, phone, meetings, or project materials. Certain technical information may be generated when a person accesses the site. We make this notice available at or before the point of collection where applicable. Where law requires consent for a specific purpose or transfer, we obtain it by an appropriate, distinguishable choice. An unchecked optional marketing choice is separate from the contact request.
-          </p>
-
-          <h2><span class="legal-section-num">6</span> Processors and transfers</h2>
-          <p>
-            We may use third-party service providers to host the site, deliver form submissions, send email, store files, manage projects, process payments, secure infrastructure, or measure visits. Providers receive only the data reasonably necessary for their contracted function and are subject to appropriate arrangements. Our third-party providers include secure cloud hosting and CDN infrastructure, email communication services, and authorized banking and electronic payment gateways operating under industry-standard security and data protection measures.
-          </p>
-          <p>
-            We may disclose data to competent authorities when required by law or to protect legal rights. Other transfers, including any transfer requiring a separate choice under Mexican law, will be described and handled as applicable. We do not sell contact-form submissions to advertisers or unrelated businesses.
-          </p>
-
-          <h2><span class="legal-section-num">7</span> Retention and deletion</h2>
-          <p>
-            We retain contact inquiries for up to 12 months after our last communication if they do not become a project. We retain project files and related communications for up to 2 years after the project ends, unless a longer period is needed to address an outstanding issue. Invoices and accounting records are kept for the period required by applicable Mexican tax law. Website security logs are kept according to our hosting provider’s retention settings. Cookie preferences remain stored in the visitor’s browser until they change their choice or clear their browser data. When the applicable period ends, we delete or anonymize the information unless we are legally required to keep it longer.
-          </p>
-
-          <h2><span class="legal-section-num">8</span> Safeguards</h2>
-          <p>
-            We apply reasonable technical and organizational measures according to the nature of the data and our operations. Measures may include controlled access, account authentication, backups, provider review, and secure communication where available. No online transmission or storage method can guarantee absolute security. If a material security incident affects personal information, we will assess and respond in accordance with applicable law.
-          </p>
-
-          <h2><span class="legal-section-num">9</span> ARCO rights, revocation, and limitation</h2>
-          <p>
-            Data subjects may exercise rights of access, rectification, cancellation, and opposition (ARCO). They may also request limits on the use or disclosure of their data, or revoke consent where legally available. Requests should be sent to <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a> and include the requester’s name, a notification address or contact channel, proof of identity or representative authority when applicable, a clear description of the data and right involved, and any information that helps locate the records. We will process requests under the requirements and deadlines of applicable law. Revocation or cancellation may not apply to data we must retain or process for legal or contractual reasons.
-          </p>
-
-          <h2><span class="legal-section-num">10</span> Minors and third-party data</h2>
-          <p>
-            The website is intended for persons who can lawfully request business services. We do not knowingly solicit personal data from children through general project forms. A client that supplies personal data about its employees, customers, or other third parties must ensure it has an appropriate basis to provide those data to us and must communicate any relevant handling instructions.
-          </p>
-
-          <h2><span class="legal-section-num">11</span> Cookies and changes</h2>
-          <p>
-            Our <a href="cookies.html" class="legal-inline-link">Cookie Policy</a> describes the browser technologies actually in use and the available controls. We may update this notice when our processing changes. We will publish the revised version at <a href="https://klyvenstudio.com/privacy-policy" class="legal-inline-link">https://klyvenstudio.com/privacy-policy</a> with its effective date and, where required, provide additional notice or seek a new choice.
-          </p>
+        <div class="legal-meta-banner">
+          <strong>Extended Policy Notice:</strong> This privacy notice applies to Klyven Studio’s prospective clients and website visitors. Items in <span class="legal-placeholder">[BRACKETS]</span> represent operational and legal details to be confirmed against actual business records and Mexican legal counsel prior to formal publication.
         </div>
 
-        <!-- Spanish Content -->
-        <div class="legal-content-es" data-lang-block="es">
-          <div class="legal-meta-banner">
-            <strong>Aviso de Política:</strong> Este aviso de privacidad aplica a los prospectos de clientes y visitantes del sitio web de Klyven Studio de conformidad con las disposiciones de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y demás legislación aplicable en México.
-          </div>
+        <h2><span class="legal-section-num">1</span> Identity of the data controller</h2>
+        <p>
+          Klyven Studio is the commercial name used by <span class="legal-placeholder">[FULL LEGAL NAME OR REGISTERED BUSINESS NAME]</span>, located at <span class="legal-placeholder">[COMPLETE PHYSICAL BUSINESS ADDRESS, MEXICO]</span> (the “Studio,” “we,” “our,” or “us”). The Studio determines the purposes and means of processing personal data collected through <span class="legal-placeholder">[WEBSITE DOMAIN]</span>, its contact channels, and its business relationships. Privacy inquiries may be sent to <span class="legal-placeholder">[PRIVACY EMAIL]</span>.
+        </p>
 
-          <h2><span class="legal-section-num">1</span> Identidad del responsable del tratamiento</h2>
-          <p>
-            Klyven Studio es un estudio de diseño web en línea operado por Andrés Peralta, con domicilio para temas relacionados con la privacidad en Bosque de Duraznos No. 39, Col. Bosques de las Lomas, Alcaldía Miguel Hidalgo, C.P. 07460, Ciudad de México, México (el “Estudio”, “nosotros” o “nuestro”). El Estudio determina los fines y medios del tratamiento de los datos personales recabados a través de klyvenstudio.com, sus canales de contacto y sus relaciones comerciales. Las consultas sobre privacidad pueden dirigirse a <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>.
-          </p>
+        <h2><span class="legal-section-num">2</span> Scope of this notice</h2>
+        <p>
+          This notice applies when a person visits our website, submits an inquiry, asks for a quote, participates in a project discussion, purchases a service, or otherwise contacts the Studio. If a specific service requires a different notice or additional data, we will provide the relevant information when that data is collected. This notice does not automatically govern websites built for our clients; each client is responsible for determining the privacy practices and notices for its own website, subject to the parties’ agreement.
+        </p>
 
-          <h2><span class="legal-section-num">2</span> Alcance de este aviso</h2>
-          <p>
-            Este aviso aplica cuando una persona visita nuestro sitio web, envía una consulta, solicita una cotización, participa en conversaciones de proyecto, adquiere un servicio o contacta de cualquier otra manera al Estudio. Si un servicio específico requiere un aviso complementario o datos adicionales, proporcionaremos la información correspondiente al recabarlos. Este aviso no rige automáticamente los sitios web que desarrollamos para nuestros clientes; cada cliente es responsable de definir las prácticas y avisos de privacidad para su propio sitio web, con arreglo a lo estipulado en su contrato.
-          </p>
+        <h2><span class="legal-section-num">3</span> Categories of personal data</h2>
+        <p>Depending on the interaction, we may process the following information:</p>
+        <ul>
+          <li><strong>Identity and contact data:</strong> including name, email address, telephone number, business name, role, and preferred method of contact.</li>
+          <li><strong>Inquiry and project data:</strong> including messages, design requirements, timelines, estimated budget, content submitted for a project, meeting notes, approvals, and communications.</li>
+          <li><strong>Contract and payment administration data:</strong> including invoicing details, fiscal information needed to issue an invoice, amounts paid, invoice references, and service records. <span class="legal-placeholder">[VERIFY WHETHER ANY PAYMENT CARD DETAILS ARE PROCESSED BY THE STUDIO OR SOLELY BY A PAYMENT PROVIDER.]</span></li>
+          <li><strong>Technical data arising from website operation:</strong> such as IP address, browser type, device information, security logs, and cookie identifiers, but only to the extent actually collected by our website or providers.</li>
+        </ul>
+        <p>
+          We do not intentionally request sensitive personal data through general contact forms. Please do not include health information, religious beliefs, or other sensitive information in a routine inquiry. If sensitive data becomes necessary for a particular service, we will explain the purpose and request the form of consent required by applicable law.
+        </p>
 
-          <h2><span class="legal-section-num">3</span> Categorías de datos personales</h2>
-          <p>Dependiendo de la interacción, podemos dar tratamiento a los siguientes datos:</p>
-          <ul>
-            <li><strong>Datos de identidad y contacto:</strong> incluyendo nombre completo, correo electrónico, número telefónico, nombre comercial o de la empresa, cargo y método preferido de contacto.</li>
-            <li><strong>Datos de consulta y de proyecto:</strong> incluyendo mensajes, requerimientos de diseño, calendarios, presupuesto estimado, contenidos aportados para el proyecto, notas de reuniones, aprobaciones y comunicaciones.</li>
-            <li><strong>Datos de administración contractual y pagos:</strong> incluyendo información de facturación (RFC, razón social, régimen fiscal), comprobantes de pago, referencias de facturas y registros de servicio. Los datos de tarjetas bancarias son procesados directa y seguramente por plataformas de pago autorizadas; Klyven Studio no recaba ni almacena números completos de tarjeta de crédito o débito.</li>
-            <li><strong>Datos técnicos de navegación:</strong> tales como dirección IP, tipo de navegador, información del dispositivo, registros de seguridad e identificadores de cookies, únicamente en la medida en que sean recabados por nuestro sitio web o proveedores técnicos.</li>
-          </ul>
-          <p>
-            No solicitamos intencionadamente datos personales sensibles mediante los formularios generales de contacto. Le solicitamos no incluir información sobre salud, creencias religiosas u otros datos sensibles en consultas rutinarias. Si dichos datos fuesen indispensables para un servicio específico, informaremos la finalidad y recabaremos el consentimiento expreso exigido por la ley.
-          </p>
+        <h2><span class="legal-section-num">4</span> Primary and optional purposes</h2>
+        <p>
+          The Studio uses data to receive and answer inquiries; arrange meetings; assess a proposed project; prepare and communicate estimates and proposals; negotiate, perform, document, and support contracted services; issue invoices; administer payments; keep necessary records; address complaints and legal requests; and maintain the security and operation of its website and communications. These purposes are directly related to a request or service relationship.
+        </p>
+        <p>
+          Separately, and only where a person has chosen it, the Studio may send marketing emails or updates about its work and services. Marketing is optional and is not a condition of requesting a quote. A person can unsubscribe through the message or by contacting <span class="legal-placeholder">[PRIVACY EMAIL]</span>. <span class="legal-placeholder">[REMOVE THIS PARAGRAPH IF THE STUDIO DOES NOT SEND MARKETING.]</span>
+        </p>
 
-          <h2><span class="legal-section-num">4</span> Finalidades primarias y accesorias</h2>
-          <p>
-            El Estudio utiliza los datos para recibir y atender consultas; agendar reuniones; evaluar el proyecto propuesto; elaborar y comunicar estimaciones y propuestas; negociar, ejecutar, documentar y dar soporte a los servicios contratados; emitir facturas (CFDI); administrar pagos; llevar registros contables; atender requerimientos legales; y mantener la seguridad y operatividad del sitio web y canales de comunicación. Estas finalidades son directamente necesarias para la relación jurídica o solicitud de servicios.
-          </p>
-          <p>
-            De forma complementaria, y únicamente si la persona lo ha elegido expresamente, el Estudio podrá enviar correos electrónicos con novedades de diseño, artículos o actualizaciones de nuestros servicios. La suscripción a estas comunicaciones es voluntaria y no condiciona la solicitud de cotizaciones. El titular puede darse de baja en cualquier momento a través del enlace incluido en el mensaje o escribiendo a <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>.
-          </p>
+        <h2><span class="legal-section-num">5</span> Collection and consent</h2>
+        <p>
+          Data is provided directly through website forms, email, phone, meetings, or project materials. Certain technical information may be generated when a person accesses the site. We make this notice available at or before the point of collection where applicable. Where law requires consent for a specific purpose or transfer, we obtain it by an appropriate, distinguishable choice. An unchecked optional marketing choice is separate from the contact request.
+        </p>
 
-          <h2><span class="legal-section-num">5</span> Recolección y consentimiento</h2>
-          <p>
-            Los datos son provistos directamente a través de formularios del sitio web, correo electrónico, teléfono, reuniones o materiales de trabajo. Determinada información técnica se genera automáticamente al acceder al sitio. Ponemos a disposición este aviso al momento de recabar los datos. Cuando la ley exija consentimiento expreso para una finalidad o transferencia, lo recabaremos mediante una opción clara e independiente. La casilla opcional de comunicaciones informativas se mantiene desmarcada por defecto.
-          </p>
+        <h2><span class="legal-section-num">6</span> Processors and transfers</h2>
+        <p>
+          We may use third-party service providers to host the site, deliver form submissions, send email, store files, manage projects, process payments, secure infrastructure, or measure visits. Providers receive only the data reasonably necessary for their contracted function and are subject to appropriate arrangements. Our actual providers are <span class="legal-placeholder">[INSERT VERIFIED PROVIDERS, SERVICES, LOCATION OR CROSS BORDER PROCESSING AS RELEVANT]</span>.
+        </p>
+        <p>
+          We may disclose data to competent authorities when required by law or to protect legal rights. Other transfers, including any transfer requiring a separate choice under Mexican law, will be described and handled as applicable. We do not sell contact-form submissions to advertisers or unrelated businesses.
+        </p>
 
-          <h2><span class="legal-section-num">6</span> Encargados y transferencias de datos</h2>
-          <p>
-            Podemos apoyarnos en proveedores de servicios tecnológicos para el alojamiento web, entrega de formularios, envío de correos electrónicos, almacenamiento de archivos, gestión de proyectos y procesamiento seguro de pagos. Dichos proveedores reciben únicamente los datos estrictamente necesarios para su función contratada y bajo acuerdos de confidencialidad. Nuestros proveedores externos incluyen infraestructura en la nube y CDN, servicios de correo y plataformas de procesamiento de pagos reguladas que cumplen con estándares de seguridad del sector.
-          </p>
-          <p>
-            Podremos revelar datos a autoridades competentes cuando sea requerido por mandato de ley o para la defensa de derechos legítimos. No vendemos ni comercializamos datos personales recabados a través de formularios con empresas de publicidad ni con terceros ajenos a la prestación del servicio.
-          </p>
+        <h2><span class="legal-section-num">7</span> Retention and deletion</h2>
+        <p>
+          We retain inquiry data for <span class="legal-placeholder">[ACTUAL PERIOD OR DOCUMENTED CRITERION]</span>. Client project and billing records are retained for <span class="legal-placeholder">[ACTUAL PERIOD OR CRITERION]</span>, subject to applicable recordkeeping obligations. Security records and cookie preference records are kept for <span class="legal-placeholder">[ACTUAL PERIOD OR CRITERION]</span>. At the end of the relevant period, information is deleted, anonymized, or retained only where a lawful obligation or justified claim requires it. <span class="legal-placeholder">[Avoid filling these fields with an arbitrary number; match them to actual systems and accounting obligations.]</span>
+        </p>
 
-          <h2><span class="legal-section-num">7</span> Conservación y supresión de datos</h2>
-          <p>
-            Conservamos las consultas de contacto hasta por 12 meses tras nuestra última comunicación si no derivan en un proyecto. Conservamos los archivos de proyectos y comunicaciones relacionadas hasta por 2 años tras la entrega del proyecto, salvo que sea necesario un plazo mayor para atender algún asunto pendiente. Las facturas y registros contables se conservan durante el plazo exigido por las leyes fiscales aplicables en México (Código Fiscal de la Federación). Los registros de seguridad web se conservan según los parámetros de nuestro proveedor de alojamiento. Las preferencias de cookies permanecen en el navegador hasta que el usuario modifique su selección o limpie sus datos de navegación. Concluido el periodo correspondiente, los datos se eliminan o anonimizan conforme a la legislación aplicable.
-          </p>
+        <h2><span class="legal-section-num">8</span> Safeguards</h2>
+        <p>
+          We apply reasonable technical and organizational measures according to the nature of the data and our operations. Measures may include controlled access, account authentication, backups, provider review, and secure communication where available. No online transmission or storage method can guarantee absolute security. If a material security incident affects personal information, we will assess and respond in accordance with applicable law.
+        </p>
 
-          <h2><span class="legal-section-num">8</span> Medidas de seguridad</h2>
-          <p>
-            Implementamos medidas de seguridad administrativas, técnicas y físicas razonables en función de la naturaleza de los datos tratados. Estas medidas comprenden control de accesos, autenticación, copias de seguridad y protocolos de comunicación cifrada cuando están disponibles. Si bien ningún método de transmisión por internet es absolutamente invulnerable, ante cualquier eventualidad de seguridad evaluaremos y actuaremos oportunamente conforme a la ley.
-          </p>
+        <h2><span class="legal-section-num">9</span> ARCO rights, revocation, and limitation</h2>
+        <p>
+          Data subjects may exercise rights of access, rectification, cancellation, and opposition (ARCO). They may also request limits on the use or disclosure of their data, or revoke consent where legally available. Requests should be sent to <span class="legal-placeholder">[PRIVACY EMAIL]</span> and include the requester’s name, a notification address or contact channel, proof of identity or representative authority when applicable, a clear description of the data and right involved, and any information that helps locate the records. We will process requests under the requirements and deadlines of applicable law. Revocation or cancellation may not apply to data we must retain or process for legal or contractual reasons.
+        </p>
 
-          <h2><span class="legal-section-num">9</span> Derechos ARCO, revocación y limitación</h2>
-          <p>
-            Los titulares de datos personales pueden ejercer en cualquier momento sus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO), así como revocar el consentimiento otorgado o limitar el uso o divulgación de sus datos. La solicitud debe remitirse a <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a> e incluir el nombre del solicitante, medio para recibir notificaciones, documento que acredite su identidad o representación legal, descripción clara de los datos y el derecho que desea ejercer, y cualquier información que facilite su localización. Atenderemos la solicitud dentro de los plazos legales previstos por la normativa mexicana.
-          </p>
+        <h2><span class="legal-section-num">10</span> Minors and third-party data</h2>
+        <p>
+          The website is intended for persons who can lawfully request business services. We do not knowingly solicit personal data from children through general project forms. A client that supplies personal data about its employees, customers, or other third parties must ensure it has an appropriate basis to provide those data to us and must communicate any relevant handling instructions.
+        </p>
 
-          <h2><span class="legal-section-num">10</span> Menores de edad y datos de terceros</h2>
-          <p>
-            El sitio web está dirigido a personas con capacidad legal para contratar servicios comerciales. No recabamos deliberadamente datos personales de menores de edad a través de formularios. Cuando un cliente proporcione datos personales relativos a colaboradores o terceros, deberá asegurarse de contar con la base jurídica y consentimiento necesario para compartirlos con nosotros.
-          </p>
-
-          <h2><span class="legal-section-num">11</span> Cookies y actualizaciones</h2>
-          <p>
-            Nuestra <a href="cookies.html" class="legal-inline-link">Política de Cookies</a> describe las tecnologías de almacenamiento empleadas y los controles disponibles. Podremos actualizar este aviso cuando cambien nuestras prácticas de tratamiento. La versión actualizada se publicará en <a href="https://klyvenstudio.com/privacy-policy" class="legal-inline-link">https://klyvenstudio.com/privacy-policy</a> indicando su fecha de entrada en vigor.
-          </p>
-        </div>
+        <h2><span class="legal-section-num">11</span> Cookies and changes</h2>
+        <p>
+          Our <a href="cookies.html" class="legal-inline-link">Cookie Policy</a> describes the browser technologies actually in use and the available controls. We may update this notice when our processing changes. We will publish the revised version at <span class="legal-placeholder">[PRIVACY POLICY URL]</span> with its effective date and, where required, provide additional notice or seek a new choice.
+        </p>
       </article>
     </main>
 
@@ -334,3 +261,4 @@
     <script type="module" src="script.js"></script>
   </body>
 </html>
+

@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E6EDF6" />
+    <title data-i18n="projects.pageTitle">All Projects &amp; Archive — Klyven Studio</title>
+    <meta name="description" content="Explore all website designs, product interfaces, and interactive concepts crafted by Klyven Studio." />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (function() {
+        var t = localStorage.getItem('klyven_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.style.colorScheme = t;
+        if (t === 'dark') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#000000');
+        }
+      })();
+    </script>
+  </head>
+  <body class="projects-page-body">
+    <!-- Projects Page Navigation Header -->
+    <header class="projects-header">
+      <div class="projects-header-inner">
+        <div class="projects-header-left">
+          <a class="footer-logo" href="index.html" aria-label="Klyven Studio Home">
+            <img src="logo.png" alt="KLYVEN STUDIO logo" width="32" height="32" class="footer-logo-img" />
+            <span class="footer-brand-name">KLYVEN STUDIO</span>
+          </a>
+        </div>
+
+        <div class="projects-header-actions">
+          <a href="index.html" class="projects-back-btn">
+            <span data-i18n="projects.backHome">← Back to Home</span>
+          </a>
+          <button class="theme-toggle-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+            <svg class="theme-sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+            <svg class="theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <button class="lang-btn" type="button" aria-label="Cambiar a Español" title="Cambiar a Español">
+            <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="lang-btn-text">ES</span>
+          </button>
+          <a href="index.html#contact" class="projects-cta-btn" data-i18n="hero.btnStart">
+            Start a project
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Header -->
+      <section class="projects-hero">
+        <span class="projects-kicker" data-i18n="projects.kicker">PORTFOLIO &amp; ARCHIVE</span>
+        <h1 class="projects-title" data-i18n="projects.title">All Projects &amp; Concept Works</h1>
+        <p class="projects-subtitle" data-i18n="projects.subtitle">A complete collection of custom websites, product interfaces, and interactive digital concepts crafted by Klyven Studio.</p>
+
+        <!-- Category Filter Tabs -->
+        <div class="projects-filter-wrap">
+          <div class="projects-filter-bar" role="tablist" aria-label="Project filter categories">
+            <button class="project-filter-chip is-active" data-filter="all" type="button" data-i18n="projects.filterAll">All Projects</button>
+            <button class="project-filter-chip" data-filter="website" type="button" data-i18n="projects.filterWebsites">Websites &amp; Redesign</button>
+            <button class="project-filter-chip" data-filter="product" type="button" data-i18n="projects.filterProducts">Digital Products &amp; SaaS</button>
+            <button class="project-filter-chip" data-filter="concept" type="button" data-i18n="projects.filterConcepts">Concepts &amp; Brand</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Grid -->
+      <section class="projects-container" aria-label="Projects catalog">
+        <div class="portfolio-grid">
+
+          <!-- 01. CloakGPT — Stealth AI Assistant (Featured Principal) -->
+          <article class="portfolio-card portfolio-card-featured" data-category="product">
+            <div class="portfolio-preview-wrap" data-open-project="cloakgpt" title="Abrir vista previa de CloakGPT">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.cloakgpt.ca</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-cloakgpt.png" alt="CloakGPT — The Stealth AI Assistant preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Digital Product • macOS &amp; Windows</span>
+                <span class="portfolio-badge portfolio-badge-live" data-i18n="projects.tagLive">Live Product</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.cloakgptTitle">CloakGPT — Stealth AI Assistant</h2>
+              <p class="portfolio-desc" data-i18n="projects.cloakgptDesc">A native stealth AI assistant for macOS and Windows that lives in your notch or taskbar. Summon ChatGPT, Claude, Gemini &amp; Perplexity with a triple-click, invisible on screen share.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">macOS Notch App</span>
+                <span class="portfolio-tag">Multi-Model AI</span>
+                <span class="portfolio-tag">Invisible Screen Share</span>
+                <span class="portfolio-tag">Next.js &amp; Electron</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="cloakgpt">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://www.cloakgpt.ca/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02. Framnova Chrome Extension -->
+          <article class="portfolio-card" data-category="product">
+            <div class="portfolio-preview-wrap" data-open-project="framnova" title="Abrir vista previa de Framnova">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.framnova.com</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-framnova.png" alt="Framnova — Screenshot to AI Chrome Extension preview" class="work-browser-img" loading="lazy" width="1024" height="584" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Chrome Extension • SaaS</span>
+                <span class="portfolio-badge portfolio-badge-live" data-i18n="projects.tagLive">Live Product</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="work.p2Title">Framnova</h2>
+              <p class="portfolio-desc" data-i18n="work.p2Desc">Capture multiple webpage regions, preserve their order, and deliver approved visual context directly to ChatGPT, Claude, and Gemini.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Chrome MV3</span>
+                <span class="portfolio-tag">Visual Context</span>
+                <span class="portfolio-tag">AI Chat Integration</span>
+                <span class="portfolio-tag">High-Speed Canvas</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="framnova">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://www.framnova.com/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03. GetnoLock Web Platform -->
+          <article class="portfolio-card" data-category="product">
+            <div class="portfolio-preview-wrap" data-open-project="nolock" title="Abrir vista previa de GetnoLock">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.getnolock.com</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-getnolock.png" alt="GetnoLock — Digital platform design preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Web Application • Platform</span>
+                <span class="portfolio-badge portfolio-badge-live" data-i18n="projects.tagLive">Live Platform</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="work.p3Title">GetnoLock — Design</h2>
+              <p class="portfolio-desc" data-i18n="work.p3Desc">A clean digital experience with bold messaging, conversion architecture, and clear calls to action for high-velocity user activation.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Conversion Architecture</span>
+                <span class="portfolio-tag">Dark Aesthetic</span>
+                <span class="portfolio-tag">Instant Setup</span>
+                <span class="portfolio-tag">Responsive UX</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="nolock">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://getnolock.com/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Northwood Landscape Architecture -->
+          <article class="portfolio-card" data-category="website">
+            <div class="portfolio-preview-wrap" data-open-project="northwood" title="Abrir concepto completo de Northwood">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.northwoodlandscapes.com</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-northwood.jpg" alt="Northwood — Landscape architecture website redesign preview" class="work-browser-img" loading="lazy" width="1024" height="535" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Website Redesign • Architecture</span>
+                <span class="portfolio-badge portfolio-badge-concept" data-i18n="projects.tagConcept">Concept Project</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="work.p1Title">Northwood — Website Redesign</h2>
+              <p class="portfolio-desc" data-i18n="work.p1Desc">A clearer way to present high-end outdoor architecture services and guide visitors to contact. Features interactive 3D lighting, an editorial bento layout, and a custom consultation drawer.</p>
+              
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Landscape Architecture</span>
+                <span class="portfolio-tag">Living 3D Scene</span>
+                <span class="portfolio-tag">Editorial Bento</span>
+                <span class="portfolio-tag">Consultation Drawer</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="northwood">
+                  <span data-i18n="projects.viewInteractive">View interactive concept</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07. ALPEZ Private Bus Rental & Real Tours -->
+          <article class="portfolio-card" data-category="website">
+            <div class="portfolio-preview-wrap" data-open-project="alpez" title="Abrir vista previa de ALPEZ">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.alpez-realtours.com</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-alpez.png" alt="ALPEZ — Autobuses privados desde Monterrey preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Website • Transportation &amp; Fleet</span>
+                <span class="portfolio-badge portfolio-badge-live-concept" data-i18n="projects.tagLiveConcept">Live Concept</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.alpezTitle">ALPEZ — Private Bus Rental</h2>
+              <p class="portfolio-desc" data-i18n="projects.alpezDesc">High-impact digital platform and interactive trip quote engine for executive private bus rentals and group transportation from Monterrey across Mexico.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Interactive Quote Engine</span>
+                <span class="portfolio-tag">Fleet Showroom</span>
+                <span class="portfolio-tag">Sticky Capsule Nav</span>
+                <span class="portfolio-tag">Corporate Travel</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="alpez">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://6abc2d0d442f2e07682bc185--jolly-narwhal-e64805.netlify.app/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 08. DriverVan Chauffeur Van Rental CDMX -->
+          <article class="portfolio-card" data-category="website">
+            <div class="portfolio-preview-wrap" data-open-project="drivervan" title="Abrir vista previa de DriverVan">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.drivervan.mx</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-drivervan.jpg" alt="DriverVan — Renta de camionetas con chofer en CDMX preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Website • Executive Mobility</span>
+                <span class="portfolio-badge portfolio-badge-live-concept" data-i18n="projects.tagLiveConcept">Live Concept</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.drivervanTitle">DriverVan — Chauffeur Van Rental CDMX</h2>
+              <p class="portfolio-desc" data-i18n="projects.drivervanDesc">Modern booking and fleet showcase platform for private van and SUV rentals with professional chauffeurs in Mexico City and nationwide.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Fleet Catalog</span>
+                <span class="portfolio-tag">Instant Booking Flow</span>
+                <span class="portfolio-tag">Executive Mobility</span>
+                <span class="portfolio-tag">Responsive UI</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="drivervan">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://6abad7df3e35caa7f8bf7ff9--stellar-narwhal-8ebea1.netlify.app/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 09. VETQ Corporate & Tourism Mobility -->
+          <article class="portfolio-card" data-category="website">
+            <div class="portfolio-preview-wrap" data-open-project="vetq" title="Abrir vista previa de VETQ">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.vetq.mx</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-vetq.jpg" alt="VETQ — Viajes Empresariales y Turísticos Querétaro preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Website • Enterprise Transport</span>
+                <span class="portfolio-badge portfolio-badge-live-concept" data-i18n="projects.tagLiveConcept">Live Concept</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.vetqTitle">VETQ — Corporate &amp; Tourism Mobility</h2>
+              <p class="portfolio-desc" data-i18n="projects.vetqDesc">Cinematic panoramic web experience showcasing corporate personnel transport, airport transfers, and guided regional tourism across Querétaro.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Cinematic Hero</span>
+                <span class="portfolio-tag">Fleet Slideshow</span>
+                <span class="portfolio-tag">Glassmorphism Nav</span>
+                <span class="portfolio-tag">Enterprise Mobility</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="vetq">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://majestic-chebakia-e92c3d.netlify.app/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Igloo Design & Web Studio London -->
+          <article class="portfolio-card" data-category="website">
+            <div class="portfolio-preview-wrap" data-open-project="igloo" title="Abrir vista previa de Igloo">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.igloo.co</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-igloo.png" alt="Igloo — London design & web studio preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Agency • Web &amp; Brand Design</span>
+                <span class="portfolio-badge portfolio-badge-live" data-i18n="projects.tagLive">Live Website</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.iglooTitle">Igloo — Design &amp; Web Studio</h2>
+              <p class="portfolio-desc" data-i18n="projects.iglooDesc">Bespoke digital design, branding, and high-performance web development studio based in London crafting tailor-made digital flagships.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">London Studio</span>
+                <span class="portfolio-tag">Bespoke Web Design</span>
+                <span class="portfolio-tag">Brand Identity</span>
+                <span class="portfolio-tag">Performance Engineering</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="igloo">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://igloo.co/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Raycast Supercharged Launcher & AI -->
+          <article class="portfolio-card" data-category="product">
+            <div class="portfolio-preview-wrap" data-open-project="raycast" title="Abrir vista previa de Raycast">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.raycast.com</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-raycast.png" alt="Raycast — Supercharged desktop launcher & AI preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">Desktop App • Productivity &amp; AI</span>
+                <span class="portfolio-badge portfolio-badge-live" data-i18n="projects.tagLive">Live Product</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.raycastTitle">Raycast — Supercharged Launcher &amp; AI</h2>
+              <p class="portfolio-desc" data-i18n="projects.raycastDesc">An ultra-fast, extendable desktop launcher for macOS and Windows with integrated AI, script commands, and an expansive developer store.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Productivity Launcher</span>
+                <span class="portfolio-tag">Raycast AI</span>
+                <span class="portfolio-tag">Developer Ecosystem</span>
+                <span class="portfolio-tag">Speed &amp; Polish</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="raycast">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://www.raycast.com/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. Ferm Living Danish Design & Interiors -->
+          <article class="portfolio-card" data-category="website">
+            <div class="portfolio-preview-wrap" data-open-project="fermliving" title="Abrir vista previa de Ferm Living">
+              <div class="work-browser-bar">
+                <div class="work-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="work-address">
+                  <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                  <span>www.fermliving.com</span>
+                </div>
+                <div class="work-kebab" aria-hidden="true"><i></i><i></i><i></i></div>
+              </div>
+              <img src="assets/work-fermliving.webp" alt="Ferm Living — Danish design and furniture preview" class="work-browser-img" loading="lazy" width="1024" height="538" />
+            </div>
+
+            <div class="portfolio-details">
+              <div class="portfolio-meta-top">
+                <span class="portfolio-category">E-Commerce • Interior Architecture</span>
+                <span class="portfolio-badge portfolio-badge-live" data-i18n="projects.tagLive">Live Website</span>
+              </div>
+              <h2 class="portfolio-title" data-i18n="projects.fermlivingTitle">Ferm Living — Danish Design &amp; Interiors</h2>
+              <p class="portfolio-desc" data-i18n="projects.fermlivingDesc">Authentic Scandinavian furniture, lighting, and home accessories e-commerce experience rooted in Danish design traditions.</p>
+
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Danish Design</span>
+                <span class="portfolio-tag">Curated E-Commerce</span>
+                <span class="portfolio-tag">Interior Architecture</span>
+                <span class="portfolio-tag">Artisan Lifestyle</span>
+              </div>
+
+              <div class="portfolio-actions">
+                <button type="button" class="portfolio-btn-primary" data-open-project="fermliving">
+                  <span data-i18n="projects.openPreview">Open preview</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <a href="https://fermliving.com/" target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary">
+                  <span data-i18n="projects.visitLive">Visit live site</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bottom Studio CTA Banner -->
+      <section class="projects-cta-section">
+        <div class="projects-cta-box">
+          <h2 class="projects-cta-title" data-i18n="cta.title">Have a website in mind?</h2>
+          <p class="projects-cta-desc" data-i18n="cta.copy">Let’s build something your business can be proud of.</p>
+          <div class="projects-cta-buttons">
+            <a href="index.html#contact" class="work-all-btn">
+              <span data-i18n="cta.startProject">Start a project</span>
+              <span class="work-all-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="https://wa.me/5216568600778?text=Hello%2C%20I%20would%20like%20to%20start%20a%20website%20project%20with%20Klyven%20Studio." target="_blank" rel="noopener noreferrer" class="portfolio-btn-secondary" style="padding: 13px 28px; font-size: 15px; font-weight: 650;">
+              <span data-i18n="cta.whatsapp">WhatsApp</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Standard Studio Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top-grid">
+          <div class="footer-brand-col">
+            <a class="footer-logo" href="index.html" aria-label="KLYVEN STUDIO">
+              <img src="logo.png" alt="KLYVEN STUDIO logo" width="32" height="32" class="footer-logo-img" />
+              <span class="footer-brand-name">KLYVEN STUDIO</span>
+            </a>
+            <p class="footer-tagline" data-i18n="footer.tagline">
+              Websites that make your business impossible to overlook.
+            </p>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading" data-i18n="footer.navTitle">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="index.html#work" data-i18n="nav.work">Work</a></li>
+              <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+              <li><a href="index.html#pricing" data-i18n="nav.prices">Prices</a></li>
+              <li><a href="index.html#contact" data-i18n="nav.contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading" data-i18n="footer.legalTitle">Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+              <li><a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a></li>
+              <li><a href="cookies.html" data-i18n="footer.cookies">Cookie Policy</a></li>
+              <li><a href="refund-policy.html" data-i18n="footer.refund">Refund &amp; Cancellation Policy</a></li>
+              <li><button type="button" class="cookie-settings-link" data-cookie-settings data-i18n="footer.cookieSettings">Cookie settings</button></li>
+              <li><a href="index.html#contact" data-i18n="footer.contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <p class="footer-copyright" data-i18n="footer.copyright">
+            © 2026 Klyven Studio. All rights reserved.
+          </p>
+          <p class="footer-copyright-expanded" data-i18n="footer.copyrightExpanded">
+            Original content and visual materials owned by Klyven Studio are protected by applicable intellectual property law. Client logos, project screenshots, photographs, fonts, trademarks, and other third-party materials remain subject to the rights of their respective owners and to applicable permissions or licenses. No permission to reuse those third-party materials is granted by their appearance on this website.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Browser Modal Window (For Viewing Any Project Concept) -->
+<div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="project-modal-backdrop" id="project-modal-backdrop"></div>
+      
+      <div class="project-modal-dialog">
+        <!-- Floating Browser Shell -->
+        <div class="project-browser-window" id="project-browser-window">
+          <!-- Window Header / Browser Bar -->
+          <div class="project-browser-bar">
+            <div class="project-browser-controls">
+              <button type="button" class="ctrl-dot ctrl-close" id="project-modal-close-dot" title="Cerrar ventana" aria-label="Cerrar ventana"></button>
+              <span class="ctrl-dot ctrl-min" aria-hidden="true"></span>
+              <span class="ctrl-dot ctrl-max" aria-hidden="true"></span>
+            </div>
+            
+            <div class="project-browser-url-pill">
+              <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor" aria-hidden="true">
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+              <span class="project-browser-url">https://www.northwoodlandscapes.com</span>
+            </div>
+
+            <div class="project-browser-actions">
+              <a href="https://getnolock.com/" target="_blank" rel="noopener noreferrer" class="project-modal-live-link" id="project-modal-live-link" title="Abrir sitio web oficial en pestaña nueva" aria-label="Abrir web oficial" style="display: none;">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span class="live-link-text" data-i18n="work.openLiveSite">Abrir web oficial</span>
+              </a>
+              <button type="button" class="project-modal-close-btn" id="project-modal-close-btn" aria-label="Cerrar vista previa">
+                <span class="close-btn-text">ESC</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Scrollable Website Content Inside Browser Frame -->
+          <div class="project-browser-viewport" id="project-browser-viewport">
+            <!-- Northwood Full Website UI -->
+            <div class="project-site-container" id="project-site-northwood">
+              <div class="nw-site">
+
+              <!-- Spanish Language Block -->
+              <div class="nw-lang-block" data-lang-block="es">
+                <!-- Interactive Living Hero Section -->
+                <header class="nw-hero">
+                  <!-- Northwood Top Navigation -->
+                  <nav class="nw-nav">
+                    <div class="nw-nav-brand">
+                      <svg class="nw-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L4 14h4v6h8v-6h4L12 2z"/>
+                      </svg>
+                      <span class="nw-nav-logo">NORTHWOOD</span>
+                    </div>
+                    <div class="nw-nav-links">
+                      <a href="#nw-services-es" class="nw-nav-link">Servicios</a>
+                      <a href="#nw-portfolio-es" class="nw-nav-link">Proyectos</a>
+                      <a href="#nw-about-es" class="nw-nav-link">Nosotros</a>
+                    </div>
+                    <div class="nw-nav-cta">
+                      <a href="#nw-consult-es" class="nw-btn-quote">Pedir Presupuesto</a>
+                    </div>
+                  </nav>
+
+                  <!-- Main Hero Content -->
+                  <div class="nw-hero-content">
+                    <span class="nw-hero-kicker">ESPACIOS EXTERIORES PARA EL DÍA A DÍA</span>
+                    <h1 class="nw-hero-title">Paisajes pensados para un hogar con serenidad.</h1>
+                    <p class="nw-hero-subtitle">Diseño, construcción y cuidado de espacios exteriores hermosos que se sienten como un hogar.</p>
+
+                    <div class="nw-hero-actions">
+                      <a href="#nw-services-es" class="nw-hero-btn nw-hero-btn-primary">
+                        <span>Nuestros Servicios</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                      <a href="#nw-portfolio-es" class="nw-hero-btn nw-hero-btn-secondary">
+                        Ver Proyectos
+                      </a>
+                    </div>
+
+                    <!-- Bottom 3-Column Features -->
+                    <div class="nw-hero-features">
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Diseño de Paisaje</h4>
+                        <p class="nw-feat-desc">Del concepto al plano</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Construcción e Instalación</h4>
+                        <p class="nw-feat-desc">Elaborado con cuidado</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Mantenimiento Continuo</h4>
+                        <p class="nw-feat-desc">Espacios que perduran</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+
+                <!-- The Northwood Way / Editorial Bento Philosophy Section -->
+                <section class="nw-bento-section" id="nw-about-es">
+                  <!-- Header Area -->
+                  <div class="nw-bento-header">
+                    <div class="nw-bento-kicker-row">
+                      <span class="nw-bento-kicker">THE NORTHWOOD WAY</span>
+                      <span class="nw-bento-line" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="nw-bento-title-row">
+                      <h2 class="nw-bento-title">Paisajes creados<br />para vivirlos de verdad.</h2>
+                      <div class="nw-bento-intro">
+                        <p class="nw-bento-desc">
+                          Diseñamos jardines que conectan tu hogar con la belleza natural de California — creando espacios exteriores fluidos, duraderos y en total armonía con su entorno.
+                        </p>
+                        <a href="#nw-portfolio-es" class="nw-bento-btn">
+                          <span>Explorar proyectos</span>
+                          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bento Grid Mosaic -->
+                  <div class="nw-bento-grid">
+                    <!-- Left Tall Hero Card (01 / Considered Design) -->
+                    <div class="nw-bento-card nw-bento-hero-card">
+                      <img src="assets/nw-bento-hero.jpg" alt="Considered landscape design with illuminated stone stairs" class="nw-bento-img" loading="lazy" />
+                      <div class="nw-bento-overlay-pill">
+                        <span class="nw-bento-tag">01 / DISEÑO PENSADO</span>
+                        <a href="#nw-portfolio-es" class="nw-bento-circle-btn" aria-label="Ver diseño pensado">
+                          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Center Column (2 top cards + 2 metrics + 1 wide landscape) -->
+                    <div class="nw-bento-col-center">
+                      <!-- Center Top Row: Philosophy Card + Native Planting Card -->
+                      <div class="nw-bento-row-top">
+                        <!-- Card 2: Designed Around Nature (Dark Editorial Card) -->
+                        <div class="nw-bento-card nw-bento-nature-card">
+                          <div class="nw-bento-topo-pattern" aria-hidden="true">
+                            <svg viewBox="0 0 300 240" fill="none" stroke="rgba(52, 211, 153, 0.08)" stroke-width="1.2">
+                              <path d="M-20,40 Q60,10 140,50 T320,30" />
+                              <path d="M-20,80 Q70,40 150,90 T320,70" />
+                              <path d="M-20,120 Q80,70 160,130 T320,110" />
+                              <path d="M-20,160 Q90,100 170,170 T320,150" />
+                              <path d="M-20,200 Q100,130 180,210 T320,190" />
+                            </svg>
+                          </div>
+                          <div class="nw-bento-nature-body">
+                            <h3 class="nw-bento-nature-title">Diseñado<br />con la naturaleza.</h3>
+                            <p class="nw-bento-nature-text">
+                              Trabajamos con el microclima, la luz solar y la flora nativa de tu terreno para crear paisajes que pertenecen a este lugar — y florecen con los años.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Card 3: Native Planting Photo Card -->
+                        <div class="nw-bento-card nw-bento-planting-card">
+                          <img src="assets/nw-bento-planting.jpg" alt="Native California olive tree planting" class="nw-bento-img" loading="lazy" />
+                          <div class="nw-bento-overlay-pill">
+                            <span class="nw-bento-tag">02 / FLORA NATIVA</span>
+                            <a href="#nw-services-es" class="nw-bento-circle-btn" aria-label="Ver flora nativa">
+                              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Middle Row: 2 Metric Cards -->
+                      <div class="nw-bento-row-metrics">
+                        <!-- Card 4: 140+ spaces crafted -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">140+</span>
+                            <span class="nw-bento-metric-lbl">espacios creados</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.2A7 7 0 0 1 11 20z"></path>
+                              <path d="m2 21 9-9"></path>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- Card 5: 15 years experience -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">15</span>
+                            <span class="nw-bento-metric-lbl">años de trayectoria</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                              <path d="M12 2L5 13h3.5v7h7v-7H19L12 2z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Bottom Row: Stone Landscape Photo -->
+                      <div class="nw-bento-card nw-bento-stone-card">
+                        <img src="assets/nw-bento-stone.jpg" alt="Sculptural stone and native landscaping craftsmanship" class="nw-bento-img" loading="lazy" />
+                      </div>
+                    </div>
+
+                    <!-- Right Tall Water Feature Card -->
+                    <div class="nw-bento-card nw-bento-water-card">
+                      <img src="assets/nw-bento-water.jpg" alt="Architectural natural stone water fountain with warm backlighting" class="nw-bento-img" loading="lazy" />
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Featured Projects / Portfolio Highlights -->
+                <div class="nw-portfolio-section" id="nw-portfolio-es">
+                  <div class="nw-proj-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">TRABAJOS SELECCIONADOS / 01—03</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="nw-proj-title-row">
+                      <h3 class="nw-proj-title">Espacios moldeados por el lugar al que pertenecen.</h3>
+                      <a href="#nw-contact-es" class="nw-proj-btn-all">Ver todos los proyectos ↗</a>
+                    </div>
+                  </div>
+
+                  <div class="nw-proj-grid">
+                    <!-- Large Project Card Left -->
+                    <article class="nw-proj-card nw-proj-card-main" data-nw-project="meadow" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles de The Meadow House">
+                      <div class="nw-proj-media">
+                        <img src="assets/nw-proj-meadow.jpg" alt="The Meadow House — Carmel Valley Residence" class="nw-proj-img" loading="lazy" />
+                        <div class="nw-proj-overlay" aria-hidden="true"></div>
+                        <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                      </div>
+
+                      <div class="nw-proj-content">
+                        <div class="nw-proj-info">
+                          <div class="nw-proj-meta-row">
+                            <span class="nw-proj-badge">01</span>
+                            <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                            <span class="nw-proj-location">CARMEL VALLEY • RESIDENCIA</span>
+                          </div>
+                          <h4 class="nw-proj-card-title">The Meadow House</h4>
+                          <p class="nw-proj-card-sub">Pabellón contemporáneo y praderas nativas escalonadas con iluminación rasante</p>
+                        </div>
+                        <div class="nw-proj-action" aria-hidden="true">
+                          <span class="nw-proj-arrow-circle">
+                            <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- Stack of 2 Project Cards Right -->
+                    <div class="nw-proj-stack">
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="oakridge" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles de Oakridge Residence">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-oakridge.jpg" alt="Oakridge Residence — Napa Valley Vineyard" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">02</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">NAPA VALLEY • VIÑEDO</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Oakridge Residence</h4>
+                            <p class="nw-proj-card-sub">Estanque reflectante en piedra caliza y terrazas de olivos</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="hillside" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles de Hillside Sanctuary">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-hillside.jpg" alt="Hillside Sanctuary — Marin County Hillside Garden" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">03</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">CONDADO DE MARÍN • JARDÍN EN COLINA</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Hillside Sanctuary</h4>
+                            <p class="nw-proj-card-sub">Pérgola en madera noble y escalinatas pétreas iluminadas</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comprehensive Services / Capabilities -->
+                <div class="nw-capabilities-section" id="nw-services-es" data-nw-cap-section>
+                  <div class="nw-cap-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">CAPACIDADES / 01 — 04</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="nw-cap-title">Del primer trazo al cuidado duradero.</h3>
+                    <p class="nw-cap-subtitle">Diseño integral, construcción y cuidado del paisaje — concebidos para lugares extraordinarios y una forma de vida más vibrante.</p>
+                  </div>
+
+                  <!-- Panoramic Viewer -->
+                  <div class="nw-cap-viewer">
+                    <div class="nw-cap-banner-wrap">
+                      <img src="assets/nw-cap-banner-01.jpg" alt="01 · Planificación Maestra y Modelado 3D" class="nw-cap-banner-img" data-banner-idx="0" />
+                      <img src="assets/nw-cap-banner-02.jpg" alt="02 · Cantería Arquitectónica y Terrazas" class="nw-cap-banner-img is-active" data-banner-idx="1" />
+                      <img src="assets/nw-cap-banner-03.jpg" alt="03 · Elementos de Agua y Piscinas a Medida" class="nw-cap-banner-img" data-banner-idx="2" />
+                      <img src="assets/nw-cap-banner-04.jpg" alt="04 · Iluminación Escultural y Riego Inteligente" class="nw-cap-banner-img" data-banner-idx="3" />
+                    </div>
+
+                    <!-- Overlaid Left Glass Panel -->
+                    <div class="nw-cap-glass-panel">
+                      <div class="nw-cap-panel-num-row">
+                        <span class="nw-cap-panel-num">02</span>
+                        <span class="nw-cap-panel-line" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-panel-category">CANTERÍA ARQUITECTÓNICA Y TERRAZAS</span>
+                      <h4 class="nw-cap-panel-title">Arraigado en materiales imperecederos.</h4>
+                      <p class="nw-cap-panel-desc">Muros de piedra seca, caminos de granito, fogateros y terrazas en madera sostenible.</p>
+                    </div>
+
+                    <!-- Circular Next Arrow Button -->
+                    <button type="button" class="nw-cap-arrow-btn" aria-label="Siguiente capacidad" title="Siguiente capacidad">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- 4-Stage Horizontal Navigation -->
+                  <div class="nw-cap-nav" role="tablist" aria-label="Navegación de Capacidades">
+                    <!-- Stage 01 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="0">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-01.jpg" alt="Planificación Maestra y Modelado 3D" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">01</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">PLANIFICACIÓN MAESTRA Y MODELADO 3D</span>
+                    </button>
+
+                    <!-- Stage 02 (Active default) -->
+                    <button type="button" class="nw-cap-nav-item active" role="tab" aria-selected="true" data-cap-idx="1">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-02.jpg" alt="Cantería Arquitectónica y Terrazas" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">02</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">CANTERÍA ARQUITECTÓNICA Y TERRAZAS</span>
+                    </button>
+
+                    <!-- Stage 03 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="2">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-03.jpg" alt="Elementos de Agua y Piscinas a Medida" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">03</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">ELEMENTOS DE AGUA Y PISCINAS A MEDIDA</span>
+                    </button>
+
+                    <!-- Stage 04 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="3">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-04.jpg" alt="Iluminación Escultural y Riego Inteligente" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">04</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">ILUMINACIÓN ESCULTURAL Y RIEGO INTELIGENTE</span>
+                    </button>
+                  </div>
+                </div>
+
+
+                <!-- Testimonial Quote -->
+                <div class="nw-quote-box">
+                  <div class="nw-stars">★★★★★</div>
+                  <blockquote class="nw-quote-text">
+                    “Northwood transformó una ladera inclinada e inutilizable en el espacio favorito de nuestra familia. La iluminación rasante al caer la noche es sencillamente una obra de arte.”
+                  </blockquote>
+                  <div class="nw-quote-author">
+                    <strong>Julian &amp; Claire Vance</strong>
+                    <span>Propietarios en Carmel Valley, CA</span>
+                  </div>
+                </div>
+
+                <!-- Consultation / Contact Form Section -->
+                <div class="nw-consult-section" id="nw-consult-es">
+                  <div class="nw-consult-header">
+                    <span class="nw-kicker">INICIAR UN PROYECTO</span>
+                    <h3 class="nw-section-title">Comienza la transformación de tu espacio exterior.</h3>
+                    <p class="nw-desc">Agenda una sesión de consulta personalizada con nuestros arquitectos del paisaje.</p>
+                  </div>
+
+                  <form class="nw-form" onsubmit="event.preventDefault(); alert('¡Gracias por tu interés en Northwood Landscapes! Esta es una demostración conceptual desarrollada por Klyven Studio.');">
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Nombre Completo</label>
+                        <input type="text" class="nw-input" placeholder="Tu nombre..." required />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Correo Electrónico</label>
+                        <input type="email" class="nw-input" placeholder="tu@correo.com" required />
+                      </div>
+                    </div>
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Ubicación de la Propiedad</label>
+                        <input type="text" class="nw-input" placeholder="Ej. Carmel, Napa, Valle de Bravo..." />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Tipo de Proyecto</label>
+                        <select class="nw-select">
+                          <option>Diseño Integral &amp; Construcción</option>
+                          <option>Rediseño de Patio &amp; Terrazas</option>
+                          <option>Piscinas &amp; Espejos de Agua</option>
+                          <option>Paisajismo &amp; Riego Sustentable</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="nw-form-group">
+                      <label class="nw-label">Detalles del Proyecto</label>
+                      <textarea class="nw-textarea" rows="3" placeholder="Cuéntanos brevemente sobre tu espacio o visión..."></textarea>
+                    </div>
+                    <button type="submit" class="nw-submit-btn">
+                      Solicitar Consulta de Diseño →
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Site Footer -->
+                <footer class="nw-footer" id="nw-contact-es">
+                  <div class="nw-footer-top">
+                    <div class="nw-footer-brand">
+                      <div class="nw-footer-logo">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                          <path d="M12 2L4 12h3v8h10v-8h3L12 2z"/>
+                        </svg>
+                        <span>NORTHWOOD</span>
+                      </div>
+                      <p class="nw-footer-tagline">Paisajes pensados para un hogar con serenidad.</p>
+                    </div>
+                    <div class="nw-footer-meta">
+                      <span class="nw-meta-item">Carmel • Napa Valley • Marin County</span>
+                      <span class="nw-meta-item">contacto@northwoodlandscapes.com</span>
+                    </div>
+                  </div>
+                  <div class="nw-footer-bottom">
+                    <span>&copy; 2026 Northwood Landscapes. Todos los derechos reservados.</span>
+                    <span class="nw-klyven-badge">Rediseño Web y Concepto por <strong>KLYVEN STUDIO</strong></span>
+                  </div>
+                </footer>
+              </div>
+
+              <!-- English Language Block -->
+              <div class="nw-lang-block" data-lang-block="en">
+                <!-- Interactive Living Hero Section -->
+                <header class="nw-hero">
+                  <!-- Northwood Top Navigation -->
+                  <nav class="nw-nav">
+                    <div class="nw-nav-brand">
+                      <svg class="nw-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L4 14h4v6h8v-6h4L12 2z"/>
+                      </svg>
+                      <span class="nw-nav-logo">NORTHWOOD</span>
+                    </div>
+                    <div class="nw-nav-links">
+                      <a href="#nw-services-en" class="nw-nav-link">Services</a>
+                      <a href="#nw-portfolio-en" class="nw-nav-link">Projects</a>
+                      <a href="#nw-about-en" class="nw-nav-link">About</a>
+                    </div>
+                    <div class="nw-nav-cta">
+                      <a href="#nw-consult-en" class="nw-btn-quote">Get a Quote</a>
+                    </div>
+                  </nav>
+
+                  <!-- Main Hero Content -->
+                  <div class="nw-hero-content">
+                    <span class="nw-hero-kicker">OUTDOOR SPACES FOR EVERYDAY LIVING</span>
+                    <h1 class="nw-hero-title">Thoughtful landscapes for a calmer home.</h1>
+                    <p class="nw-hero-subtitle">Design, build and maintain beautiful outdoor spaces that feel like home.</p>
+
+                    <div class="nw-hero-actions">
+                      <a href="#nw-services-en" class="nw-hero-btn nw-hero-btn-primary">
+                        <span>Our Services</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                      <a href="#nw-portfolio-en" class="nw-hero-btn nw-hero-btn-secondary">
+                        View Our Work
+                      </a>
+                    </div>
+
+                    <!-- Bottom 3-Column Features -->
+                    <div class="nw-hero-features">
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Landscape Design</h4>
+                        <p class="nw-feat-desc">From concept to plan</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Build &amp; Installation</h4>
+                        <p class="nw-feat-desc">Crafted with care</p>
+                      </div>
+                      <div class="nw-hero-feat">
+                        <div class="nw-feat-bar" aria-hidden="true"></div>
+                        <h4 class="nw-feat-title">Ongoing Maintenance</h4>
+                        <p class="nw-feat-desc">Spaces that last</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+
+                <!-- The Northwood Way / Editorial Bento Philosophy Section -->
+                <section class="nw-bento-section" id="nw-about-en">
+                  <!-- Header Area -->
+                  <div class="nw-bento-header">
+                    <div class="nw-bento-kicker-row">
+                      <span class="nw-bento-kicker">THE NORTHWOOD WAY</span>
+                      <span class="nw-bento-line" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="nw-bento-title-row">
+                      <h2 class="nw-bento-title">Landscapes made<br />to feel lived in.</h2>
+                      <div class="nw-bento-intro">
+                        <p class="nw-bento-desc">
+                          We design gardens that connect your home to the natural beauty of California — shaping outdoor spaces that feel effortless, enduring and part of the place.
+                        </p>
+                        <a href="#nw-portfolio-en" class="nw-bento-btn">
+                          <span>Explore our work</span>
+                          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bento Grid Mosaic -->
+                  <div class="nw-bento-grid">
+                    <!-- Left Tall Hero Card (01 / Considered Design) -->
+                    <div class="nw-bento-card nw-bento-hero-card">
+                      <img src="assets/nw-bento-hero.jpg" alt="Considered landscape design with illuminated stone stairs" class="nw-bento-img" loading="lazy" />
+                      <div class="nw-bento-overlay-pill">
+                        <span class="nw-bento-tag">01 / CONSIDERED DESIGN</span>
+                        <a href="#nw-portfolio-en" class="nw-bento-circle-btn" aria-label="View considered design">
+                          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Center Column (2 top cards + 2 metrics + 1 wide landscape) -->
+                    <div class="nw-bento-col-center">
+                      <!-- Center Top Row: Philosophy Card + Native Planting Card -->
+                      <div class="nw-bento-row-top">
+                        <!-- Card 2: Designed Around Nature (Dark Editorial Card) -->
+                        <div class="nw-bento-card nw-bento-nature-card">
+                          <div class="nw-bento-topo-pattern" aria-hidden="true">
+                            <svg viewBox="0 0 300 240" fill="none" stroke="rgba(52, 211, 153, 0.08)" stroke-width="1.2">
+                              <path d="M-20,40 Q60,10 140,50 T320,30" />
+                              <path d="M-20,80 Q70,40 150,90 T320,70" />
+                              <path d="M-20,120 Q80,70 160,130 T320,110" />
+                              <path d="M-20,160 Q90,100 170,170 T320,150" />
+                              <path d="M-20,200 Q100,130 180,210 T320,190" />
+                            </svg>
+                          </div>
+                          <div class="nw-bento-nature-body">
+                            <h3 class="nw-bento-nature-title">Designed<br />around nature.</h3>
+                            <p class="nw-bento-nature-text">
+                              We work with your site’s unique microclimates, sunlight and native flora to create landscapes that belong here — and thrive for years to come.
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Card 3: Native Planting Photo Card -->
+                        <div class="nw-bento-card nw-bento-planting-card">
+                          <img src="assets/nw-bento-planting.jpg" alt="Native California olive tree planting" class="nw-bento-img" loading="lazy" />
+                          <div class="nw-bento-overlay-pill">
+                            <span class="nw-bento-tag">02 / NATIVE PLANTING</span>
+                            <a href="#nw-services-en" class="nw-bento-circle-btn" aria-label="View native planting">
+                              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Middle Row: 2 Metric Cards -->
+                      <div class="nw-bento-row-metrics">
+                        <!-- Card 4: 140+ spaces crafted -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">140+</span>
+                            <span class="nw-bento-metric-lbl">spaces crafted</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.2A7 7 0 0 1 11 20z"></path>
+                              <path d="m2 21 9-9"></path>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <!-- Card 5: 15 years experience -->
+                        <div class="nw-bento-card nw-bento-metric-card">
+                          <div class="nw-bento-metric-text">
+                            <span class="nw-bento-metric-num">15</span>
+                            <span class="nw-bento-metric-lbl">years of experience</span>
+                          </div>
+                          <div class="nw-bento-metric-icon-wrap" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                              <path d="M12 2L5 13h3.5v7h7v-7H19L12 2z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Center Bottom Row: Stone Landscape Photo -->
+                      <div class="nw-bento-card nw-bento-stone-card">
+                        <img src="assets/nw-bento-stone.jpg" alt="Sculptural stone and native landscaping craftsmanship" class="nw-bento-img" loading="lazy" />
+                      </div>
+                    </div>
+
+                    <!-- Right Tall Water Feature Card -->
+                    <div class="nw-bento-card nw-bento-water-card">
+                      <img src="assets/nw-bento-water.jpg" alt="Architectural natural stone water fountain with warm backlighting" class="nw-bento-img" loading="lazy" />
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Featured Projects / Portfolio Highlights -->
+                <div class="nw-portfolio-section" id="nw-portfolio-en">
+                  <div class="nw-proj-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">SELECTED WORK / 01—03</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="nw-proj-title-row">
+                      <h3 class="nw-proj-title">Spaces shaped by the place they belong to.</h3>
+                      <a href="#nw-contact-en" class="nw-proj-btn-all">View all projects ↗</a>
+                    </div>
+                  </div>
+
+                  <div class="nw-proj-grid">
+                    <!-- Large Project Card Left -->
+                    <article class="nw-proj-card nw-proj-card-main" data-nw-project="meadow" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View The Meadow House details">
+                      <div class="nw-proj-media">
+                        <img src="assets/nw-proj-meadow.jpg" alt="The Meadow House — Carmel Valley Residence" class="nw-proj-img" loading="lazy" />
+                        <div class="nw-proj-overlay" aria-hidden="true"></div>
+                        <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                      </div>
+
+                      <div class="nw-proj-content">
+                        <div class="nw-proj-info">
+                          <div class="nw-proj-meta-row">
+                            <span class="nw-proj-badge">01</span>
+                            <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                            <span class="nw-proj-location">CARMEL VALLEY • RESIDENCE</span>
+                          </div>
+                          <h4 class="nw-proj-card-title">The Meadow House</h4>
+                          <p class="nw-proj-card-sub">Modern pavilion framed by stepped native meadows and warm path illumination</p>
+                        </div>
+                        <div class="nw-proj-action" aria-hidden="true">
+                          <span class="nw-proj-arrow-circle">
+                            <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- Stack of 2 Project Cards Right -->
+                    <div class="nw-proj-stack">
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="oakridge" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View Oakridge Residence details">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-oakridge.jpg" alt="Oakridge Residence — Napa Valley Vineyard" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">02</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">NAPA VALLEY • VINEYARD</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Oakridge Residence</h4>
+                            <p class="nw-proj-card-sub">Limestone reflection pool surrounded by century-old olive grove terraces</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+
+                      <article class="nw-proj-card nw-proj-card-secondary" data-nw-project="hillside" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View Hillside Sanctuary details">
+                        <div class="nw-proj-media">
+                          <img src="assets/nw-proj-hillside.jpg" alt="Hillside Sanctuary — Marin County Hillside Garden" class="nw-proj-img" loading="lazy" />
+                          <div class="nw-proj-overlay" aria-hidden="true"></div>
+                          <div class="nw-proj-spotlight" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="nw-proj-content">
+                          <div class="nw-proj-info">
+                            <div class="nw-proj-meta-row">
+                              <span class="nw-proj-badge">03</span>
+                              <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                              <span class="nw-proj-location">MARIN COUNTY • HILLSIDE GARDEN</span>
+                            </div>
+                            <h4 class="nw-proj-card-title">Hillside Sanctuary</h4>
+                            <p class="nw-proj-card-sub">Architectural timber pergola and illuminated stone steps carved into steep terrain</p>
+                          </div>
+                          <div class="nw-proj-action" aria-hidden="true">
+                            <span class="nw-proj-arrow-circle">
+                              <svg class="nw-proj-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comprehensive Services / Capabilities -->
+                <div class="nw-capabilities-section" id="nw-services-en" data-nw-cap-section>
+                  <div class="nw-cap-header">
+                    <div class="nw-proj-kicker-row">
+                      <span class="nw-proj-kicker">CAPABILITIES / 01 — 04</span>
+                      <span class="nw-proj-line" aria-hidden="true"></span>
+                    </div>
+                    <h3 class="nw-cap-title">From first sketch to lasting care.</h3>
+                    <p class="nw-cap-subtitle">Integrated landscape design, build and stewardship — crafted for extraordinary places and a more vibrant way of living.</p>
+                  </div>
+
+                  <!-- Panoramic Viewer -->
+                  <div class="nw-cap-viewer">
+                    <div class="nw-cap-banner-wrap">
+                      <img src="assets/nw-cap-banner-01.jpg" alt="01 · Masterplanning &amp; 3D Modeling" class="nw-cap-banner-img" data-banner-idx="0" />
+                      <img src="assets/nw-cap-banner-02.jpg" alt="02 · Architectural Stonework &amp; Patios" class="nw-cap-banner-img is-active" data-banner-idx="1" />
+                      <img src="assets/nw-cap-banner-03.jpg" alt="03 · Water Features &amp; Custom Pools" class="nw-cap-banner-img" data-banner-idx="2" />
+                      <img src="assets/nw-cap-banner-04.jpg" alt="04 · Sculptural Lighting &amp; Smart Irrigation" class="nw-cap-banner-img" data-banner-idx="3" />
+                    </div>
+
+                    <!-- Overlaid Left Glass Panel -->
+                    <div class="nw-cap-glass-panel">
+                      <div class="nw-cap-panel-num-row">
+                        <span class="nw-cap-panel-num">02</span>
+                        <span class="nw-cap-panel-line" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-panel-category">ARCHITECTURAL STONEWORK &amp; PATIOS</span>
+                      <h4 class="nw-cap-panel-title">Grounded in lasting materials.</h4>
+                      <p class="nw-cap-panel-desc">Dry-stacked walls, granite walkways, fire hearths and sustainable timber decking.</p>
+                    </div>
+
+                    <!-- Circular Next Arrow Button -->
+                    <button type="button" class="nw-cap-arrow-btn" aria-label="Next capability" title="Next capability">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- 4-Stage Horizontal Navigation -->
+                  <div class="nw-cap-nav" role="tablist" aria-label="Capabilities Navigation">
+                    <!-- Stage 01 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="0">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-01.jpg" alt="Masterplanning & 3D Modeling" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">01</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">MASTERPLANNING &amp; 3D MODELING</span>
+                    </button>
+
+                    <!-- Stage 02 (Active default) -->
+                    <button type="button" class="nw-cap-nav-item active" role="tab" aria-selected="true" data-cap-idx="1">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-02.jpg" alt="Architectural Stonework & Patios" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">02</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">ARCHITECTURAL STONEWORK &amp; PATIOS</span>
+                    </button>
+
+                    <!-- Stage 03 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="2">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-03.jpg" alt="Water Features & Custom Pools" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">03</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">WATER FEATURES &amp; CUSTOM POOLS</span>
+                    </button>
+
+                    <!-- Stage 04 -->
+                    <button type="button" class="nw-cap-nav-item" role="tab" aria-selected="false" data-cap-idx="3">
+                      <div class="nw-cap-thumb-wrap">
+                        <img src="assets/nw-cap-thumb-04.jpg" alt="Sculptural Lighting & Smart Irrigation" class="nw-cap-thumb-img" loading="lazy" />
+                      </div>
+                      <div class="nw-cap-progress-row">
+                        <span class="nw-cap-nav-num">04</span>
+                        <span class="nw-cap-nav-indicator" aria-hidden="true"></span>
+                        <span class="nw-cap-nav-bar" aria-hidden="true"></span>
+                      </div>
+                      <span class="nw-cap-nav-label">SCULPTURAL LIGHTING &amp; SMART IRRIGATION</span>
+                    </button>
+                  </div>
+                </div>
+
+
+                <!-- Testimonial Quote -->
+                <div class="nw-quote-box">
+                  <div class="nw-stars">★★★★★</div>
+                  <blockquote class="nw-quote-text">
+                    “Northwood transformed an unusable hillside into our family's favorite sanctuary. The architectural ground lighting at dusk is nothing short of breathtaking.”
+                  </blockquote>
+                  <div class="nw-quote-author">
+                    <strong>Julian &amp; Claire Vance</strong>
+                    <span>Homeowners in Carmel Valley, CA</span>
+                  </div>
+                </div>
+
+                <!-- Consultation / Contact Form Section -->
+                <div class="nw-consult-section" id="nw-consult-en">
+                  <div class="nw-consult-header">
+                    <span class="nw-kicker">START A PROJECT</span>
+                    <h3 class="nw-section-title">Bring your outdoor living space to life.</h3>
+                    <p class="nw-desc">Schedule a private site consultation with our lead landscape architects.</p>
+                  </div>
+
+                  <form class="nw-form" onsubmit="event.preventDefault(); alert('Thank you for exploring Northwood Landscapes! This is an interactive concept preview crafted by Klyven Studio.');">
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Full Name</label>
+                        <input type="text" class="nw-input" placeholder="Your name..." required />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Email Address</label>
+                        <input type="email" class="nw-input" placeholder="your@email.com" required />
+                      </div>
+                    </div>
+                    <div class="nw-form-row">
+                      <div class="nw-form-group">
+                        <label class="nw-label">Property Location</label>
+                        <input type="text" class="nw-input" placeholder="e.g. Carmel, Napa, Marin County..." />
+                      </div>
+                      <div class="nw-form-group">
+                        <label class="nw-label">Project Scope</label>
+                        <select class="nw-select">
+                          <option>Full Architecture &amp; Construction</option>
+                          <option>Patio &amp; Terrace Redesign</option>
+                          <option>Pool &amp; Water Sanctuaries</option>
+                          <option>Sustainable Native Landscaping</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="nw-form-group">
+                      <label class="nw-label">Project Details</label>
+                      <textarea class="nw-textarea" rows="3" placeholder="Tell us briefly about your property or vision..."></textarea>
+                    </div>
+                    <button type="submit" class="nw-submit-btn">
+                      Request Design Consultation →
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Site Footer -->
+                <footer class="nw-footer">
+                  <div class="nw-footer-top">
+                    <div class="nw-footer-brand">
+                      <div class="nw-footer-logo">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                          <path d="M12 2L4 12h3v8h10v-8h3L12 2z"/>
+                        </svg>
+                        <span>NORTHWOOD</span>
+                      </div>
+                      <p class="nw-footer-tagline">Thoughtful landscapes for a calmer home.</p>
+                    </div>
+                    <div class="nw-footer-meta">
+                      <span class="nw-meta-item">Carmel • Napa Valley • Marin County</span>
+                      <span class="nw-meta-item">contact@northwoodlandscapes.com</span>
+                    </div>
+                  </div>
+                  <div class="nw-footer-bottom">
+                    <span>&copy; 2026 Northwood Landscapes. All rights reserved.</span>
+                    <span class="nw-klyven-badge">Website Redesign &amp; Concept by <strong>KLYVEN STUDIO</strong></span>
+                  </div>
+                </footer>
+              </div>
+
+              <!-- Northwood Project Detail Drawer / Quickview Modal -->
+              <div class="nw-drawer" id="nw-drawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="nw-drawer-title">
+                <div class="nw-drawer-backdrop" id="nw-drawer-backdrop"></div>
+                <div class="nw-drawer-dialog">
+                  <button type="button" class="nw-drawer-close-btn" id="nw-drawer-close-btn" aria-label="Cerrar vista de proyecto">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                  <div class="nw-drawer-hero">
+                    <img src="assets/nw-proj-meadow.jpg" alt="Detalle del proyecto" class="nw-drawer-hero-img" id="nw-drawer-img" />
+                    <div class="nw-drawer-hero-gradient" aria-hidden="true"></div>
+                  </div>
+                  <div class="nw-drawer-body">
+                    <div class="nw-drawer-header-row">
+                      <div class="nw-proj-meta-row">
+                        <span class="nw-proj-badge" id="nw-drawer-badge">01</span>
+                        <span class="nw-proj-line-accent" aria-hidden="true"></span>
+                        <span class="nw-proj-location" id="nw-drawer-location">CARMEL VALLEY • RESIDENCIA</span>
+                      </div>
+                    </div>
+                    <h3 class="nw-drawer-title" id="nw-drawer-title">The Meadow House</h3>
+                    <p class="nw-drawer-narrative" id="nw-drawer-desc">Integración sutil entre arquitectura interior y praderas nativas escalonadas con iluminación rasante.</p>
+                    
+                    <div class="nw-drawer-specs-grid">
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-loc">Ubicación</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-loc">Carmel Valley, CA</span>
+                      </div>
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-area">Superficie</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-area">6,800 m²</span>
+                      </div>
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-year">Año de Ejecución</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-year">2024</span>
+                      </div>
+                      <div class="nw-spec-item">
+                        <span class="nw-spec-label" id="nw-spec-label-scope">Alcance</span>
+                        <span class="nw-spec-value" id="nw-drawer-spec-scope">Arquitectura de Paisaje &amp; Iluminación</span>
+                      </div>
+                    </div>
+
+                    <div class="nw-drawer-footer-actions">
+                      <div class="nw-drawer-nav-group">
+                        <button type="button" class="nw-drawer-nav-btn" id="nw-drawer-prev-btn" aria-label="Proyecto anterior">
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                          </svg>
+                          <span id="nw-drawer-prev-text">Anterior</span>
+                        </button>
+                        <button type="button" class="nw-drawer-nav-btn" id="nw-drawer-next-btn" aria-label="Siguiente proyecto">
+                          <span id="nw-drawer-next-text">Siguiente</span>
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </button>
+                      </div>
+                      <a href="#nw-contact-es" class="nw-drawer-cta-btn" id="nw-drawer-cta-btn">
+                        <span id="nw-drawer-cta-text">Consultar proyecto similar</span>
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Framnova Live Application UI -->
+          <div class="project-site-container is-iframe-container" id="project-site-framnova" style="display: none;">
+            <div class="project-iframe-loader" id="project-iframe-loader-framnova">
+              <div class="project-iframe-spinner"></div>
+              <span class="project-iframe-loading-text" data-i18n="work.loadingLive">Cargando aplicación en vivo...</span>
+            </div>
+            <iframe 
+              src="about:blank"
+              data-src="framnova-preview.html"
+              class="project-site-iframe"
+              id="project-framnova-iframe"
+              title="Framnova — Live Application Preview"
+              loading="lazy"
+              allow="clipboard-write"
+            ></iframe>
+          </div>
+
+            <!-- NoLock (GetNoLock) Live Application UI -->
+            <div class="project-site-container is-iframe-container" id="project-site-nolock" style="display: none;">
+              <div class="project-iframe-loader" id="project-iframe-loader">
+                <div class="project-iframe-spinner"></div>
+                <span class="project-iframe-loading-text" data-i18n="work.loadingLive">Cargando aplicación en vivo...</span>
+              </div>
+              <iframe 
+                src="about:blank"
+                data-src="https://getnolock.com/"
+                class="project-site-iframe"
+                id="project-nolock-iframe"
+                title="NoLock — Live Application Preview"
+                loading="lazy"
+                allow="clipboard-write"
+              ></iframe>
+            </div>
+          
+          <!-- Cafe Collective Concept Preview -->
+          <div class="project-site-container" id="project-site-cafe" style="display: none;">
+            <div class="cafe-preview-modal-body">
+              <div class="cafe-hero-preview">
+                <span class="cafe-tagline">ARTISAN ROASTERY &amp; NEIGHBORHOOD BISTRO</span>
+                <h2 class="cafe-title">A warm, slow living space shaped for connection.</h2>
+                <p class="cafe-desc">Brand identity and digital menu experience designed for a specialty coffee shop and artisanal bakery.</p>
+              </div>
+              <div class="cafe-img-showcase">
+                <img src="assets/work-cafe.png" alt="Café Collective Full Brand &amp; Digital Experience" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Orion Space Operations Preview -->
+          <div class="project-site-container" id="project-site-orion" style="display: none;">
+            <div class="orion-preview-modal-body">
+              <div class="orion-modal-hero">
+                <span class="orion-modal-tagline">AUTONOMOUS ORBITAL OPERATIONS</span>
+                <h2 class="orion-modal-title">Real-Time Telemetry &amp; Flight Interface</h2>
+                <p class="orion-modal-desc">Interactive orbital tracking, satellite telemetry analytics, and mission command dashboard design.</p>
+              </div>
+              <div class="orion-modal-img-wrap">
+                <img src="assets/orion-after-full.png" alt="Orion Space Operations Platform Preview" loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Web Viewer Container for CloakGPT, ALPEZ, DriverVan, VETQ, etc. -->
+          <div class="project-site-container is-iframe-container" id="project-site-live-viewer" style="display: none;">
+            <div class="project-iframe-loader" id="project-iframe-loader-live">
+              <div class="project-iframe-spinner"></div>
+              <span class="project-iframe-loading-text" data-i18n="work.loadingLive">Cargando aplicación en vivo...</span>
+            </div>
+            <iframe 
+              src="about:blank"
+              class="project-site-iframe"
+              id="project-live-viewer-iframe"
+              title="Live Project Application Preview"
+              loading="lazy"
+              allow="clipboard-write; fullscreen"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Preferences Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-banner-title" hidden>
+      <div class="cookie-banner-inner">
+        <div class="cookie-banner-main">
+          <div class="cookie-banner-header">
+            <div class="cookie-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a10 10 0 0 0-1.8 19.8"/>
+                <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+                <circle cx="15.5" cy="11.5" r="1" fill="currentColor"/>
+                <circle cx="10" cy="15" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="cookie-banner-text">
+              <h3 class="cookie-banner-title" id="cookie-banner-title" data-i18n="cookies.bannerTitle">Cookie Preferences</h3>
+              <p class="cookie-banner-desc" data-i18n="cookies.bannerDesc" data-i18n-html="true">
+                We use essential technologies to operate this website. With your choice, we may also use optional analytics or marketing cookies to measure visits and improve our services. You can change your preference at any time in <button type="button" class="cookie-settings-link" data-cookie-settings style="text-decoration: underline; color: inherit; font-weight: 600;">Cookie settings</button>. Read our <a href="cookies.html" class="cookie-policy-link">Cookie Policy</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="cookie-banner-actions">
+            <button type="button" class="cookie-btn cookie-btn-essential" id="cookie-btn-essential" data-i18n="cookies.essentialOnly">Reject optional</button>
+            <button type="button" class="cookie-btn cookie-btn-customize" id="cookie-btn-customize" data-i18n="cookies.customize">Customize</button>
+            <button type="button" class="cookie-btn cookie-btn-accept" id="cookie-btn-accept" data-i18n="cookies.acceptAll">Accept all</button>
+            <button type="button" class="cookie-btn cookie-btn-save" id="cookie-btn-save" data-i18n="cookies.savePreferences" hidden>Save preferences</button>
+          </div>
+        </div>
+
+        <!-- Preferences Toggles Panel (Shown when Customize is clicked) -->
+        <div class="cookie-details-panel" id="cookie-details-panel" hidden>
+          <div class="cookie-toggle-row">
+            <div class="cookie-toggle-info">
+              <span class="cookie-toggle-title" data-i18n="cookies.categoryEssential">Essential Storage</span>
+              <span class="cookie-toggle-desc" data-i18n="cookies.categoryEssentialDesc">Required for site navigation and storing your privacy preferences.</span>
+            </div>
+            <span class="cookie-always-active-badge" data-i18n="cookies.alwaysActive">Always active</span>
+          </div>
+
+          <div class="cookie-toggle-row">
+            <div class="cookie-toggle-info">
+              <label for="cookie-analytics-toggle" class="cookie-toggle-title" data-i18n="cookies.categoryAnalytics">Analytics Cookies</label>
+              <span class="cookie-toggle-desc" data-i18n="cookies.categoryAnalyticsDesc">Helps us understand how visitors interact with the site.</span>
+            </div>
+            <label class="switch-control">
+              <input type="checkbox" id="cookie-analytics-toggle" />
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <div class="cookie-toggle-row">
+            <div class="cookie-toggle-info">
+              <label for="cookie-marketing-toggle" class="cookie-toggle-title" data-i18n="cookies.categoryMarketing">Marketing Cookies</label>
+              <span class="cookie-toggle-desc" data-i18n="cookies.categoryMarketingDesc">Used to measure marketing effectiveness and campaigns.</span>
+            </div>
+            <label class="switch-control">
+              <input type="checkbox" id="cookie-marketing-toggle" />
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

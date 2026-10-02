@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E6EDF6" />
     <title>Cookie Policy — Klyven Studio</title>
     <meta name="description" content="Cookie Policy for Klyven Studio. Clear explanation of cookies, categories, and controls." />
     <link rel="icon" type="image/png" href="logo.png" />
@@ -12,6 +13,10 @@
         var t = localStorage.getItem('klyven_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', t);
         document.documentElement.style.colorScheme = t;
+        if (t === 'dark') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#000000');
+        }
       })();
     </script>
   </head>
@@ -52,199 +57,116 @@
     <!-- Main Content -->
     <main class="legal-container">
       <div class="legal-hero">
-        <span class="legal-kicker" data-i18n="legal.kicker">LEGAL &amp; COMPLIANCE</span>
-        <h1 class="legal-title" data-i18n="legal.cookiesTitle">Cookie Policy — Klyven Studio</h1>
-        <p class="legal-updated" data-i18n="legal.updated" data-i18n-html="true">Effective date: September 10, 2026 &nbsp;|&nbsp; Last updated: September 10, 2026</p>
+        <span class="legal-kicker">LEGAL &amp; COMPLIANCE</span>
+        <h1 class="legal-title">Cookie Policy — Klyven Studio</h1>
+        <p class="legal-updated">Effective date: September 10, 2026 &nbsp;|&nbsp; Last updated: September 10, 2026</p>
 
         <!-- Quick Switch Tabs -->
         <nav class="legal-nav-chips" aria-label="Legal policies">
-          <a href="privacy-policy.html" class="legal-chip" data-i18n="legal.navPrivacy">Privacy Policy</a>
-          <a href="terms.html" class="legal-chip" data-i18n="legal.navTerms">Terms &amp; Conditions</a>
-          <a href="cookies.html" class="legal-chip is-active" data-i18n="legal.navCookies">Cookie Policy</a>
-          <a href="refund-policy.html" class="legal-chip" data-i18n="legal.navRefund">Refund &amp; Cancellation</a>
+          <a href="privacy-policy.html" class="legal-chip">Privacy Policy</a>
+          <a href="terms.html" class="legal-chip">Terms &amp; Conditions</a>
+          <a href="cookies.html" class="legal-chip is-active">Cookie Policy</a>
+          <a href="refund-policy.html" class="legal-chip">Refund &amp; Cancellation</a>
         </nav>
       </div>
 
       <article class="legal-card">
-        <!-- English Content -->
-        <div class="legal-content-en" data-lang-block="en">
-          <div class="legal-meta-banner">
-            <strong>Policy Notice:</strong> This Cookie Policy describes the browser storage, technologies, and preference controls used on klyvenstudio.com.
-          </div>
-
-          <h2><span class="legal-section-num">1</span> What cookies and similar tools do</h2>
-          <p>
-            Cookies are small data files a website may place in a browser. Similar technologies include local storage, pixels, and identifiers created by external scripts. They may keep a website functioning, remember choices, protect forms, measure visits, or support advertising. A tool can also collect personal information such as an IP address or an online identifier, in which case the <a href="privacy-policy.html" class="legal-inline-link">Privacy Policy</a> also applies.
-          </p>
-
-          <h2><span class="legal-section-num">2</span> Categories used by this site</h2>
-          <p>
-            The table below describes possible categories of technologies used on this website. Optional categories remain disabled until chosen by the visitor.
-          </p>
-          <div class="legal-table-wrap">
-            <table class="legal-table">
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Purpose</th>
-                  <th>Choice</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Strictly necessary</strong></td>
-                  <td>Core site operation, security, form protection, and remembering the visitor’s selection, when actually used.</td>
-                  <td>Usually needed for the requested function.</td>
-                </tr>
-                <tr>
-                  <td><strong>Analytics</strong></td>
-                  <td>Visitor statistics and measurement, if an analytics service is installed.</td>
-                  <td>Optional and disabled until chosen.</td>
-                </tr>
-                <tr>
-                  <td><strong>Marketing</strong></td>
-                  <td>Advertising measurement or remarketing, if such services are installed.</td>
-                  <td>Optional and disabled until chosen.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2><span class="legal-section-num">3</span> Actual cookie inventory</h2>
-          <p>
-            The table below lists the browser storage currently used by Klyven Studio:
-          </p>
-          <div class="legal-table-wrap">
-            <table class="legal-table">
-              <thead>
-                <tr>
-                  <th>Name or storage key</th>
-                  <th>Provider</th>
-                  <th>Purpose and data</th>
-                  <th>Duration</th>
-                  <th>Type</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>klyven_cookie_consent</code></td>
-                  <td>Klyven Studio</td>
-                  <td>Stores the visitor’s cookie preferences: accepted or rejected categories.</td>
-                  <td>Until the visitor clears browser data or changes their preferences</td>
-                  <td>Essential</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2><span class="legal-section-num">4</span> Managing a choice</h2>
-          <p>
-            Where optional categories exist, a visitor may accept all, reject optional technologies, or customize the categories separately. The choice should be retained so the visitor is not asked on every page.
-          </p>
-          <p>
-            A persistent <button type="button" class="cookie-settings-link legal-inline-link" data-cookie-settings style="text-decoration: underline; font-weight: 600;">“Cookie settings”</button> link in the footer allows a later change. Optional scripts should not load before the relevant choice and should respond to a later withdrawal as far as technically possible. A browser’s own settings can also remove or block stored data; this may affect site functions.
-          </p>
-
-          <h2><span class="legal-section-num">5</span> Third-party services and international processing</h2>
-          <p>
-            External providers may process information under their own terms and may store it outside Mexico. The Studio’s live provider list and the <a href="privacy-policy.html" class="legal-inline-link">Privacy Policy</a> should accurately describe relevant services and disclosures. Merely displaying this policy does not itself configure the website or prevent a tracking script from running.
-          </p>
-
-          <h2><span class="legal-section-num">6</span> Policy updates and contact</h2>
-          <p>
-            We update this policy when the services used on the website change and show the effective date above. Questions about a cookie or an online identifier can be sent to <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>.
-          </p>
+        <div class="legal-meta-banner">
+          <strong>Extended Policy Notice:</strong> This Cookie Policy describes actual browser storage, optional technologies, and preference controls. Items in <span class="legal-placeholder">[BRACKETS]</span> require confirmation with live website scripts and cookies prior to formal publication.
         </div>
 
-        <!-- Spanish Content -->
-        <div class="legal-content-es" data-lang-block="es">
-          <div class="legal-meta-banner">
-            <strong>Aviso de Política:</strong> Esta Política de Cookies describe el almacenamiento en el navegador, tecnologías y controles de preferencias utilizados en klyvenstudio.com.
-          </div>
+        <h2><span class="legal-section-num">1</span> What cookies and similar tools do</h2>
+        <p>
+          Cookies are small data files a website may place in a browser. Similar technologies include local storage, pixels, and identifiers created by external scripts. They may keep a website functioning, remember choices, protect forms, measure visits, or support advertising. A tool can also collect personal information such as an IP address or an online identifier, in which case the <a href="privacy-policy.html" class="legal-inline-link">Privacy Policy</a> also applies.
+        </p>
 
-          <h2><span class="legal-section-num">1</span> Función de las cookies y herramientas similares</h2>
-          <p>
-            Las cookies son pequeños archivos de datos que un sitio web puede almacenar en su navegador. Tecnologías análogas comprenden almacenamiento local (localStorage), etiquetas de seguimiento y scripts provistos por plataformas tecnológicas. Estas herramientas permiten mantener operativo el sitio, recordar sus preferencias, proteger formularios de envío, medir estadísticas de visita o facilitar campañas. Cuando estas tecnologías recaben datos como dirección IP o identificadores en línea, aplica conjuntamente nuestro <a href="privacy-policy.html" class="legal-inline-link">Aviso de Privacidad</a>.
-          </p>
-
-          <h2><span class="legal-section-num">2</span> Categorías de almacenamiento</h2>
-          <p>
-            La siguiente tabla describe las categorías de tecnologías empleadas en este sitio web. Las categorías opcionales se mantienen desactivadas por defecto hasta que el usuario decida habilitarlas.
-          </p>
-          <div class="legal-table-wrap">
-            <table class="legal-table">
-              <thead>
-                <tr>
-                  <th>Categoría</th>
-                  <th>Finalidad</th>
-                  <th>Elección del usuario</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Estrictamente necesarias</strong></td>
-                  <td>Operación esencial del sitio, navegación técnica, seguridad de formularios y almacenamiento de su selección de cookies.</td>
-                  <td>Indispensables para el funcionamiento del servicio web solicitado.</td>
-                </tr>
-                <tr>
-                  <td><strong>Analíticas</strong></td>
-                  <td>Medición de visitas, tráfico y comportamiento de navegación para mejorar la usabilidad del sitio.</td>
-                  <td>Opcionales; permanecen inactivas hasta que el usuario las autorice.</td>
-                </tr>
-                <tr>
-                  <td><strong>Marketing</strong></td>
-                  <td>Medición del rendimiento de campañas publicitarias e impacto de difusión.</td>
-                  <td>Opcionales; permanecen inactivas hasta que el usuario las autorice.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2><span class="legal-section-num">3</span> Inventario actual de almacenamiento</h2>
-          <p>
-            A continuación se detalla el almacenamiento en el navegador implementado activamente en klyvenstudio.com:
-          </p>
-          <div class="legal-table-wrap">
-            <table class="legal-table">
-              <thead>
-                <tr>
-                  <th>Nombre o clave de almacenamiento</th>
-                  <th>Proveedor</th>
-                  <th>Finalidad y datos almacenados</th>
-                  <th>Duración</th>
-                  <th>Tipo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>klyven_cookie_consent</code></td>
-                  <td>Klyven Studio</td>
-                  <td>Guarda las preferencias del visitante: categorías aceptadas o rechazadas.</td>
-                  <td>Hasta que el visitante borre los datos de su navegador o modifique su selección</td>
-                  <td>Esencial</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2><span class="legal-section-num">4</span> Gestión y control de preferencias</h2>
-          <p>
-            El visitante puede elegir en cualquier momento aceptar todas las cookies, conservar únicamente las esenciales o personalizar las categorías permitidas. Su decisión se conserva para no solicitar confirmación en cada página que visite.
-          </p>
-          <p>
-            En el pie de página de todo el sitio web disponemos de un enlace permanente a <button type="button" class="cookie-settings-link legal-inline-link" data-cookie-settings style="text-decoration: underline; font-weight: 600;">“Configuración de cookies”</button> que le permite reabrir el panel y actualizar su selección en cualquier momento. Asimismo, puede configurar o bloquear cookies directamente desde las opciones de seguridad de su navegador.
-          </p>
-
-          <h2><span class="legal-section-num">5</span> Proveedores externos y transferencias técnicas</h2>
-          <p>
-            Determinados servicios técnicos auxiliares pueden procesar datos bajo sus propios términos y contar con servidores ubicados en el extranjero. Nuestro <a href="privacy-policy.html" class="legal-inline-link">Aviso de Privacidad</a> describe los estándares de seguridad aplicables a las transferencias técnicas requeridas para la prestación del servicio.
-          </p>
-
-          <h2><span class="legal-section-num">6</span> Actualizaciones de esta política y contacto</h2>
-          <p>
-            Actualizaremos esta política cuando incorporemos nuevas funcionalidades o herramientas que utilicen almacenamiento local. Para cualquier duda relacionada con cookies o privacidad, puede contactarnos en <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>.
-          </p>
+        <h2><span class="legal-section-num">2</span> Categories used by this site</h2>
+        <p>
+          The table below describes possible categories of technologies used on this website. Optional categories remain disabled until chosen by the visitor.
+        </p>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Purpose</th>
+                <th>Choice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Strictly necessary</strong></td>
+                <td>Core site operation, security, form protection, and remembering the visitor’s selection, when actually used.</td>
+                <td>Usually needed for the requested function.</td>
+              </tr>
+              <tr>
+                <td><strong>Analytics</strong></td>
+                <td>Visitor statistics and measurement, if an analytics service is installed.</td>
+                <td>Optional and disabled until chosen.</td>
+              </tr>
+              <tr>
+                <td><strong>Marketing</strong></td>
+                <td>Advertising measurement or remarketing, if such services are installed.</td>
+                <td>Optional and disabled until chosen.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <p>
+          <em>The categories above describe possible types of technology. They must be edited to match the live website. Do not state that Klyven Studio uses analytics or marketing tools unless they are actually installed; do not show an “Accept all” button that activates an undisclosed service.</em>
+        </p>
+
+        <h2><span class="legal-section-num">3</span> Actual cookie inventory</h2>
+        <p>
+          Replace the following example fields with an inventory gathered from the published website and its connected providers. Identify first- and third-party tools, duration, purpose, and the recipient of information. If no optional cookies are installed, say so plainly.
+        </p>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Name or storage key</th>
+                <th>Provider</th>
+                <th>Purpose and data</th>
+                <th>Duration</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="legal-placeholder">[ACTUAL NAME]</span></td>
+                <td><span class="legal-placeholder">[PROVIDER]</span></td>
+                <td><span class="legal-placeholder">[PURPOSE AND DATA]</span></td>
+                <td><span class="legal-placeholder">[DURATION]</span></td>
+                <td><span class="legal-placeholder">[CATEGORY]</span></td>
+              </tr>
+              <tr>
+                <td><span class="legal-placeholder">[ACTUAL NAME]</span></td>
+                <td><span class="legal-placeholder">[PROVIDER]</span></td>
+                <td><span class="legal-placeholder">[PURPOSE AND DATA]</span></td>
+                <td><span class="legal-placeholder">[DURATION]</span></td>
+                <td><span class="legal-placeholder">[CATEGORY]</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2><span class="legal-section-num">4</span> Managing a choice</h2>
+        <p>
+          Where optional categories exist, a visitor may accept all, reject optional technologies, or customize the categories separately. The choice should be retained so the visitor is not asked on every page.
+        </p>
+        <p>
+          A persistent <button type="button" class="cookie-settings-link" data-cookie-settings style="text-decoration: underline; font-weight: 600; color: #1e4574;">“Cookie settings”</button> link in the footer allows a later change. Optional scripts should not load before the relevant choice and should respond to a later withdrawal as far as technically possible. A browser’s own settings can also remove or block stored data; this may affect site functions.
+        </p>
+
+        <h2><span class="legal-section-num">5</span> Third-party services and international processing</h2>
+        <p>
+          External providers may process information under their own terms and may store it outside Mexico. The Studio’s live provider list and the <a href="privacy-policy.html" class="legal-inline-link">Privacy Policy</a> should accurately describe relevant services and disclosures. Merely displaying this policy does not itself configure the website or prevent a tracking script from running.
+        </p>
+
+        <h2><span class="legal-section-num">6</span> Policy updates and contact</h2>
+        <p>
+          We update this policy when the services used on the website change and show the effective date above. Questions about a cookie or an online identifier can be sent to <span class="legal-placeholder">[PRIVACY EMAIL]</span>.
+        </p>
       </article>
     </main>
 
@@ -364,3 +286,4 @@
     <script type="module" src="script.js"></script>
   </body>
 </html>
+
