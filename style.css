@@ -1430,15 +1430,17 @@ a, button { font: inherit; }
   backdrop-filter: blur(10px);
 }
 
-/* BEFORE: Retro 2004 Ugly Legacy Job Portal */
+/* BEFORE: A clean, simple mission directory. */
 .ba-layer-before .before-badge {
   left: 16px;
-  background: #ffffcc;
-  color: #990000;
-  border: 1px solid #cc0000;
-  font-family: 'Courier New', monospace;
-  font-weight: 800;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.92);
+  color: #46566d;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .orion-before-page {
@@ -1448,15 +1450,15 @@ a, button { font: inherit; }
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: #d4d0c8;
-  color: #000000;
-  font-family: 'Times New Roman', Times, serif;
-  padding: clamp(10px, 1.8vw, 20px);
+  background: linear-gradient(145deg, #f8fafc, #eef3f8);
+  color: #17243a;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: clamp(54px, 5.5vw, 68px) clamp(18px, 2.8vw, 32px) clamp(18px, 2.8vw, 32px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  border: 2px inset #ffffff;
+  border: 0;
 }
 
 .retro-header {
@@ -1858,30 +1860,30 @@ a, button { font: inherit; }
 .orion-gauge-label { margin-top: 1px; color: rgba(255,255,255,.55); font-size: 6px; }
 
 /* The older directory deliberately stays plain, but its controls retain layout. */
-.simple-nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; }
+.simple-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid #dfe6ef; }
 .simple-brand { display: flex; align-items: center; gap: 7px; }
-.simple-logo-circle { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #0f172a; }
-.simple-brand-name { color: #0f172a; font-size: 13px; font-weight: 750; }
-.simple-nav-links { display: flex; align-items: center; gap: clamp(10px,1.8vw,18px); color: #64748b; font-size: 11.5px; }
-.simple-nav-links .is-active { color: #0f172a; font-weight: 600; }
-.simple-signin-btn { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; color: #0f172a; font-size: 11px; }
-.simple-hero { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: clamp(8px,1.4vw,16px) 0; }
-.simple-hero-title { margin: 0; color: #0f172a; font-size: clamp(16px,2.2vw,24px); font-weight: 700; line-height: 1.2; }
-.simple-hero-sub { margin: 0 0 clamp(6px,1vw,10px); color: #64748b; font-size: clamp(10.5px,1.1vw,12.5px); }
-.simple-search-bar { display: flex; width: 100%; max-width: 480px; align-items: center; gap: 8px; padding: 4px 6px 4px 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.simple-logo-circle { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #4a78b0; box-shadow: 0 0 0 4px rgba(74,120,176,.1); }
+.simple-brand-name { color: #18263b; font-size: 12px; font-weight: 750; letter-spacing: .035em; }
+.simple-nav-links { display: flex; align-items: center; gap: clamp(10px,1.8vw,18px); color: #718096; font-size: 10.5px; }
+.simple-nav-links .is-active { color: #233a59; font-weight: 650; }
+.simple-signin-btn { padding: 6px 11px; border: 1px solid #d9e1eb; border-radius: 999px; background: rgba(255,255,255,.72); color: #34465f; font-size: 10px; }
+.simple-hero { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: clamp(12px,1.8vw,20px) 0; }
+.simple-hero-title { margin: 0; color: #17243a; font-size: clamp(18px,2.4vw,27px); font-weight: 680; letter-spacing: -.035em; line-height: 1.15; }
+.simple-hero-sub { margin: 0 0 clamp(8px,1.2vw,13px); color: #718096; font-size: clamp(10.5px,1.1vw,12px); line-height: 1.5; }
+.simple-search-bar { display: flex; width: 100%; max-width: 480px; min-height: 38px; align-items: center; gap: 8px; padding: 4px 5px 4px 10px; border: 1px solid #e0e6ee; border-radius: 10px; background: rgba(255,255,255,.94); box-shadow: 0 5px 16px rgba(35,55,82,.05); }
 .simple-search-input,.simple-search-loc { display: flex; min-width: 0; flex: 1; align-items: center; gap: 6px; color: #334155; font-size: 11px; }
-.simple-search-loc { padding-left: 8px; border-left: 1px solid #e2e8f0; }
-.simple-search-btn { padding: 5px 12px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 600; }
+.simple-search-loc { padding-left: 8px; border-left: 1px solid #edf0f4; color: #718096; }
+.simple-search-btn { padding: 6px 12px; border: 0; border-radius: 7px; background: #233a59; color: #fff; font-size: 10px; font-weight: 600; }
 .simple-jobs-list { display: flex; width: 100%; flex-direction: column; gap: clamp(6px,1vw,10px); }
-.simple-job-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: clamp(7px,1.1vw,11px) clamp(10px,1.4vw,14px); border: 1px solid #e2e8f0; border-radius: 9px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.02); }
+.simple-job-card { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: clamp(8px,1.1vw,12px) clamp(10px,1.4vw,14px); border: 1px solid rgba(219,227,237,.9); border-radius: 11px; background: rgba(255,255,255,.94); box-shadow: 0 4px 14px rgba(35,55,82,.035); }
 .simple-job-left { display: flex; align-items: center; gap: 10px; }
-.simple-company-avatar { display: flex; width: 28px; height: 28px; flex-shrink: 0; align-items: center; justify-content: center; border: 1px solid #e2e8f0; border-radius: 6px; background: #f1f5f9; color: #0f172a; font-size: 11px; font-weight: 700; }
+.simple-company-avatar { display: flex; width: 30px; height: 30px; flex-shrink: 0; align-items: center; justify-content: center; border: 1px solid #e2eaf3; border-radius: 8px; background: #f3f7fb; color: #48688f; font-size: 10px; font-weight: 700; }
 .simple-job-info { display: flex; flex-direction: column; gap: 2px; }
-.simple-job-role { margin: 0; color: #0f172a; font-size: 12px; font-weight: 650; }
-.simple-job-company { color: #64748b; font-size: 10px; }
+.simple-job-role { margin: 0; color: #26364c; font-size: 11px; font-weight: 650; }
+.simple-job-company { color: #8491a3; font-size: 9px; }
 .simple-job-tags { display: flex; align-items: center; gap: 5px; }
-.simple-tag { padding: 2.5px 7px; border-radius: 4px; background: #f1f5f9; color: #475569; font-size: 9.5px; }
-.simple-apply-btn { padding: 4px 11px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; color: #0f172a; font-size: 10.5px; font-weight: 600; }
+.simple-tag { padding: 3px 7px; border: 1px solid #edf0f4; border-radius: 999px; background: #f7f9fc; color: #738196; font-size: 8px; }
+.simple-apply-btn { padding: 5px 9px; border: 1px solid #dfe6ee; border-radius: 7px; background: #fff; color: #4a607d; font-size: 9px; font-weight: 600; white-space: nowrap; }
 
 html:not([data-theme="dark"]) .orion-live-app,[data-theme="light"] .orion-live-app { background: #f8fafc; color: #0f172a; }
 html:not([data-theme="dark"]) .orion-top-section,[data-theme="light"] .orion-top-section { background-image: url("assets/orion-hero-bg.jpg"); }
@@ -1927,7 +1929,7 @@ html:not([data-theme="dark"]) .orion-job-bottom-meta,[data-theme="light"] .orion
   .orion-glass-card { padding: 11px 12px; }
   .orion-filter-bar { align-items: flex-start; }
   .orion-filter-pills { max-width: calc(100% - 64px); }
-  .orion-before-page { padding: 10px; }
+  .ba-layer-before .before-page.orion-before-page { padding: 60px 12px 12px; }
   .simple-job-card { flex-wrap: wrap; }
   .simple-job-tags { order: 3; width: 100%; }
 }
