@@ -1694,6 +1694,244 @@ a, button { font: inherit; }
   padding-top: 4px;
 }
 
+/* Restore the Orion before/after demo layout. */
+.orion-live-app {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 540px;
+  flex-direction: column;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, Inter, "Segoe UI", sans-serif;
+  user-select: none;
+}
+
+.orion-top-section {
+  position: relative;
+  display: flex;
+  min-height: 360px;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: clamp(14px, 2vw, 20px) clamp(16px, 2.5vw, 28px);
+  background: #88968e url("assets/orion-hero-bg.jpg") center / cover no-repeat;
+}
+
+.orion-pavilion-layer,
+.orion-pavilion-img {
+  display: none !important;
+}
+
+.orion-nav {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: clamp(16px, 2.5vw, 24px);
+}
+
+.orion-brand,
+.orion-user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.orion-brand { gap: 9px; }
+.orion-logo-glyph { flex-shrink: 0; }
+.orion-brand-text { color: #fff; font-size: 15px; font-weight: 800; letter-spacing: .04em; }
+
+.orion-search-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px 4px 14px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  color: #fff;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.orion-search-field { display: flex; min-width: 0; align-items: center; gap: 6px; font-size: 11.5px; }
+.orion-input { width: clamp(80px, 12vw, 130px); border: 0; outline: 0; background: transparent; color: inherit; font-family: inherit; font-size: 11px; text-overflow: ellipsis; }
+.orion-input-query { width: clamp(140px, 20vw, 240px); }
+.orion-input-loc { width: clamp(75px, 10vw, 105px); }
+.orion-caret { flex-shrink: 0; opacity: .6; }
+.orion-search-divider { width: 1px; height: 16px; flex-shrink: 0; margin: 0 3px; background: rgba(255,255,255,.25); }
+.orion-search-btn { flex-shrink: 0; padding: 5px 14px; border: 0; border-radius: 999px; background: #fff; color: #0a0e14; font-size: 11px; font-weight: 700; cursor: pointer; }
+.orion-search-btn:hover { transform: scale(1.04); background: #a3e635; }
+.orion-user-controls { gap: 10px; }
+.orion-icon-btn { display: flex; width: 28px; height: 28px; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; background: rgba(255,255,255,.08); color: #fff; cursor: pointer; }
+.orion-icon-btn:hover { background: rgba(255,255,255,.2); }
+.orion-avatar { width: 28px; height: 28px; overflow: hidden; border: 1.5px solid rgba(255,255,255,.6); border-radius: 50%; }
+.orion-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.orion-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 36px);
+}
+
+.orion-hero-left,
+.orion-hero-right { display: flex; min-width: 0; flex-direction: column; justify-content: space-between; gap: 14px; }
+.orion-hero-title { margin: 0; color: #fff; font-size: clamp(24px, 3.6vw, 42px); font-weight: 850; letter-spacing: -.03em; line-height: 1.08; text-transform: uppercase; }
+.orion-title-row-1 { display: flex; align-items: center; gap: 10px; }
+.orion-ai-badge { padding: 3px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.15); color: #e2e8f0; font-size: 9.5px; font-weight: 700; letter-spacing: .04em; text-transform: none; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.orion-glass-card { padding: 13px 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 18px; background: rgba(20,26,24,.65); box-shadow: 0 16px 36px rgba(0,0,0,.35); color: #fff; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+.orion-glass-card:hover { transform: translateY(-2px); border-color: rgba(163,230,53,.4); }
+.orion-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.orion-card-title { color: rgba(255,255,255,.85); font-size: 11.5px; font-weight: 600; }
+.orion-corner-arrow { font-size: 11px; opacity: .6; }
+.orion-salary-card { max-width: 320px; }
+.orion-chart-body { position: relative; display: flex; align-items: center; gap: 8px; }
+.orion-y-labels { display: flex; height: 60px; flex-direction: column; justify-content: space-between; color: rgba(255,255,255,.5); font-size: 8px; }
+.orion-chart-canvas { position: relative; flex: 1; min-width: 0; }
+.orion-salary-svg { display: block; width: 100%; height: 68px; }
+.orion-salary-pill-tag { position: absolute; top: 18%; left: 52%; padding: 2px 7px; transform: translate(-50%,-50%); border-radius: 999px; background: #a3e635; box-shadow: 0 0 10px rgba(163,230,53,.6); color: #0a0e14; font-size: 8.5px; font-weight: 800; }
+.orion-chart-months { display: flex; justify-content: space-between; padding: 4px 6px 0 32px; color: rgba(255,255,255,.55); font-size: 8px; }
+.orion-candidates-stats { display: flex; justify-content: space-between; margin: 8px 0 12px; }
+.orion-stat-item { display: flex; align-items: baseline; gap: 4px; }
+.orion-stat-num { color: #fff; font-size: clamp(16px,2vw,22px); font-weight: 800; letter-spacing: -.02em; }
+.orion-stat-pct { color: rgba(255,255,255,.55); font-size: 9px; font-weight: 600; }
+.orion-level-tabs { display: flex; align-items: center; gap: 3px; padding: 3px; border: 1px solid rgba(255,255,255,.08); border-radius: 999px; background: rgba(0,0,0,.4); }
+.orion-level-tab { flex: 1; padding: 4.5px 0; border: 0; border-radius: 999px; background: transparent; color: rgba(255,255,255,.7); font-size: 10px; font-weight: 600; cursor: pointer; }
+.orion-level-tab.is-active-black { background: #000; color: #fff; }
+.orion-level-tab.is-active-lime { background: #a3e635; box-shadow: 0 0 12px rgba(163,230,53,.5); color: #0a0e14; font-weight: 750; }
+.orion-sub-metrics-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.orion-mini-val-row { display: flex; align-items: baseline; gap: 3px; margin: 2px 0 6px; }
+.orion-mini-val { color: #fff; font-size: 19px; font-weight: 800; letter-spacing: -.02em; }
+.orion-mini-sup { color: #a3e635; font-size: 9px; font-weight: 700; }
+.orion-progress-labels { display: flex; justify-content: space-between; margin-bottom: 3px; color: rgba(255,255,255,.55); font-size: 8px; }
+.orion-custom-track { position: relative; width: 100%; height: 6px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.12); }
+.orion-track-pill { width: 24px; height: 6px; border-radius: 999px; background: #fff; }
+.orion-mini-bars { display: flex; height: 22px; align-items: flex-end; gap: 3px; }
+.orion-mini-bars span { flex: 1; border-radius: 1.5px; background: rgba(255,255,255,.25); }
+.orion-mini-bars span.bar-lime { background: #a3e635; box-shadow: 0 0 8px #a3e635; }
+
+.orion-bottom-section { position: relative; display: flex; flex-direction: column; gap: 14px; padding: clamp(14px,2vw,20px) clamp(16px,2.5vw,28px); background: #000; }
+.orion-filter-bar { display: flex; min-width: 0; align-items: center; justify-content: space-between; gap: 12px; }
+.orion-filter-pills { display: flex; min-width: 0; flex: 1; align-items: center; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.orion-filter-pill { padding: 4px 11px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: transparent; color: #e2e8f0; font-size: 10px; font-weight: 550; white-space: nowrap; cursor: pointer; }
+.orion-filter-pill:hover,.orion-filter-pill.is-active { border-color: rgba(255,255,255,.45); background: rgba(255,255,255,.08); }
+.orion-circle-action-btn { display: flex; width: 24px; height: 24px; flex-shrink: 0; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: #fff; cursor: pointer; }
+.orion-carousel-nav { display: flex; flex-shrink: 0; align-items: center; gap: 8px; }
+.orion-nav-circle-btn { display: flex; width: 24px; height: 24px; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: transparent; color: #fff; font-size: 11px; cursor: pointer; }
+.orion-nav-circle-btn:hover { border-color: #fff; background: rgba(255,255,255,.15); }
+.orion-carousel-counter { color: rgba(255,255,255,.55); font-size: 10.5px; }
+.orion-carousel-counter strong { color: #fff; font-weight: 700; }
+.orion-cards-track { display: grid; width: 100%; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; overflow: hidden; transition: opacity .22s ease,transform .22s ease; }
+.orion-cards-track.is-sliding { transform: translateY(6px); opacity: .15; }
+.orion-job-card { position: relative; display: flex; min-height: 155px; flex-direction: column; justify-content: space-between; padding: 14px 16px; border: 1px solid rgba(255,255,255,.1); border-radius: 20px; background: #0c0f16; box-shadow: 0 12px 28px rgba(0,0,0,.5); }
+.orion-job-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.22); }
+.orion-job-top { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
+.orion-company-mark { display: flex; width: 28px; height: 28px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 7px; font-size: 12px; font-weight: 800; }
+.mark-amazon { background: #fff; color: #000; }
+.mark-bereal { border: 1px solid #fff; background: #000; color: #fff; font-size: 6.5px; }
+.mark-wise { border: 1px solid rgba(163,230,53,.4); background: #000; color: #a3e635; font-size: 14px; font-weight: 900; }
+.orion-job-heading { display: flex; flex-direction: column; gap: 1px; }
+.orion-job-title { margin: 0; color: #fff; font-size: 13px; font-weight: 700; }
+.orion-job-meta { color: rgba(255,255,255,.55); font-size: 9.5px; }
+.orion-job-pill-tags { display: flex; max-width: 170px; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+.orion-job-pill-tags span { padding: 2px 7px; border-radius: 999px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.75); font-size: 8.5px; }
+.orion-job-bottom-meta { display: flex; align-items: center; gap: 5px; color: rgba(255,255,255,.45); font-size: 9px; }
+.orion-compat-cluster { position: absolute; top: 14px; right: 14px; bottom: 14px; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; }
+.orion-node-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.orion-node-btn { display: flex; width: 20px; height: 20px; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; background: rgba(255,255,255,.08); color: #fff; font-size: 9px; cursor: pointer; }
+.orion-node-btn.node-heart.is-liked,.orion-node-btn.node-check.is-applied { border-color: #a3e635; background: #a3e635; color: #0a0e14; box-shadow: 0 0 10px rgba(163,230,53,.5); }
+.orion-job-card.is-dismissed { filter: grayscale(1); opacity: .25; pointer-events: none; }
+.orion-node-btn:hover { background: rgba(255,255,255,.2); }
+.orion-gauge-wrap { position: relative; display: flex; width: 58px; height: 58px; align-items: center; justify-content: center; }
+.orion-gauge-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.gauge-bg { fill: none; stroke: rgba(255,255,255,.1); stroke-width: 5; }
+.gauge-arc { fill: none; stroke: #a3e635; stroke-width: 5; stroke-linecap: round; filter: drop-shadow(0 0 6px rgba(163,230,53,.7)); }
+.orion-gauge-content { position: absolute; display: flex; flex-direction: column; text-align: center; }
+.orion-gauge-pct { color: #fff; font-size: 12px; font-weight: 800; line-height: 1; }
+.orion-gauge-label { margin-top: 1px; color: rgba(255,255,255,.55); font-size: 6px; }
+
+/* The older directory deliberately stays plain, but its controls retain layout. */
+.simple-nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; }
+.simple-brand { display: flex; align-items: center; gap: 7px; }
+.simple-logo-circle { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #0f172a; }
+.simple-brand-name { color: #0f172a; font-size: 13px; font-weight: 750; }
+.simple-nav-links { display: flex; align-items: center; gap: clamp(10px,1.8vw,18px); color: #64748b; font-size: 11.5px; }
+.simple-nav-links .is-active { color: #0f172a; font-weight: 600; }
+.simple-signin-btn { padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; color: #0f172a; font-size: 11px; }
+.simple-hero { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: clamp(8px,1.4vw,16px) 0; }
+.simple-hero-title { margin: 0; color: #0f172a; font-size: clamp(16px,2.2vw,24px); font-weight: 700; line-height: 1.2; }
+.simple-hero-sub { margin: 0 0 clamp(6px,1vw,10px); color: #64748b; font-size: clamp(10.5px,1.1vw,12.5px); }
+.simple-search-bar { display: flex; width: 100%; max-width: 480px; align-items: center; gap: 8px; padding: 4px 6px 4px 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.simple-search-input,.simple-search-loc { display: flex; min-width: 0; flex: 1; align-items: center; gap: 6px; color: #334155; font-size: 11px; }
+.simple-search-loc { padding-left: 8px; border-left: 1px solid #e2e8f0; }
+.simple-search-btn { padding: 5px 12px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; font-size: 11px; font-weight: 600; }
+.simple-jobs-list { display: flex; width: 100%; flex-direction: column; gap: clamp(6px,1vw,10px); }
+.simple-job-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: clamp(7px,1.1vw,11px) clamp(10px,1.4vw,14px); border: 1px solid #e2e8f0; border-radius: 9px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.02); }
+.simple-job-left { display: flex; align-items: center; gap: 10px; }
+.simple-company-avatar { display: flex; width: 28px; height: 28px; flex-shrink: 0; align-items: center; justify-content: center; border: 1px solid #e2e8f0; border-radius: 6px; background: #f1f5f9; color: #0f172a; font-size: 11px; font-weight: 700; }
+.simple-job-info { display: flex; flex-direction: column; gap: 2px; }
+.simple-job-role { margin: 0; color: #0f172a; font-size: 12px; font-weight: 650; }
+.simple-job-company { color: #64748b; font-size: 10px; }
+.simple-job-tags { display: flex; align-items: center; gap: 5px; }
+.simple-tag { padding: 2.5px 7px; border-radius: 4px; background: #f1f5f9; color: #475569; font-size: 9.5px; }
+.simple-apply-btn { padding: 4px 11px; border: 1px solid #cbd5e1; border-radius: 6px; background: #fff; color: #0f172a; font-size: 10.5px; font-weight: 600; }
+
+html:not([data-theme="dark"]) .orion-live-app,[data-theme="light"] .orion-live-app { background: #f8fafc; color: #0f172a; }
+html:not([data-theme="dark"]) .orion-top-section,[data-theme="light"] .orion-top-section { background-image: url("assets/orion-hero-bg.jpg"); }
+[data-theme="dark"] .orion-top-section { background-image: linear-gradient(rgba(10,15,12,.45),rgba(5,10,8,.65)),url("assets/orion-hero-bg.jpg"); }
+html:not([data-theme="dark"]) .orion-brand-text,[data-theme="light"] .orion-brand-text,
+html:not([data-theme="dark"]) .orion-hero-title,[data-theme="light"] .orion-hero-title { color: #0f172a; }
+html:not([data-theme="dark"]) .orion-search-pill,[data-theme="light"] .orion-search-pill { border-color: rgba(255,255,255,.95); background: rgba(255,255,255,.7); box-shadow: 0 8px 24px rgba(15,35,25,.08); color: #0f172a; }
+html:not([data-theme="dark"]) .orion-input,[data-theme="light"] .orion-input { color: #0f172a; }
+html:not([data-theme="dark"]) .orion-search-btn,[data-theme="light"] .orion-search-btn { background: #0f172a; color: #fff; }
+html:not([data-theme="dark"]) .orion-glass-card,[data-theme="light"] .orion-glass-card { border-color: rgba(255,255,255,.95); background: rgba(255,255,255,.72); box-shadow: 0 14px 32px rgba(18,38,28,.07); color: #0f172a; }
+html:not([data-theme="dark"]) .orion-card-title,[data-theme="light"] .orion-card-title,
+html:not([data-theme="dark"]) .orion-stat-num,[data-theme="light"] .orion-stat-num,
+html:not([data-theme="dark"]) .orion-mini-val,[data-theme="light"] .orion-mini-val { color: #0f172a; }
+html:not([data-theme="dark"]) .orion-bottom-section,[data-theme="light"] .orion-bottom-section { background: #f1f5f9; }
+html:not([data-theme="dark"]) .orion-filter-pill,[data-theme="light"] .orion-filter-pill { border-color: rgba(0,0,0,.12); color: #334155; }
+html:not([data-theme="dark"]) .orion-job-card,[data-theme="light"] .orion-job-card { border-color: #e2e8f0; background: #fff; box-shadow: 0 8px 22px rgba(15,23,42,.08); }
+html:not([data-theme="dark"]) .orion-job-title,[data-theme="light"] .orion-job-title { color: #0f172a; }
+html:not([data-theme="dark"]) .orion-job-meta,[data-theme="light"] .orion-job-meta,
+html:not([data-theme="dark"]) .orion-job-bottom-meta,[data-theme="light"] .orion-job-bottom-meta { color: #64748b; }
+
+@media (max-width: 860px) {
+  .orion-live-app { min-height: 0; }
+  .orion-top-section { min-height: 0; padding: 16px; }
+  .orion-nav { flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+  .orion-brand { order: 1; }
+  .orion-user-controls { order: 2; }
+  .orion-search-pill { order: 3; width: 100%; justify-content: space-between; box-sizing: border-box; }
+  .orion-hero-grid { grid-template-columns: 1fr; gap: 14px; }
+  .orion-hero-right { gap: 12px; }
+  .orion-salary-card { max-width: none; }
+  .orion-cards-track { grid-template-columns: 1fr; }
+  .orion-cards-track > .orion-job-card:not(:first-child) { display: none; }
+  .simple-nav-links { display: none; }
+  .simple-job-tags { flex-wrap: wrap; gap: 4px; }
+}
+
+@media (max-width: 600px) {
+  .orion-search-field { flex: 1; }
+  .orion-input-query { width: min(34vw, 160px); }
+  .orion-input-loc { width: min(20vw, 90px); }
+  .orion-search-divider { display: none; }
+  .orion-sub-metrics-row { gap: 8px; }
+  .orion-glass-card { padding: 11px 12px; }
+  .orion-filter-bar { align-items: flex-start; }
+  .orion-filter-pills { max-width: calc(100% - 64px); }
+  .orion-before-page { padding: 10px; }
+  .simple-job-card { flex-wrap: wrap; }
+  .simple-job-tags { order: 3; width: 100%; }
+}
+
 /* Bottom Benefits Bar */
 .ba-benefits-bar {
   display: flex;
