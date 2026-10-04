@@ -13,9 +13,9 @@
         var t = localStorage.getItem('klyven_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', t);
         document.documentElement.style.colorScheme = t;
-        if (t === 'dark') {
-          var m = document.querySelector('meta[name="theme-color"]');
-          if (m) m.setAttribute('content', '#000000');
+        if (t === "dark") {
+          var m = document.querySelector("meta[name=\"theme-color\"]");
+          if (m) m.setAttribute("content", "#000000");
         }
       })();
     </script>
@@ -57,63 +57,113 @@
     <!-- Main Content -->
     <main class="legal-container">
       <div class="legal-hero">
-        <span class="legal-kicker">LEGAL &amp; COMPLIANCE</span>
-        <h1 class="legal-title">Refund &amp; Cancellation Policy — Klyven Studio</h1>
-        <p class="legal-updated">Effective date: September 10, 2026 &nbsp;|&nbsp; Last updated: September 10, 2026</p>
+        <span class="legal-kicker" data-i18n="legal.kicker">LEGAL &amp; COMPLIANCE</span>
+        <h1 class="legal-title" data-i18n="legal.refundTitle">Refund &amp; Cancellation Policy — Klyven Studio</h1>
+        <p class="legal-updated" data-i18n="legal.updated" data-i18n-html="true">Effective date: September 10, 2026 &nbsp;|&nbsp; Last updated: September 10, 2026</p>
 
         <!-- Quick Switch Tabs -->
         <nav class="legal-nav-chips" aria-label="Legal policies">
-          <a href="privacy-policy.html" class="legal-chip">Privacy Policy</a>
-          <a href="terms.html" class="legal-chip">Terms &amp; Conditions</a>
-          <a href="cookies.html" class="legal-chip">Cookie Policy</a>
-          <a href="refund-policy.html" class="legal-chip is-active">Refund &amp; Cancellation</a>
+          <a href="privacy-policy.html" class="legal-chip" data-i18n="legal.navPrivacy">Privacy Policy</a>
+          <a href="terms.html" class="legal-chip" data-i18n="legal.navTerms">Terms &amp; Conditions</a>
+          <a href="cookies.html" class="legal-chip" data-i18n="legal.navCookies">Cookie Policy</a>
+          <a href="refund-policy.html" class="legal-chip is-active" data-i18n="legal.navRefund">Refund &amp; Cancellation</a>
         </nav>
       </div>
 
       <article class="legal-card">
-        <div class="legal-meta-banner">
-          <strong>Extended Policy Notice:</strong> This policy explains how Klyven Studio reviews project cancellations, completed milestones, payment calculations, and service resolutions under Mexican law. Items in <span class="legal-placeholder">[BRACKETS]</span> require confirmation with actual business banking and billing practices prior to publication.
+        <!-- English Content -->
+        <div class="legal-content-en" data-lang-block="en">
+          <div class="legal-meta-banner">
+            <strong>Policy Notice:</strong> This policy explains how Klyven Studio reviews project cancellations, completed milestones, payment calculations, and service resolutions under Mexican law and client project agreements.
+          </div>
+
+          <h2><span class="legal-section-num">1</span> Purpose and relationship with the project agreement</h2>
+          <p>
+            This policy explains how Klyven Studio reviews cancellations, amounts paid, incomplete work, and concerns about delivered web design services. The accepted Project Agreement identifies the scope, milestones, fees, payment schedule, and authorized third-party purchases. This policy must be read alongside that agreement and applicable law. It does not create a blanket “no refunds” rule and does not waive statutory remedies.
+          </p>
+
+          <h2><span class="legal-section-num">2</span> Cancellation before work begins</h2>
+          <p>
+            If the client requests cancellation before substantive project work has begun, the Studio will assess payments received and refund amounts attributable to services not performed. Third-party purchases or other charges may be considered only where authorized, actually incurred, identified to the client, and chargeable under the accepted agreement and applicable law. The Studio will give an itemized explanation of any deduction.
+          </p>
+
+          <h2><span class="legal-section-num">3</span> Cancellation after work begins</h2>
+          <p>
+            When work has begun, the Studio will examine completed milestones, documented work performed, deliverables already supplied, amounts invoiced or paid, and third-party expenses that the client authorized. The Studio will calculate any amount due for completed work and any amount payable back for unperformed work under the accepted agreement and applicable law. It will provide a written breakdown and will not automatically characterize every advance payment as non-refundable.
+          </p>
+
+          <h2><span class="legal-section-num">4</span> Paused or delayed projects</h2>
+          <p>
+            If a project pauses because necessary content, access, approvals, or payments are missing, the parties should document the status and an updated schedule. A prolonged pause, its consequences for reserved production time, and any reactivation fee should be addressed in the Project Agreement rather than imposed retrospectively. If either party decides to end a paused project, the cancellation calculation above applies, subject to the agreement and applicable law.
+          </p>
+
+          <h2><span class="legal-section-num">5</span> Service concerns and required remedies</h2>
+          <p>
+            A client who believes a delivered service differs materially from the accepted scope should send a written description, relevant screenshots or links, and a project reference to <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>. The Studio will examine the agreed specification and the delivered work, ask for reasonable clarification if needed, and communicate a proposed correction or another appropriate remedy. Rights to relief for deficient or unprovided services under applicable consumer law remain available; this policy does not replace them.
+          </p>
+
+          <h2><span class="legal-section-num">6</span> Third-party charges</h2>
+          <p>
+            Domains, hosting, software subscriptions, premium fonts, and licensed imagery may have separate purchase and refund rules imposed by their providers. The Studio will identify such charges in the proposal or obtain approval before incurring them. Any statement that a third-party charge cannot be recovered must reflect the actual provider rules and the transaction records.
+          </p>
+
+          <h2><span class="legal-section-num">7</span> Submitting and handling a request</h2>
+          <p>
+            Send a cancellation, correction, or refund request to <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>. Include your name or company, project title, invoice or payment reference if available, what you are requesting, and a short explanation. The Studio will acknowledge the request within 3 to 5 business days, review it fairly, and provide a reasoned decision or proposed resolution. Approved refunds will be processed via electronic bank transfer (SPEI) or the original payment method within 10 to 15 business days, subject to payment provider processing and applicable legal deadlines.
+          </p>
+
+          <h2><span class="legal-section-num">8</span> Non-waivable rights</h2>
+          <p>
+            Nothing in this policy limits a right to complain to a competent authority, claim an available remedy for deficient service, or exercise another right that Mexican law does not allow a business to exclude by contract.
+          </p>
         </div>
 
-        <h2><span class="legal-section-num">1</span> Purpose and relationship with the project agreement</h2>
-        <p>
-          This policy explains how Klyven Studio reviews cancellations, amounts paid, incomplete work, and concerns about delivered web design services. The accepted Project Agreement identifies the scope, milestones, fees, payment schedule, and authorized third-party purchases. This policy must be read alongside that agreement and applicable law. It does not create a blanket “no refunds” rule and does not waive statutory remedies.
-        </p>
+        <!-- Spanish Content -->
+        <div class="legal-content-es" data-lang-block="es">
+          <div class="legal-meta-banner">
+            <strong>Aviso de Política:</strong> Esta política explica cómo Klyven Studio revisa cancelaciones de proyectos, hitos completados, cálculos de pago y resoluciones de servicio de conformidad con la ley mexicana y los contratos de proyecto aceptados.
+          </div>
 
-        <h2><span class="legal-section-num">2</span> Cancellation before work begins</h2>
-        <p>
-          If the client requests cancellation before substantive project work has begun, the Studio will assess payments received and refund amounts attributable to services not performed. Third-party purchases or other charges may be considered only where authorized, actually incurred, identified to the client, and chargeable under the accepted agreement and applicable law. The Studio will give an itemized explanation of any deduction.
-        </p>
+          <h2><span class="legal-section-num">1</span> Objeto y relación con el contrato de proyecto</h2>
+          <p>
+            Esta política detalla los criterios bajo los cuales Klyven Studio atiende cancelaciones, importes pagados, trabajos pendientes y aclaraciones sobre servicios de diseño y desarrollo web entregados. El Contrato de Proyecto aceptado por las partes identifica el alcance, hitos, honorarios, esquema de pagos y gastos autorizados a terceros. Esta política debe interpretarse conjuntamente con dicho acuerdo y la legislación aplicable; no impone una cláusula general de “no reembolsos” ni limita recursos legales irrenunciables.
+          </p>
 
-        <h2><span class="legal-section-num">3</span> Cancellation after work begins</h2>
-        <p>
-          When work has begun, the Studio will examine completed milestones, documented work performed, deliverables already supplied, amounts invoiced or paid, and third-party expenses that the client authorized. The Studio will calculate any amount due for completed work and any amount payable back for unperformed work under the accepted agreement and applicable law. It will provide a written breakdown and will not automatically characterize every advance payment as non-refundable.
-        </p>
+          <h2><span class="legal-section-num">2</span> Cancelación antes del inicio de los trabajos</h2>
+          <p>
+            Si el cliente solicita la cancelación del proyecto antes de que hayan iniciado labores sustantivas de diseño o desarrollo, el Estudio evaluará los pagos recibidos y reembolsará los importes atribuibles a servicios no ejecutados. Los gastos o contrataciones con terceros autorizados que ya hubiesen sido efectivamente erogados y comprobados podrán deducirse conforme al contrato firmado. El Estudio proporcionará un desglose detallado de cualquier deducción efectuada.
+          </p>
 
-        <h2><span class="legal-section-num">4</span> Paused or delayed projects</h2>
-        <p>
-          If a project pauses because necessary content, access, approvals, or payments are missing, the parties should document the status and an updated schedule. A prolonged pause, its consequences for reserved production time, and any reactivation fee should be addressed in the Project Agreement rather than imposed retrospectively. If either party decides to end a paused project, the cancellation calculation above applies, subject to the agreement and applicable law.
-        </p>
+          <h2><span class="legal-section-num">3</span> Cancelación con trabajos en curso</h2>
+          <p>
+            Cuando los trabajos ya hayan comenzado, el Estudio examinará los hitos completados, las labores debidamente documentadas, los entregables ya facilitados, los importes pagados y los gastos autorizados a terceros. Con base en ello se calculará el monto correspondiente al trabajo realizado y el saldo a favor o en devolución por los servicios pendientes. Se entregará un desglose por escrito y no se calificará automáticamente todo anticipo como no reembolsable.
+          </p>
 
-        <h2><span class="legal-section-num">5</span> Service concerns and required remedies</h2>
-        <p>
-          A client who believes a delivered service differs materially from the accepted scope should send a written description, relevant screenshots or links, and a project reference to <span class="legal-placeholder">[SUPPORT EMAIL]</span>. The Studio will examine the agreed specification and the delivered work, ask for reasonable clarification if needed, and communicate a proposed correction or another appropriate remedy. Rights to relief for deficient or unprovided services under applicable consumer law remain available; this policy does not replace them.
-        </p>
+          <h2><span class="legal-section-num">4</span> Proyectos en pausa o con demoras</h2>
+          <p>
+            Si un proyecto se suspende por falta de contenidos, accesos, aprobaciones o pagos a cargo del cliente, las partes documentarán el estado del proyecto y acordarán un nuevo cronograma. La eventual reactivación tras una pausa prolongada se regirá por lo pactado en el Contrato de Proyecto. Si alguna de las partes decidiera rescindir el proyecto en pausa, se aplicará el cálculo de cancelación proporcional descrito anteriormente.
+          </p>
 
-        <h2><span class="legal-section-num">6</span> Third-party charges</h2>
-        <p>
-          Domains, hosting, software subscriptions, premium fonts, and licensed imagery may have separate purchase and refund rules imposed by their providers. The Studio will identify such charges in the proposal or obtain approval before incurring them. Any statement that a third-party charge cannot be recovered must reflect the actual provider rules and the transaction records.
-        </p>
+          <h2><span class="legal-section-num">5</span> Inconformidades y soluciones de servicio</h2>
+          <p>
+            El cliente que considere que el servicio entregado difiere sustancialmente de las especificaciones pactadas deberá enviar una descripción escrita, capturas o enlaces de referencia y el número de proyecto a <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>. El Estudio revisará la especificación acordada, solicitará aclaraciones razonables si fuera necesario y comunicará una propuesta de corrección técnica oportuna. Los derechos del consumidor reconocidos por la legislación mexicana para reclamar servicios deficientes o no prestados permanecen plenamente vigentes.
+          </p>
 
-        <h2><span class="legal-section-num">7</span> Submitting and handling a request</h2>
-        <p>
-          Send a cancellation, correction, or refund request to <span class="legal-placeholder">[BILLING EMAIL]</span>. Include your name or company, project title, invoice or payment reference if available, what you are requesting, and a short explanation. The Studio will acknowledge the request within <span class="legal-placeholder">[ACTUAL RESPONSE PRACTICE]</span>, review it fairly, and provide a reasoned decision or proposed resolution. Approved refunds will be processed via <span class="legal-placeholder">[ACTUAL PAYMENT METHOD OR POLICY]</span> within <span class="legal-placeholder">[ACTUAL TIMEFRAME]</span>, subject to payment provider processing and applicable legal deadlines.
-        </p>
+          <h2><span class="legal-section-num">6</span> Cargos de proveedores externos</h2>
+          <p>
+            El registro de dominios, planes de hospedaje web, tipografías comerciales, fotografías de stock con licencia y suscripciones a software externo pueden contar con políticas de cancelación y reembolso propias dictadas por sus proveedores. El Estudio informará previamente dichos costos o recabará aprobación antes de su contratación.
+          </p>
 
-        <h2><span class="legal-section-num">8</span> Non-waivable rights</h2>
-        <p>
-          Nothing in this policy limits a right to complain to a competent authority, claim an available remedy for deficient service, or exercise another right that Mexican law does not allow a business to exclude by contract.
-        </p>
+          <h2><span class="legal-section-num">7</span> Presentación y trámite de solicitudes</h2>
+          <p>
+            Envíe cualquier solicitud de cancelación, aclaración o reembolso al correo <a href="mailto:hello@klyvenstudio.com" class="legal-inline-link">hello@klyvenstudio.com</a>, indicando su nombre o razón social, nombre del proyecto, referencia de factura o comprobante y una breve explicación del motivo. El Estudio confirmará la recepción de la solicitud en un plazo de 3 a 5 días hábiles, la evaluará objetivamente y emitirá una resolución fundada. Los reembolsos aprobados se procesarán mediante transferencia electrónica (SPEI) o a través del método de pago original dentro de los 10 a 15 días hábiles siguientes, sujeto a los tiempos bancarios y plazos legales.
+          </p>
+
+          <h2><span class="legal-section-num">8</span> Derechos irrenunciables</h2>
+          <p>
+            Ninguna disposición de esta política excluye, restringe o modifica el derecho del cliente de acudir ante la Procuraduría Federal del Consumidor (PROFECO) o tribunales competentes, ni limita cualquier derecho que conforme a las leyes mexicanas no pueda ser objeto de renuncia contractual.
+          </p>
+        </div>
       </article>
     </main>
 
@@ -233,4 +283,3 @@
     <script type="module" src="script.js"></script>
   </body>
 </html>
-

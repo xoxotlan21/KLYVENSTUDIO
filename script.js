@@ -734,6 +734,12 @@ import logoDarkUrl from './logo-dark.png';
   var backdrop = document.getElementById('project-modal-backdrop');
 
   var projectConfigs = {
+    intransca: {
+      type: 'live-viewer',
+      src: 'https://majestic-chebakia-e92c3d.netlify.app/',
+      url: 'https://www.intransca.com',
+      liveUrl: 'https://majestic-chebakia-e92c3d.netlify.app/'
+    },
     northwood: {
       type: 'inline',
       containerId: 'project-site-northwood',
