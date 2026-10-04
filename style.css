@@ -1904,6 +1904,113 @@ html:not([data-theme="dark"]) .orion-job-title,[data-theme="light"] .orion-job-t
 html:not([data-theme="dark"]) .orion-job-meta,[data-theme="light"] .orion-job-meta,
 html:not([data-theme="dark"]) .orion-job-bottom-meta,[data-theme="light"] .orion-job-bottom-meta { color: #64748b; }
 
+/* Orion Space BEFORE Slider — Dark Theme */
+[data-theme="dark"] .orion-before-page,
+[data-theme="dark"] .ba-layer-before .orion-before-page {
+  background: #000000 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .simple-nav {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .simple-logo-circle {
+  background: #60a5fa !important;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15) !important;
+}
+
+[data-theme="dark"] .simple-brand-name {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .simple-nav-links {
+  color: #71717a !important;
+}
+
+[data-theme="dark"] .simple-nav-links .is-active {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .simple-signin-btn {
+  background: #111111 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #e4e4e7 !important;
+}
+
+[data-theme="dark"] .simple-hero-title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .simple-hero-sub {
+  color: #a1a1aa !important;
+}
+
+[data-theme="dark"] .simple-search-bar {
+  background: #0d0d0d !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .simple-search-input {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .simple-search-input svg {
+  stroke: #a1a1aa !important;
+}
+
+[data-theme="dark"] .simple-search-loc {
+  border-left-color: rgba(255, 255, 255, 0.14) !important;
+  color: #a1a1aa !important;
+}
+
+[data-theme="dark"] .simple-search-loc svg {
+  stroke: #a1a1aa !important;
+}
+
+[data-theme="dark"] .simple-search-btn {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .simple-job-card {
+  background: #0a0a0a !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .simple-company-avatar {
+  background: #161616 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] .simple-job-role {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .simple-job-company {
+  color: #71717a !important;
+}
+
+[data-theme="dark"] .simple-tag {
+  background: #141414 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #a1a1aa !important;
+}
+
+[data-theme="dark"] .simple-apply-btn {
+  background: #141414 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .simple-apply-btn:hover {
+  background: #202020 !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
 @media (max-width: 860px) {
   .orion-live-app { min-height: 0; }
   .orion-top-section { min-height: 0; padding: 16px; }
@@ -3692,6 +3799,7 @@ html.pre .dot { scale: 0; }
   .approach-browser-wrap {
     width: 100%;
     max-width: 540px;
+    flex: 0 0 auto;
   }
   .approach-pillars {
     grid-template-columns: 1fr;
@@ -7411,6 +7519,65 @@ html.has-scrolled .menu > .cta {
   color: #a1a1aa;
 }
 
+/* Portfolio Empty State */
+.portfolio-empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 56px 24px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  border-radius: 16px;
+  margin: 16px 0 24px;
+}
+
+.portfolio-empty-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(148, 163, 184, 0.12);
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.portfolio-empty-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.portfolio-empty-desc {
+  margin: 0;
+  font-size: 13.5px;
+  color: #64748b;
+  max-width: 420px;
+}
+
+[data-theme="dark"] .portfolio-empty-state {
+  background: #09090b;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .portfolio-empty-icon {
+  background: #18181b;
+  color: #a1a1aa;
+}
+
+[data-theme="dark"] .portfolio-empty-title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .portfolio-empty-desc {
+  color: #a1a1aa;
+}
+
 @media (max-width: 900px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
@@ -10354,10 +10521,11 @@ html[lang="en"] [data-lang-block="es"] {
 /* ==========================================================================
    11. COOKIE CONSENT BANNER
    ========================================================================== */
+[data-theme="dark"] .cookie-banner,
 [data-theme="dark"] .cookie-banner-wrap {
-  background: rgba(14, 14, 14, 0.98);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95);
+  background: #000000;
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .cookie-banner-title {
@@ -10369,7 +10537,7 @@ html[lang="en"] [data-lang-block="es"] {
 }
 
 [data-theme="dark"] .cookie-icon-wrap {
-  background: #1f1f1f;
+  background: #111111;
   border-color: rgba(255, 255, 255, 0.14);
   color: #ffffff;
 }
@@ -10399,25 +10567,48 @@ html[lang="en"] [data-lang-block="es"] {
 }
 
 [data-theme="dark"] .cookie-details-panel {
-  background: #121212;
-  border-color: rgba(255, 255, 255, 0.1);
+  background: #050505 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .cookie-toggle-row {
+  background: #0d0d0d !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .cookie-toggle-row:hover {
+  background: #141414 !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
 }
 
 [data-theme="dark"] .cookie-toggle-title {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 [data-theme="dark"] .cookie-toggle-desc {
-  color: #a1a1aa;
-}
-
-[data-theme="dark"] .switch-control input:checked + .switch-slider {
-  background: #ffffff;
+  color: #a1a1aa !important;
 }
 
 [data-theme="dark"] .cookie-always-active-badge {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: #18181b !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #e4e4e7 !important;
+}
+
+[data-theme="dark"] .switch-slider {
+  background-color: #27272a !important;
+}
+
+[data-theme="dark"] .switch-slider::before {
+  background-color: #e4e4e7 !important;
+}
+
+[data-theme="dark"] .switch-control input:checked + .switch-slider {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .switch-control input:checked + .switch-slider::before {
+  background-color: #000000 !important;
 }
 
 /* ==========================================================================
@@ -10724,10 +10915,24 @@ body.is-project-modal-open {
   color: #e2e8f0;
   font-size: 12.5px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  min-width: 0;
+}
+
+.project-browser-url {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.live-link-text-short {
+  display: none;
 }
 
 .project-browser-url-pill svg {
   color: #34d399;
+  flex-shrink: 0;
 }
 
 .project-browser-actions {
@@ -12522,16 +12727,72 @@ body.is-project-modal-open {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .project-modal-dialog {
+    padding: 8px;
+  }
   .project-browser-window {
     height: 96vh;
-    border-radius: 12px;
+    max-height: none;
+    border-radius: 14px;
   }
-  .project-browser-url-pill span {
-    max-width: 140px;
+  .project-browser-bar {
+    height: 44px;
+    padding: 0 10px;
+    gap: 6px;
+  }
+  .project-browser-controls {
+    width: auto;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .ctrl-dot {
+    width: 9px;
+    height: 9px;
+  }
+  .project-browser-url-pill {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 160px;
+    padding: 4px 8px;
+    gap: 5px;
+    font-size: 11px;
+    justify-content: center;
+  }
+  .project-browser-url-pill svg {
+    width: 9px;
+    height: 9px;
+  }
+  .project-browser-url-pill span,
+  .project-browser-url {
+    max-width: 125px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: block;
+  }
+  .project-browser-actions {
+    min-width: 0;
+    width: auto;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+  .project-modal-live-link {
+    padding: 4px 8px;
+    font-size: 10.5px;
+    gap: 4px;
+  }
+  .project-modal-live-link .live-link-text {
+    display: none;
+  }
+  .project-modal-live-link .live-link-text-short {
+    display: inline;
+  }
+  .project-modal-close-btn {
+    padding: 4px 8px;
+  }
+  .project-modal-close-btn .close-btn-text {
+    display: none;
   }
   .nw-stats-bar {
     grid-template-columns: 1fr;
@@ -12539,6 +12800,27 @@ body.is-project-modal-open {
   }
   .nw-steps-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .project-browser-bar {
+    padding: 0 6px;
+    gap: 4px;
+  }
+  .project-browser-url-pill {
+    max-width: 110px;
+    padding: 3px 6px;
+  }
+  .project-browser-url-pill span,
+  .project-browser-url {
+    max-width: 80px;
+  }
+  .project-modal-live-link {
+    padding: 4px 6px;
+  }
+  .project-modal-close-btn {
+    padding: 4px 6px;
   }
 }
 
@@ -12994,6 +13276,18 @@ body.is-project-modal-open {
   background: #090c0a;
 }
 
+[data-theme="dark"] .project-browser-window {
+  background: #000000;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 35px 85px -15px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .project-browser-bar {
+  background: rgba(5, 5, 5, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .project-browser-viewport,
 [data-theme="dark"] .project-browser-viewport.is-iframe-mode,
 [data-theme="dark"] .project-site-container.is-iframe-container,
 [data-theme="dark"] .project-site-iframe {
@@ -13012,6 +13306,10 @@ body.is-project-modal-open {
   gap: 16px;
   z-index: 10;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+[data-theme="dark"] .project-iframe-loader {
+  background: #000000;
 }
 
 .project-iframe-loader.is-hidden {

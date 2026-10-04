@@ -3,6 +3,9 @@ import { resolve } from 'path';
 
 export default defineConfig({
   base: './',
+  server: {
+    host: true
+  },
   build: {
     rollupOptions: {
       input: {

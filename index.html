@@ -2079,6 +2079,7 @@
                   <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
                 <span class="live-link-text" data-i18n="work.openLiveSite">Abrir web oficial</span>
+                <span class="live-link-text-short" aria-hidden="true">Web</span>
               </a>
               <button type="button" class="project-modal-close-btn" id="project-modal-close-btn" aria-label="Cerrar vista previa">
                 <span class="close-btn-text">ESC</span>
@@ -3132,6 +3133,50 @@
                 title="NoLock — Live Application Preview"
                 loading="lazy"
                 allow="clipboard-write"
+              ></iframe>
+            </div>
+
+            <!-- Cafe Collective Concept Preview -->
+            <div class="project-site-container" id="project-site-cafe" style="display: none;">
+              <div class="cafe-preview-modal-body">
+                <div class="cafe-hero-preview">
+                  <span class="cafe-tagline">ARTISAN ROASTERY &amp; NEIGHBORHOOD BISTRO</span>
+                  <h2 class="cafe-title">A warm, slow living space shaped for connection.</h2>
+                  <p class="cafe-desc">Brand identity and digital menu experience designed for a specialty coffee shop and artisanal bakery.</p>
+                </div>
+                <div class="cafe-img-showcase">
+                  <img src="assets/work-cafe.png" alt="Café Collective Full Brand &amp; Digital Experience" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Orion Space Operations Preview -->
+            <div class="project-site-container" id="project-site-orion" style="display: none;">
+              <div class="orion-preview-modal-body">
+                <div class="orion-modal-hero">
+                  <span class="orion-modal-tagline">AUTONOMOUS ORBITAL OPERATIONS</span>
+                  <h2 class="orion-modal-title">Real-Time Telemetry &amp; Flight Interface</h2>
+                  <p class="orion-modal-desc">Interactive orbital tracking, satellite telemetry analytics, and mission command dashboard design.</p>
+                </div>
+                <div class="orion-modal-img-wrap">
+                  <img src="assets/orion-after-full.png" alt="Orion Space Operations Platform Preview" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Web Viewer Container for CloakGPT, ALPEZ, DriverVan, VETQ, Raycast, Ferm Living, Igloo, etc. -->
+            <div class="project-site-container is-iframe-container" id="project-site-live-viewer" style="display: none;">
+              <div class="project-iframe-loader" id="project-iframe-loader-live">
+                <div class="project-iframe-spinner"></div>
+                <span class="project-iframe-loading-text" data-i18n="work.loadingLive">Cargando aplicación en vivo...</span>
+              </div>
+              <iframe 
+                src="about:blank"
+                class="project-site-iframe"
+                id="project-live-viewer-iframe"
+                title="Live Project Application Preview"
+                loading="lazy"
+                allow="clipboard-write; fullscreen"
               ></iframe>
             </div>
           </div>

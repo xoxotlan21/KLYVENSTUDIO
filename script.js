@@ -733,6 +733,87 @@ import logoDarkUrl from './logo-dark.png';
   var closeDot = document.getElementById('project-modal-close-dot');
   var backdrop = document.getElementById('project-modal-backdrop');
 
+  var projectConfigs = {
+    northwood: {
+      type: 'inline',
+      containerId: 'project-site-northwood',
+      url: 'https://www.northwoodlandscapes.com',
+      liveUrl: 'https://www.northwoodlandscapes.com'
+    },
+    nolock: {
+      type: 'iframe-dedicated',
+      containerId: 'project-site-nolock',
+      iframeId: 'project-nolock-iframe',
+      loaderId: 'project-iframe-loader',
+      src: 'https://getnolock.com/',
+      url: 'https://getnolock.com',
+      liveUrl: 'https://getnolock.com/'
+    },
+    framnova: {
+      type: 'iframe-dedicated',
+      containerId: 'project-site-framnova',
+      iframeId: 'project-framnova-iframe',
+      loaderId: 'project-iframe-loader-framnova',
+      src: 'framnova-preview.html',
+      url: 'https://www.framnova.com',
+      liveUrl: 'https://www.framnova.com/'
+    },
+    cafe: {
+      type: 'inline',
+      containerId: 'project-site-cafe',
+      url: 'https://www.cafecollective.co',
+      liveUrl: 'https://www.cafecollective.co'
+    },
+    orion: {
+      type: 'inline',
+      containerId: 'project-site-orion',
+      url: 'https://www.orion-space.nexus',
+      liveUrl: 'https://www.orion-space.nexus'
+    },
+    cloakgpt: {
+      type: 'live-viewer',
+      src: 'https://www.cloakgpt.ca/',
+      url: 'https://www.cloakgpt.ca',
+      liveUrl: 'https://www.cloakgpt.ca/'
+    },
+    alpez: {
+      type: 'live-viewer',
+      src: 'https://6abc2d0d442f2e07682bc185--jolly-narwhal-e64805.netlify.app/',
+      url: 'https://www.alpez-realtours.com',
+      liveUrl: 'https://6abc2d0d442f2e07682bc185--jolly-narwhal-e64805.netlify.app/'
+    },
+    drivervan: {
+      type: 'live-viewer',
+      src: 'https://6abad7df3e35caa7f8bf7ff9--stellar-narwhal-8ebea1.netlify.app/',
+      url: 'https://www.drivervan.mx',
+      liveUrl: 'https://6abad7df3e35caa7f8bf7ff9--stellar-narwhal-8ebea1.netlify.app/'
+    },
+    vetq: {
+      type: 'live-viewer',
+      src: 'https://majestic-chebakia-e92c3d.netlify.app/',
+      url: 'https://www.vetq.mx',
+      liveUrl: 'https://majestic-chebakia-e92c3d.netlify.app/'
+    },
+    igloo: {
+      type: 'live-viewer',
+      src: 'https://igloo.co/',
+      url: 'https://www.igloo.co',
+      liveUrl: 'https://igloo.co/'
+    },
+    raycast: {
+      type: 'live-viewer',
+      src: 'raycast-preview.html',
+      url: 'https://www.raycast.com',
+      liveUrl: 'https://www.raycast.com/'
+    },
+    fermliving: {
+      type: 'live-viewer',
+      src: 'fermliving-preview.html',
+      url: 'https://www.fermliving.com',
+      liveUrl: 'https://www.fermliving.com/'
+    }
+  };
+
   function openModal(projectId) {
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
@@ -745,71 +826,75 @@ import logoDarkUrl from './logo-dark.png';
     });
 
     var currentLang = document.documentElement.lang || 'en';
+    var config = projectConfigs[projectId] || projectConfigs['northwood'];
 
-    if (projectId === 'nolock') {
-      if (viewport) viewport.classList.add('is-iframe-mode');
-      var nolockSite = document.getElementById('project-site-nolock');
-      var iframe = document.getElementById('project-nolock-iframe');
-      var loader = document.getElementById('project-iframe-loader');
-      var liveLink = document.getElementById('project-modal-live-link');
+    if (urlPill) {
+      urlPill.textContent = config.url || 'https://klyven.com';
+    }
 
-      if (nolockSite) nolockSite.style.display = 'flex';
-      if (liveLink) {
-        liveLink.href = 'https://getnolock.com/';
+    var liveLink = document.getElementById('project-modal-live-link');
+    if (liveLink) {
+      if (config.liveUrl) {
+        liveLink.href = config.liveUrl;
         liveLink.style.display = 'inline-flex';
+      } else {
+        liveLink.style.display = 'none';
       }
+    }
 
+    if (config.type === 'iframe-dedicated') {
+      if (viewport) viewport.classList.add('is-iframe-mode');
+      var dedicatedSite = document.getElementById(config.containerId);
+      var iframe = document.getElementById(config.iframeId);
+      var loader = document.getElementById(config.loaderId);
+
+      if (dedicatedSite) dedicatedSite.style.display = 'flex';
       if (iframe) {
-        var targetSrc = iframe.getAttribute('data-src') || 'https://getnolock.com/';
-        if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.includes('getnolock.com')) {
+        var targetSrc = iframe.getAttribute('data-src') || config.src;
+        if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.includes(targetSrc)) {
           if (loader) loader.classList.remove('is-hidden');
           iframe.src = targetSrc;
           iframe.onload = function () {
             if (loader) loader.classList.add('is-hidden');
           };
+        } else {
+          if (loader) loader.classList.add('is-hidden');
         }
       }
-      if (urlPill) urlPill.textContent = 'https://getnolock.com';
-    } else if (projectId === 'framnova' || projectId === 'cafe') {
+    } else if (config.type === 'live-viewer') {
       if (viewport) viewport.classList.add('is-iframe-mode');
-      var framnovaSite = document.getElementById('project-site-framnova');
-      var iframe = document.getElementById('project-framnova-iframe');
-      var loader = document.getElementById('project-iframe-loader-framnova');
-      var liveLink = document.getElementById('project-modal-live-link');
+      var viewerSite = document.getElementById('project-site-live-viewer');
+      var viewerIframe = document.getElementById('project-live-viewer-iframe');
+      var viewerLoader = document.getElementById('project-iframe-loader-live');
 
-      if (framnovaSite) framnovaSite.style.display = 'flex';
-      if (liveLink) {
-        liveLink.href = 'https://www.framnova.com/';
-        liveLink.style.display = 'inline-flex';
-      }
-
-      if (iframe) {
-        var targetSrc = iframe.getAttribute('data-src') || 'framnova-preview.html';
-        if (!iframe.src || iframe.src === 'about:blank' || !iframe.src.includes('framnova-preview.html')) {
-          if (loader) loader.classList.remove('is-hidden');
-          iframe.src = targetSrc;
-          iframe.onload = function () {
-            if (loader) loader.classList.add('is-hidden');
-          };
+      if (viewerSite) viewerSite.style.display = 'flex';
+      if (viewerIframe) {
+        if (viewerLoader) viewerLoader.classList.remove('is-hidden');
+        viewerIframe.onload = function () {
+          if (viewerLoader) viewerLoader.classList.add('is-hidden');
+        };
+        if (viewerIframe.getAttribute('data-current-src') !== config.src || !viewerIframe.src || viewerIframe.src === 'about:blank') {
+          viewerIframe.setAttribute('data-current-src', config.src);
+          viewerIframe.src = config.src;
+        } else {
+          if (viewerLoader) viewerLoader.classList.add('is-hidden');
         }
       }
-      if (urlPill) urlPill.textContent = 'https://www.framnova.com';
     } else {
+      // 'inline' type (northwood, cafe, orion)
       if (viewport) viewport.classList.remove('is-iframe-mode');
-      var liveLink = document.getElementById('project-modal-live-link');
-      if (liveLink) liveLink.style.display = 'none';
-
-      var nwSite = document.getElementById('project-site-northwood');
-      if (nwSite) {
-        nwSite.style.display = 'block';
-        nwSite.querySelectorAll('[data-lang-block]').forEach(function (el) {
-          el.style.display = el.getAttribute('data-lang-block') === currentLang ? 'block' : 'none';
-        });
-        setTimeout(function () {
-          window.dispatchEvent(new Event('resize'));
-        }, 60);
+      var inlineSite = document.getElementById(config.containerId) || document.getElementById('project-site-northwood');
+      if (inlineSite) {
+        inlineSite.style.display = 'block';
+        if (config.containerId === 'project-site-northwood') {
+          inlineSite.querySelectorAll('[data-lang-block]').forEach(function (el) {
+            el.style.display = el.getAttribute('data-lang-block') === currentLang ? 'block' : 'none';
+          });
+          setTimeout(function () {
+            window.dispatchEvent(new Event('resize'));
+          }, 60);
+        }
       }
-      if (urlPill) urlPill.textContent = 'https://www.northwoodlandscapes.com';
     }
 
     if (viewport) viewport.scrollTop = 0;
@@ -820,6 +905,12 @@ import logoDarkUrl from './logo-dark.png';
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('is-project-modal-open');
     if (viewport) viewport.classList.remove('is-iframe-mode');
+
+    var viewerIframe = document.getElementById('project-live-viewer-iframe');
+    if (viewerIframe) {
+      viewerIframe.removeAttribute('data-current-src');
+      viewerIframe.src = 'about:blank';
+    }
   }
 
   document.addEventListener('click', function (e) {
@@ -856,6 +947,43 @@ import logoDarkUrl from './logo-dark.png';
       closeModal();
     }
   });
+
+  /* ==========================================================================
+     Project Catalog Filtering (projects.html)
+     ========================================================================== */
+  var filterChips = document.querySelectorAll('.project-filter-chip');
+  var portfolioCards = document.querySelectorAll('.portfolio-card');
+  var portfolioEmptyState = document.getElementById('portfolio-empty-state');
+
+  if (filterChips.length && portfolioCards.length) {
+    filterChips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var filter = (chip.getAttribute('data-filter') || 'all').toLowerCase();
+
+        filterChips.forEach(function (c) {
+          c.classList.remove('is-active');
+        });
+        chip.classList.add('is-active');
+
+        var visibleCount = 0;
+        portfolioCards.forEach(function (card) {
+          var cardCategories = (card.getAttribute('data-category') || '').toLowerCase().trim().split(/\s+/);
+          var isMatch = filter === 'all' || cardCategories.indexOf(filter) !== -1;
+          if (isMatch) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (portfolioEmptyState) {
+          portfolioEmptyState.style.display = visibleCount === 0 ? 'flex' : 'none';
+        }
+      });
+    });
+  }
+
   /* Northwood Capabilities Interactive Stage */
   function initNorthwoodCapabilities() {
     var capData = {
