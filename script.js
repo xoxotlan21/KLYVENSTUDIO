@@ -2085,32 +2085,47 @@ import logoDarkUrl from './logo-dark.png';
       });
 
       // Calculate availability based on Studio Schedule (America/Mexico_City):
-      // - Monday to Friday: 9:00 AM to 7:00 PM (19:00)
-      // - Saturday: 9:00 AM to 5:00 PM (17:00)
-      // - Sunday: Closed all day until Monday 9:00 AM
+      // - Monday to Friday: 7:00 AM to 9:00 PM (21:00)
+      // - Saturday: 7:00 AM to 5:00 PM (17:00)
+      // - Sunday: Closed all day until Monday 7:00 AM
       var isAvailable = false;
-      var reopenKey = 'status.openToday';
+      var reopenKey = 'status.openToday7am';
+      var whatsappNoteKey = 'status.whatsappOfflineToday';
 
       if (weekday === 'Sun') {
         isAvailable = false;
-        reopenKey = 'status.openMonday';
+        reopenKey = 'status.openMon7am';
+        whatsappNoteKey = 'status.whatsappOfflineMon';
       } else if (weekday === 'Sat') {
-        if (hour >= 9 && hour < 17) {
+        if (hour >= 7 && hour < 17) {
           isAvailable = true;
         } else {
           isAvailable = false;
-          reopenKey = hour >= 17 ? 'status.openMonday' : 'status.openToday';
+          if (hour >= 17) {
+            reopenKey = 'status.openMon7am';
+            whatsappNoteKey = 'status.whatsappOfflineMon';
+          } else {
+            reopenKey = 'status.openToday7am';
+            whatsappNoteKey = 'status.whatsappOfflineToday';
+          }
         }
       } else {
-        // Monday through Friday
-        if (hour >= 9 && hour < 19) {
+        // Monday through Friday: 7:00 AM to 9:00 PM (21:00)
+        if (hour >= 7 && hour < 21) {
           isAvailable = true;
         } else {
           isAvailable = false;
-          if (hour >= 19) {
-            reopenKey = (weekday === 'Fri') ? 'status.openTomorrow' : 'status.openTomorrow';
+          if (hour >= 21) {
+            if (weekday === 'Fri') {
+              reopenKey = 'status.openSat7am';
+              whatsappNoteKey = 'status.whatsappOfflineSat';
+            } else {
+              reopenKey = 'status.openTomorrow7am';
+              whatsappNoteKey = 'status.whatsappOfflineTomorrow';
+            }
           } else {
-            reopenKey = 'status.openToday';
+            reopenKey = 'status.openToday7am';
+            whatsappNoteKey = 'status.whatsappOfflineToday';
           }
         }
       }
@@ -2147,11 +2162,11 @@ import logoDarkUrl from './logo-dark.png';
       });
 
       // Update WhatsApp direct note
-      var whatsappNoteKey = isAvailable ? 'cta.whatsappNote' : 'status.whatsappOffline';
+      var finalWhatsappNoteKey = isAvailable ? 'status.whatsappAvailable' : whatsappNoteKey;
       statusNotes.forEach(function (el) {
-        el.setAttribute('data-i18n', whatsappNoteKey);
-        if (t && t[whatsappNoteKey]) {
-          el.textContent = t[whatsappNoteKey];
+        el.setAttribute('data-i18n', finalWhatsappNoteKey);
+        if (t && t[finalWhatsappNoteKey]) {
+          el.textContent = t[finalWhatsappNoteKey];
         }
       });
     }

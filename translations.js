@@ -315,7 +315,7 @@ export const translations = {
     "pricing.p1Feat4": "Contact or WhatsApp integration",
     "pricing.p1Feat5": "Domain connection assistance",
     "pricing.p1Feat6": "Launch support",
-    "pricing.p1Btn": "Start a Landing Page →",
+    "pricing.p1Btn": "Start a Landing Page",
 
     "pricing.popularBadge": "MOST POPULAR",
     "pricing.p2Title": "BUSINESS WEBSITE",
@@ -329,7 +329,7 @@ export const translations = {
     "pricing.p2Feat6": "Service presentation",
     "pricing.p2Feat7": "Domain connection assistance",
     "pricing.p2Feat8": "Launch support",
-    "pricing.p2Btn": "Build My Website →",
+    "pricing.p2Btn": "Build My Website",
 
     "pricing.p3Title": "WEBSITE REDESIGN",
     "pricing.p3Price": "$4,000",
@@ -341,7 +341,22 @@ export const translations = {
     "pricing.p3Feat5": "Responsive redesign",
     "pricing.p3Feat6": "Conversion improvements",
     "pricing.p3Feat7": "Launch support",
-    "pricing.p3Btn": "Redesign My Website →",
+    "pricing.p3Btn": "Redesign My Website",
+
+    // Studio Availability & Schedule
+    "status.available": "Available for new projects",
+    "status.unavailable": "Currently closed",
+    "status.response": "Avg. response < 2h",
+    "status.openMon7am": "Opens Mon 7:00 AM",
+    "status.openSat7am": "Opens Sat 7:00 AM",
+    "status.openTomorrow7am": "Opens tomorrow 7:00 AM",
+    "status.openToday7am": "Opens today 7:00 AM",
+    "status.whatsappAvailable": "Response within 24 hours · Clear quotes before starting",
+    "status.whatsappOffline": "Currently closed · We open at 7:00 AM",
+    "status.whatsappOfflineMon": "Currently closed · We open Monday at 7:00 AM",
+    "status.whatsappOfflineTomorrow": "Currently closed · We open tomorrow at 7:00 AM",
+    "status.whatsappOfflineToday": "Currently closed · We open today at 7:00 AM",
+    "status.whatsappOfflineSat": "Currently closed · We open Saturday at 7:00 AM",
     "pricing.footnote": "Prices shown are starting points. The final quote depends on the amount of content, pages, integrations, functionality, and overall scope of the project. You'll receive a clear quote before any work begins.",
 
     // FAQ
@@ -761,7 +776,7 @@ export const translations = {
     "pricing.p1Feat4": "Integración de contacto o WhatsApp",
     "pricing.p1Feat5": "Asistencia para conectar dominio",
     "pricing.p1Feat6": "Soporte durante el lanzamiento",
-    "pricing.p1Btn": "Iniciar una Landing Page →",
+    "pricing.p1Btn": "Iniciar una Landing Page",
 
     "pricing.popularBadge": "MÁS POPULAR",
     "pricing.p2Title": "SITIO WEB EMPRESARIAL",
@@ -775,7 +790,7 @@ export const translations = {
     "pricing.p2Feat6": "Presentación de servicios estructurada",
     "pricing.p2Feat7": "Asistencia para conectar dominio",
     "pricing.p2Feat8": "Soporte durante el lanzamiento",
-    "pricing.p2Btn": "Crear mi sitio web →",
+    "pricing.p2Btn": "Crear mi sitio web",
 
     "pricing.p3Title": "REDISEÑO WEB",
     "pricing.p3Price": "$4,000",
@@ -787,7 +802,22 @@ export const translations = {
     "pricing.p3Feat5": "Rediseño 100% adaptable a móvil",
     "pricing.p3Feat6": "Optimización para conversiones",
     "pricing.p3Feat7": "Soporte durante el lanzamiento",
-    "pricing.p3Btn": "Rediseñar mi sitio web →",
+    "pricing.p3Btn": "Rediseñar mi sitio web",
+
+    // Studio Availability & Schedule
+    "status.available": "Disponible para nuevos proyectos",
+    "status.unavailable": "Cerrado en este momento",
+    "status.response": "Resp. promedio < 2h",
+    "status.openMon7am": "Abre lunes 7:00 AM",
+    "status.openSat7am": "Abre sábado 7:00 AM",
+    "status.openTomorrow7am": "Abre mañana 7:00 AM",
+    "status.openToday7am": "Abre hoy 7:00 AM",
+    "status.whatsappAvailable": "Respuesta en menos de 24 horas · Cotización clara antes de comenzar",
+    "status.whatsappOffline": "Cerrado en este momento · Abrimos a las 7:00 AM",
+    "status.whatsappOfflineMon": "Cerrado en este momento · Abrimos el lunes a las 7:00 AM",
+    "status.whatsappOfflineTomorrow": "Cerrado en este momento · Abrimos mañana a las 7:00 AM",
+    "status.whatsappOfflineToday": "Cerrado en este momento · Abrimos hoy a las 7:00 AM",
+    "status.whatsappOfflineSat": "Cerrado en este momento · Abrimos el sábado a las 7:00 AM",
     "pricing.footnote": "Los precios mostrados son puntos de partida. La cotización final depende del volumen de contenido, páginas, integraciones y alcance general. Recibirás una cotización clara antes de iniciar.",
 
     // FAQ
