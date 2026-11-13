@@ -2532,6 +2532,40 @@ import logoDarkUrl from './logo-dark.png';
   initLinearSpotlightGlow();
   initStudioLiveClock();
   initMagneticButtons();
+
+  // ==========================================================================
+  // HERO 3-DEVICE RESPONSIVE AUTO-SCALER (MOBILE / TABLET)
+  // ==========================================================================
+  function initHeroDeviceScale() {
+    var vp = document.querySelector('.hero-devices-viewport');
+    var stage = document.querySelector('.hero-devices-stage');
+    if (!vp || !stage) return;
+
+    function applyScale() {
+      var w = window.innerWidth;
+      if (w <= 768) {
+        var containerWidth = vp.clientWidth || (w - 32);
+        if (containerWidth > 0) {
+          var targetW = Math.max(280, containerWidth);
+          var s = Math.min(0.95, targetW / 740);
+          stage.style.transform = 'scale(' + s.toFixed(4) + ')';
+          vp.style.height = Math.round(440 * s + 6) + 'px';
+        }
+      } else if (w <= 1040) {
+        stage.style.transform = 'scale(0.88)';
+        vp.style.height = '420px';
+      } else {
+        stage.style.transform = '';
+        vp.style.height = '';
+      }
+    }
+
+    window.addEventListener('resize', applyScale, { passive: true });
+    window.addEventListener('orientationchange', applyScale, { passive: true });
+    applyScale();
+  }
+
+  initHeroDeviceScale();
 })();
 
 

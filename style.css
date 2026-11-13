@@ -15470,8 +15470,17 @@ body.is-project-modal-open {
 /* ==========================================================================
    3-DEVICE FLOATING STAGE
    ========================================================================== */
-.hero-devices-stage {
+.hero-devices-viewport {
   flex: 1 1 64%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  position: relative;
+}
+
+.hero-devices-stage {
+  flex: 1 1 100%;
   position: relative;
   height: 500px;
   max-width: 820px;
@@ -16473,20 +16482,31 @@ body.is-project-modal-open {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 24px;
-    gap: 24px;
+    gap: 20px;
   }
   .hero-content-left {
     flex: none;
     max-width: 580px;
     width: 100%;
   }
-  .hero-devices-stage {
+  .hero-devices-viewport {
     flex: none;
     width: 100%;
-    max-width: 780px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 440px;
     margin: 0 auto;
-    height: 450px;
-    transform: scale(0.92);
+  }
+  .hero-devices-stage {
+    flex: none;
+    width: 760px;
+    max-width: none;
+    height: 460px;
+    margin: 0 auto;
+    transform: scale(0.88);
+    transform-origin: center center;
   }
 }
 
@@ -16494,11 +16514,52 @@ body.is-project-modal-open {
   .hero-white-card {
     min-height: auto;
   }
+  .hero-devices-viewport {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 8px auto 14px;
+  }
   .hero-devices-stage {
-    height: 390px;
-    transform: scale(0.75);
-    transform-origin: center top;
-    margin-bottom: -50px;
+    flex: none;
+    width: 740px;
+    max-width: none;
+    height: 440px;
+    transform-origin: top center;
+    margin: 0 auto !important;
+  }
+  .wrap-laptop {
+    left: 50% !important;
+    margin-left: -255px !important;
+  }
+  .wrap-tablet {
+    left: 10px !important;
+    bottom: 22px !important;
+  }
+  .wrap-phone {
+    right: 12px !important;
+    bottom: 30px !important;
+  }
+}
+
+/* Concrete, unitless scale steps for 100% universal browser compatibility (iOS Safari & Android) */
+@media (max-width: 768px) and (min-width: 641px) {
+  .hero-devices-viewport {
+    height: 380px;
+  }
+  .hero-devices-stage {
+    transform: scale(0.85) !important;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 541px) {
+  .hero-devices-viewport {
+    height: 330px;
+  }
+  .hero-devices-stage {
+    transform: scale(0.73) !important;
   }
 }
 
@@ -16508,19 +16569,69 @@ body.is-project-modal-open {
   }
   .hero-content-left .hero-title {
     font-size: 38px;
+    line-height: 1.05;
+  }
+  .hero-capability-pills {
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .hero-cap-pill {
+    padding: 6px 12px;
+    font-size: 11.5px;
+  }
+  .hero-devices-viewport {
+    margin: 12px auto 6px;
+  }
+}
+
+@media (max-width: 540px) and (min-width: 481px) {
+  .hero-devices-viewport {
+    height: 295px;
   }
   .hero-devices-stage {
-    height: 320px;
-    transform: scale(0.56);
-    transform-origin: top center;
-    margin-top: 4px;
-    margin-bottom: -115px;
+    transform: scale(0.65) !important;
   }
-  .wrap-tablet {
-    left: -20px;
+}
+
+@media (max-width: 480px) and (min-width: 431px) {
+  .hero-devices-viewport {
+    height: 265px;
   }
-  .wrap-phone {
-    right: -15px;
+  .hero-devices-stage {
+    transform: scale(0.58) !important;
+  }
+}
+
+@media (max-width: 430px) and (min-width: 391px) {
+  /* iPhone Pro Max, Plus, Large Android */
+  .hero-devices-viewport {
+    height: 238px;
+  }
+  .hero-devices-stage {
+    transform: scale(0.52) !important;
+  }
+}
+
+@media (max-width: 390px) and (min-width: 361px) {
+  /* iPhone 12/13/14/15/16 standard (390px) */
+  .hero-devices-viewport {
+    height: 220px;
+  }
+  .hero-devices-stage {
+    transform: scale(0.48) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Compact screens */
+  .hero-content-left .hero-title {
+    font-size: 32px;
+  }
+  .hero-devices-viewport {
+    height: 195px;
+  }
+  .hero-devices-stage {
+    transform: scale(0.42) !important;
   }
 }
 
