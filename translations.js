@@ -10,11 +10,16 @@ export const translations = {
     "nav.contactMobile": "Start a Project →",
 
     // Hero Section
-    "hero.kicker": "INDEPENDENT WEB DESIGN STUDIO",
-    "hero.title": "Websites that make your business impossible to overlook.",
-    "hero.description": "We design distinctive, high-performing websites that make your business easier to understand, easier to trust, and easier to choose.",
-    "hero.btnStart": "Start a Project →",
-    "hero.btnExplore": "Explore Our Work",
+    "hero.kicker": "INDEPENDENT DIGITAL STUDIO",
+    "hero.title": "Your next<br /><span class=\"hero-title-accent\">digital chapter.</span>",
+    "hero.description": "Distinctive websites. Thoughtfully designed for your next chapter.",
+    "hero.btnStart": "Start a project →",
+    "hero.btnExplore": "Explore our work ↗",
+    "hero.capWebDesign": "Web design",
+    "hero.capDevelopment": "Development",
+    "hero.capBrandIdentity": "Brand identity",
+    "hero.calloutResponsive": "Responsive by design",
+    "hero.calloutBrand": "Built around your brand",
     "hero.serviceWebDesign": "Web Design",
     "hero.serviceRedesign": "Website Redesign",
     "hero.serviceLandingPages": "Landing Pages",
@@ -27,22 +32,16 @@ export const translations = {
 
     // Trust / Value Strip
     "trust.heading": "Built around your business.",
-    "trust.item1Num": "01",
-    "trust.item1Title": "Clear positioning",
-    "trust.item1Desc": "Make what you do immediately understandable.",
-    "trust.item2Num": "02",
-    "trust.item2Title": "Professional presence",
-    "trust.item2Desc": "Give customers a reason to trust your business.",
-    "trust.item3Num": "03",
-    "trust.item3Title": "Designed to convert",
-    "trust.item3Desc": "Guide visitors toward inquiries, bookings, calls, or WhatsApp.",
-    "trust.item4Num": "04",
-    "trust.item4Title": "Built for every screen",
-    "trust.item4Desc": "A polished experience across mobile, tablet, and desktop.",
+    "trust.item1Title": "Thoughtful design",
+    "trust.item1Desc": "Purposeful, refined, and built around your goals.",
+    "trust.item2Title": "Seamless experiences",
+    "trust.item2Desc": "Fast, intuitive, and effortless across every device.",
+    "trust.item3Title": "Made for your next chapter",
+    "trust.item3Desc": "A lasting digital foundation for what’s ahead.",
 
     // The Klyven Approach / Introduction
     "approach.kicker": "THE KLYVEN APPROACH",
-    "approach.title": "Good design gets attention.<br />Clear design gets results.",
+    "approach.title": "Good design gets attention.<br /><span class=\"text-gradient-blue\">Clear design gets results.</span>",
     "approach.lead": "Your website shouldn't just look professional.",
     "approach.p1": "It should explain your value, answer the right questions, build confidence, and make the next step obvious.",
     "approach.p2": "We combine strategy, visual design, messaging, and development to create websites built around the way your customers actually make decisions.",
@@ -94,7 +93,7 @@ export const translations = {
 
     // Selected Work
     "work.kicker": "SELECTED WORK",
-    "work.title": "Different businesses.<br />Different problems.<br />Different solutions.",
+    "work.title": "Different businesses.<br />Different problems.<br /><span class=\"text-gradient-blue\">Different solutions.</span>",
     "work.subtitle": "Every project starts with the business — not a template.",
     "work.badgeConcept": "Concept Project",
     "work.badgeClient": "Client Project",
@@ -140,7 +139,7 @@ export const translations = {
 
     // Redesign Section (Before / After)
     "redesign.kicker": "WEBSITE REDESIGN",
-    "redesign.title": "Your business has evolved.<br />Your website should too.",
+    "redesign.title": "Your business has evolved.<br /><span class=\"text-gradient-blue\">Your website should too.</span>",
     "redesign.subtitle": "An outdated website can make a strong business look weaker than it actually is. We rethink the structure, visual direction, messaging, and user experience to create a website that better reflects where your business is today.",
     "redesign.cta": "Redesign My Website →",
     "redesign.beforeTitle": "Before",
@@ -235,7 +234,7 @@ export const translations = {
 
     // Why Klyven
     "why.kicker": "WHY KLYVEN",
-    "why.title": "Small studio.<br />Direct collaboration.<br />Serious attention to detail.",
+    "why.title": "Small studio.<br />Direct collaboration.<br /><span class=\"text-gradient-blue\">Serious attention to detail.</span>",
     "why.subtitle": "You don't get passed between departments or account managers. You work directly with the people designing and building your website.",
     "why.p1Title": "Direct communication",
     "why.p1Desc": "Clear conversations from the first message to launch.",
@@ -273,9 +272,9 @@ export const translations = {
     "proof.quote": "“Klyven transformed how our clients discover and contact us. The clarity, speed, and modern feel immediately set us apart.”",
     "proof.author": "— Fleet & Mobility Client",
     "proof.role": "Transportation / Corporate Services",
-    "proof.metric1": "+45% increase in WhatsApp inquiries",
-    "proof.metric2": "Fast launch in under 12 business days",
-    "proof.metric3": "6 services reorganized into a clearer customer journey",
+    "proof.metric1": "<span class=\"counter-stat\" data-target=\"45\" data-prefix=\"+\" data-suffix=\"%\">+45%</span> increase in WhatsApp inquiries",
+    "proof.metric2": "Fast launch in under <span class=\"counter-stat\" data-target=\"12\" data-suffix=\" days\">12 days</span>",
+    "proof.metric3": "<span class=\"counter-stat\" data-target=\"6\">6</span> services reorganized into a clearer customer journey",
 
     // About / Human Element
     "about.kicker": "INDEPENDENT BY DESIGN",
@@ -306,6 +305,9 @@ export const translations = {
     "pricing.title": "A clear starting point.",
     "pricing.subtitle": "Every project is different, but you shouldn't have to contact us just to understand the general investment.",
     "pricing.from": "From",
+    "pricing.startingAt": "one-time investment",
+    "pricing.featuresIncludes": "Includes:",
+    "pricing.everythingInLanding": "Everything in Landing Page, plus:",
     "pricing.p1Title": "LANDING PAGE",
     "pricing.p1Price": "$1,500",
     "pricing.p1Desc": "For a single offer, service, campaign, or business that needs a focused online presence.",
@@ -383,7 +385,7 @@ export const translations = {
 
     // Final CTA
     "cta.kicker": "READY TO UPGRADE YOUR DIGITAL PRESENCE?",
-    "cta.title": "Your business deserves a website that looks as professional as the work behind it.",
+    "cta.title": "Your business deserves a website that looks <span class=\"text-gradient-blue\">as professional as your work.</span>",
     "cta.copy": "Let’s build something your business can be proud of.",
     "cta.startProject": "Start a Project →",
     "cta.whatsapp": "Contact via WhatsApp →",
@@ -471,11 +473,16 @@ export const translations = {
     "nav.contactMobile": "Iniciar un proyecto →",
 
     // Hero Section
-    "hero.kicker": "ESTUDIO INDEPENDIENTE DE DISEÑO WEB",
-    "hero.title": "Páginas web que hacen que tu negocio sea imposible de ignorar.",
-    "hero.description": "Diseñamos sitios web distintivos y de alto rendimiento que hacen que tu negocio sea más fácil de entender, de confiar y de elegir.",
+    "hero.kicker": "ESTUDIO DIGITAL INDEPENDIENTE",
+    "hero.title": "Tu próximo<br /><span class=\"hero-title-accent\">capítulo digital.</span>",
+    "hero.description": "Sitios web distintivos. Diseñados cuidadosamente para tu próximo capítulo.",
     "hero.btnStart": "Iniciar un proyecto →",
-    "hero.btnExplore": "Explorar proyectos",
+    "hero.btnExplore": "Explorar proyectos ↗",
+    "hero.capWebDesign": "Diseño web",
+    "hero.capDevelopment": "Desarrollo",
+    "hero.capBrandIdentity": "Identidad de marca",
+    "hero.calloutResponsive": "Diseño adaptable",
+    "hero.calloutBrand": "Creado para tu marca",
     "hero.serviceWebDesign": "Diseño Web",
     "hero.serviceRedesign": "Rediseño Web",
     "hero.serviceLandingPages": "Landing Pages",
@@ -488,22 +495,16 @@ export const translations = {
 
     // Trust / Value Strip
     "trust.heading": "Creado en torno a tu negocio.",
-    "trust.item1Num": "01",
-    "trust.item1Title": "Posicionamiento claro",
-    "trust.item1Desc": "Haz que lo que haces se entienda al instante.",
-    "trust.item2Num": "02",
-    "trust.item2Title": "Presencia profesional",
-    "trust.item2Desc": "Da a tus clientes una razón clara para confiar en tu empresa.",
-    "trust.item3Num": "03",
-    "trust.item3Title": "Diseñado para convertir",
-    "trust.item3Desc": "Guía a los visitantes hacia consultas, reservaciones, llamadas o WhatsApp.",
-    "trust.item4Num": "04",
-    "trust.item4Title": "Hecho para cualquier pantalla",
-    "trust.item4Desc": "Una experiencia impecable en móviles, tablets y computadoras.",
+    "trust.item1Title": "Diseño pensado",
+    "trust.item1Desc": "Con propósito, refinado y enfocado en tus metas.",
+    "trust.item2Title": "Experiencias fluidas",
+    "trust.item2Desc": "Rápidas, intuitivas y sin esfuerzo en cualquier dispositivo.",
+    "trust.item3Title": "Hecho para tu próximo capítulo",
+    "trust.item3Desc": "Una base digital duradera para lo que viene.",
 
     // The Klyven Approach / Introduction
     "approach.kicker": "EL ENFOQUE KLYVEN",
-    "approach.title": "El buen diseño atrae miradas.<br />El diseño claro da resultados.",
+    "approach.title": "El buen diseño atrae miradas.<br /><span class=\"text-gradient-blue\">El diseño claro da resultados.</span>",
     "approach.lead": "Tu sitio web no solo debería verse profesional.",
     "approach.p1": "Debe explicar tu valor, responder las preguntas correctas, generar confianza y hacer que el siguiente paso sea evidente.",
     "approach.p2": "Combinamos estrategia, diseño visual, redacción y desarrollo para crear páginas web construidas alrededor de cómo tus clientes toman decisiones.",
@@ -555,7 +556,7 @@ export const translations = {
 
     // Selected Work
     "work.kicker": "PROYECTOS SELECCIONADOS",
-    "work.title": "Distintos negocios.<br />Distintos problemas.<br />Distintas soluciones.",
+    "work.title": "Distintos negocios.<br />Distintos problemas.<br /><span class=\"text-gradient-blue\">Distintas soluciones.</span>",
     "work.subtitle": "Cada proyecto comienza con el negocio — no con una plantilla.",
     "work.badgeConcept": "Proyecto Conceptual",
     "work.badgeClient": "Proyecto de Cliente",
@@ -601,7 +602,7 @@ export const translations = {
 
     // Redesign Section (Before / After)
     "redesign.kicker": "REDISEÑO WEB",
-    "redesign.title": "Tu negocio ha evolucionado.<br />Tu página web también debería.",
+    "redesign.title": "Tu negocio ha evolucionado.<br /><span class=\"text-gradient-blue\">Tu página web también debería.</span>",
     "redesign.subtitle": "Un sitio desactualizado hace que un negocio sólido parezca débil. Reestructuramos la jerarquía, dirección visual, mensajes y experiencia para reflejar dónde está tu empresa hoy.",
     "redesign.cta": "Rediseñar mi sitio web →",
     "redesign.beforeTitle": "Antes",
@@ -696,7 +697,7 @@ export const translations = {
 
     // Why Klyven
     "why.kicker": "POR QUÉ KLYVEN",
-    "why.title": "Estudio pequeño.<br />Colaboración directa.<br />Atención rigurosa al detalle.",
+    "why.title": "Estudio pequeño.<br />Colaboración directa.<br /><span class=\"text-gradient-blue\">Atención rigurosa al detalle.</span>",
     "why.subtitle": "Sin intermediarios ni ejecutivos de cuenta. Trabajas directamente con quienes diseñan y desarrollan tu página web.",
     "why.p1Title": "Comunicación directa",
     "why.p1Desc": "Charlas claras y directas desde el primer mensaje hasta el lanzamiento.",
@@ -734,9 +735,9 @@ export const translations = {
     "proof.quote": "“Klyven transformó la manera en que nuestros clientes nos descubren y contactan. La claridad, velocidad y presencia moderna nos diferenció de inmediato.”",
     "proof.author": "— Cliente Corporativo de Movilidad",
     "proof.role": "Transporte y Logística Empresarial",
-    "proof.metric1": "+45% incremento en consultas por WhatsApp",
-    "proof.metric2": "Lanzamiento en 11 días hábiles",
-    "proof.metric3": "6 servicios reorganizados en una ruta de cliente clara",
+    "proof.metric1": "<span class=\"counter-stat\" data-target=\"45\" data-prefix=\"+\" data-suffix=\"%\">+45%</span> incremento en consultas por WhatsApp",
+    "proof.metric2": "Lanzamiento rápido en <span class=\"counter-stat\" data-target=\"12\" data-suffix=\" días\">12 días</span> hábiles",
+    "proof.metric3": "<span class=\"counter-stat\" data-target=\"6\">6</span> servicios reorganizados en una ruta de cliente clara",
 
     // About / Human Element
     "about.kicker": "INDEPENDIENTE POR ELECCIÓN",
@@ -767,6 +768,9 @@ export const translations = {
     "pricing.title": "Un punto de partida claro.",
     "pricing.subtitle": "Cada proyecto es diferente, pero no deberías tener que contactarnos solo para conocer la inversión estimada.",
     "pricing.from": "Desde",
+    "pricing.startingAt": "inversión base única",
+    "pricing.featuresIncludes": "Incluye:",
+    "pricing.everythingInLanding": "Todo lo de Landing Page, más:",
     "pricing.p1Title": "LANDING PAGE",
     "pricing.p1Price": "$1,500",
     "pricing.p1Desc": "Para una oferta, servicio, campaña o negocio que necesita una presencia online enfocada.",
@@ -844,7 +848,7 @@ export const translations = {
 
     // Final CTA
     "cta.kicker": "¿LISTO PARA ELEVAR TU PRESENCIA DIGITAL?",
-    "cta.title": "Tu negocio merece un sitio web que luzca tan profesional como el trabajo que hay detrás.",
+    "cta.title": "Tu negocio merece un sitio web que luzca <span class=\"text-gradient-blue\">tan profesional como tu trabajo.</span>",
     "cta.copy": "Creemos algo de lo que tu negocio se sienta orgulloso.",
     "cta.startProject": "Iniciar un proyecto →",
     "cta.whatsapp": "Contactar por WhatsApp →",

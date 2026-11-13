@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta name="theme-color" content="#E6EDF6" />
+    <meta name="theme-color" content="#ffffff" />
     <title>KLYVEN STUDIO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=block" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="logo.png" />
     <script>
@@ -23,15 +23,14 @@
     </script>
   </head>
   <body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
+
     <!-- Ambient Glow for Dark Mode -->
     <div class="ambient-glow" aria-hidden="true"></div>
 
     <div class="page" id="top">
-      <div class="card">
-        <video class="bg bg-video-light" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true" poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105822_bf7c2d53-9957-4521-bbbf-7c1ab7a70130.png" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105953_21ad8049-9088-4a00-bad3-aee6b5575a2b.mp4"></video>
-        <video class="bg bg-video-dark" autoplay muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" src="https://files.catbox.moe/1e30cl.mp4"></video>
-        <div class="tint"></div>
-
+      <div class="card hero-white-card">
         <div class="hero-container">
           <!-- Top Floating Navigation Bar -->
           <header class="hero-topbar">
@@ -136,91 +135,303 @@
           </header>
 
           <!-- Main Hero Stage -->
-          <div class="hero-stage">
-            <div class="hero-content">
-              <p class="hero-kicker" data-i18n="hero.kicker">INDEPENDENT WEB DESIGN STUDIO</p>
+          <div class="hero-stage hero-stage-showcase">
+            <div class="hero-content hero-content-left">
+              <div class="hero-kicker">
+                <span class="hero-kicker-dot" aria-hidden="true"></span>
+                <span class="hero-kicker-text" data-i18n="hero.kicker">INDEPENDENT DIGITAL STUDIO</span>
+              </div>
+
               <h1 class="hero-title" data-i18n="hero.title" data-i18n-html="true">
-                Websites that make your business impossible to overlook.
+                Your next<br /><span class="hero-title-accent">digital chapter.</span>
               </h1>
               <p class="hero-description" data-i18n="hero.description">
-                We design distinctive, high-performing websites that make your business easier to understand, easier to trust, and easier to choose.
+                Distinctive websites. Thoughtfully designed for your next chapter.
               </p>
 
               <div class="hero-actions">
-                <a class="hero-btn-primary" href="#contact">
-                  <span data-i18n="hero.btnStart">Start a Project →</span>
+                <a class="hero-btn-primary hero-btn-chapter" href="#contact">
+                  <span data-i18n="hero.btnStart">Start a project →</span>
                 </a>
-                <a class="hero-btn-secondary" href="#work">
-                  <span data-i18n="hero.btnExplore">Explore Our Work</span>
+                <a class="hero-btn-secondary hero-btn-explore" href="#work">
+                  <span data-i18n="hero.btnExplore">Explore our work ↗</span>
                 </a>
               </div>
 
-              <div class="hero-services-line">
-                <span data-i18n="hero.serviceWebDesign">Web Design</span>
-                <span class="divider">/</span>
-                <span data-i18n="hero.serviceRedesign">Website Redesign</span>
-                <span class="divider">/</span>
-                <span data-i18n="hero.serviceLandingPages">Landing Pages</span>
+              <div class="hero-capability-pills" aria-label="Core capabilities">
+                <span class="hero-cap-pill">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2.5" width="12" height="8.5" rx="1.5" />
+                    <path d="M5.5 13.5h5M8 11v2.5" />
+                  </svg>
+                  <span data-i18n="hero.capWebDesign">Web design</span>
+                </span>
+                <span class="hero-cap-pill">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5.5 4.5 2 8l3.5 3.5M10.5 4.5 14 8l-3.5 3.5M8.8 3.5l-1.6 9" />
+                  </svg>
+                  <span data-i18n="hero.capDevelopment">Development</span>
+                </span>
+                <span class="hero-cap-pill">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M8 2 2 5.2 8 8.4l6-3.2L8 2Z" />
+                    <path d="m2 8 6 3.2L14 8" />
+                    <path d="m2 10.8 6 3.2 6-3.2" />
+                  </svg>
+                  <span data-i18n="hero.capBrandIdentity">Brand identity</span>
+                </span>
               </div>
             </div>
 
-            <!-- Right "What we create" Frosted Glass Card -->
-            <aside class="hero-create-card spotlight-card" aria-label="What we create">
-              <h2 class="create-card-title" data-i18n="hero.createTitle">What we create</h2>
-              <ul class="create-card-list">
-                <li class="create-card-item">
-                  <span class="create-icon-wrap" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="2.5" y="3" width="15" height="10.5" rx="1.5" />
-                      <path d="M7 17h6M10 13.5v3.5" />
-                    </svg>
-                  </span>
-                  <span class="create-item-text" data-i18n="hero.createItem1">Made for your business</span>
-                </li>
-                <li class="create-card-item">
-                  <span class="create-icon-wrap" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="5.5" y="2.5" width="9" height="15" rx="2" />
-                      <line x1="9.5" y1="14.5" x2="10.5" y2="14.5" />
-                    </svg>
-                  </span>
-                  <span class="create-item-text" data-i18n="hero.createItem2">Works on every screen</span>
-                </li>
-                <li class="create-card-item">
-                  <span class="create-icon-wrap" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="2.5" y="4" width="15" height="12" rx="2" />
-                      <path d="m3.5 5.5 6.5 5 6.5-5" />
-                    </svg>
-                  </span>
-                  <span class="create-item-text" data-i18n="hero.createItem3">Clear paths to contact</span>
-                </li>
-              </ul>
-            </aside>
+            <!-- Floating 3-Device Showcase (Built 100% with HTML & CSS) -->
+            <div class="hero-devices-stage" aria-label="Showcase of responsive website concepts across tablet, laptop, and mobile">
+              <!-- Soft Atmospheric Radial Blue Halo -->
+              <div class="hero-devices-halo" aria-hidden="true"></div>
+
+              <!-- Single Discreet Floating Callout -->
+              <div class="hero-callout-single" aria-hidden="true">
+                <span class="callout-pill-icon">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="1.5" width="8" height="13" rx="1.8" />
+                    <path d="M7.5 12h1" />
+                  </svg>
+                </span>
+                <span data-i18n="hero.calloutResponsive">Responsive by design</span>
+              </div>
+
+              <!-- 2. Tablet (NOREN) - Left & slightly behind (Sage Green Theme) -->
+              <div class="device-float-wrap wrap-tablet">
+                <div class="device-tablet">
+                  <div class="tablet-frame">
+                    <span class="tablet-btn-power" aria-hidden="true"></span>
+                    <span class="tablet-btn-vol" aria-hidden="true"></span>
+                    <div class="tablet-bezel">
+                      <span class="tablet-camera" aria-hidden="true"></span>
+                      <div class="tablet-screen">
+                        <div class="device-glare" aria-hidden="true"></div>
+                        <div class="noren-ui noren-sage-theme">
+                          <header class="noren-header">
+                            <span class="noren-brand">NOREN</span>
+                            <div class="noren-header-right" aria-hidden="true">
+                              <span class="noren-bag-pill">Bag (1)</span>
+                              <span class="noren-menu-icon">
+                                <i></i><i></i><i></i>
+                              </span>
+                            </div>
+                          </header>
+                          <div class="noren-body">
+                            <div class="noren-copy-block">
+                              <div class="noren-tag-pill">ARCHIVE SERIES / 24</div>
+                              <h3 class="noren-headline">The<br />Essential<br />Chair</h3>
+                              <div class="noren-price-row">
+                                <span class="noren-material">Smoked Oak &amp; Bouclé</span>
+                                <span class="noren-price">$840 USD</span>
+                              </div>
+                              <div class="noren-cta-row">
+                                <span class="noren-shop-btn">Shop Piece →</span>
+                                <div class="noren-swatches" aria-hidden="true">
+                                  <span class="swatch-dot swatch-sand is-active" title="Oatmeal"></span>
+                                  <span class="swatch-dot swatch-sage" title="Sage"></span>
+                                  <span class="swatch-dot swatch-charcoal" title="Charcoal"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="noren-showcase">
+                              <div class="noren-artisan-badge">Handcrafted in Copenhagen</div>
+                              <img
+                                src="assets/hero-chair-hq@2x.webp"
+                                alt="Minimalist armchair in sage green interior"
+                                class="noren-photo"
+                                width="430"
+                                height="252"
+                                loading="eager"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device-shadow shadow-tablet" aria-hidden="true"></div>
+              </div>
+
+              <!-- 1. Laptop (AURORA ARCHITECTURE) - Main Center Frontal Device (Warm Tones) -->
+              <div class="device-float-wrap wrap-laptop">
+                <div class="device-laptop">
+                  <div class="laptop-lid">
+                    <div class="laptop-bezel">
+                      <div class="laptop-camera-housing" aria-hidden="true">
+                        <span class="laptop-camera"></span>
+                        <span class="laptop-camera-led"></span>
+                      </div>
+                      <div class="laptop-screen">
+                        <div class="device-glare" aria-hidden="true"></div>
+                        <div class="aura-ui aura-warm-theme">
+                          <header class="aura-header">
+                            <div class="aura-brand-group">
+                              <span class="aura-brand">AURORA</span>
+                              <span class="aura-subbrand">ARCHITECTURE &amp; INTERIORS</span>
+                            </div>
+                            <nav class="aura-nav" aria-hidden="true">
+                              <span>Projects</span>
+                              <span>Philosophy</span>
+                              <span>Studio</span>
+                              <span>Contact</span>
+                              <span class="aura-nav-btn">Index ↗</span>
+                            </nav>
+                          </header>
+                          <div class="aura-hero">
+                            <div class="aura-copy">
+                              <div class="aura-meta-tag">
+                                <span class="aura-meta-dot"></span>
+                                <span>VILLA SOMBRA — RESIDENTIAL</span>
+                              </div>
+                              <div class="aura-headline">
+                                Spaces<br />in harmony<br />with life.
+                              </div>
+                              <p class="aura-desc">
+                                Contemporary architecture rooted in landscape, natural stone, and generous daylight.
+                              </p>
+                              <div class="aura-actions">
+                                <div class="aura-circle-btn" aria-hidden="true">→</div>
+                                <span class="aura-action-label">Explore Residence — 01</span>
+                              </div>
+                              <div class="aura-carousel-counter">
+                                <span class="aura-counter-num">01 / 06</span>
+                                <div class="aura-progress-bar"><span class="aura-progress-fill"></span></div>
+                              </div>
+                            </div>
+                            <div class="aura-visual">
+                              <div class="aura-photo-badge">
+                                <span class="aura-badge-icon">📍</span>
+                                <span>Mallorca, Spain</span>
+                              </div>
+                              <img
+                                src="assets/hero-house-hq@2x.webp"
+                                alt="Modern warm architectural residence with stone terrace and tree"
+                                class="aura-photo"
+                                width="444"
+                                height="540"
+                                loading="eager"
+                              />
+                              <div class="aura-photo-caption">
+                                <span>Architectural Portfolio • 2024</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="laptop-base" aria-hidden="true">
+                    <div class="laptop-notch"></div>
+                  </div>
+                </div>
+                <div class="device-shadow shadow-laptop" aria-hidden="true"></div>
+              </div>
+
+              <!-- 3. Smartphone (VELA) - Right Vertical Device (Steel Blue Creative Theme) -->
+              <div class="device-float-wrap wrap-phone">
+                <div class="device-phone">
+                  <div class="phone-frame">
+                    <span class="phone-btn-action" aria-hidden="true"></span>
+                    <span class="phone-btn-vol vol-up" aria-hidden="true"></span>
+                    <span class="phone-btn-vol vol-down" aria-hidden="true"></span>
+                    <span class="phone-btn-power" aria-hidden="true"></span>
+                    <div class="phone-bezel">
+                      <div class="phone-dynamic-island" aria-hidden="true">
+                        <span class="di-lens"></span>
+                        <span class="di-sensor"></span>
+                      </div>
+                      <div class="phone-screen">
+                        <div class="device-glare" aria-hidden="true"></div>
+                        <div class="vela-ui vela-steelblue-theme">
+                          <header class="vela-header">
+                            <span class="vela-brand">VELA</span>
+                            <div class="vela-nav-pill" aria-hidden="true">Menu ☰</div>
+                          </header>
+                          <div class="vela-content-stage">
+                            <div class="vela-copy">
+                              <div class="vela-award-pill">✦ DIGITAL STUDIO 2024</div>
+                              <h4 class="vela-title">Creative<br />&amp; Digital<br />Services</h4>
+                              <p class="vela-desc">Designing category-defining digital experiences.</p>
+                              <div class="vela-media">
+                                <span class="vela-case-badge">CASE STUDY #04</span>
+                                <img
+                                  src="assets/hero-wave-hq@2x.webp"
+                                  alt="Abstract fluid wave in vibrant purple and cyan"
+                                  class="vela-photo"
+                                  width="232"
+                                  height="236"
+                                  loading="eager"
+                                />
+                              </div>
+                              <div class="vela-tags-row" aria-hidden="true">
+                                <span>Strategy</span>
+                                <span>Branding</span>
+                                <span>WebGL</span>
+                              </div>
+                              <div class="vela-action-row">
+                                <div class="vela-circle-btn" aria-hidden="true">→</div>
+                                <span class="vela-action-text">See case study</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="phone-home-bar" aria-hidden="true"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device-shadow shadow-phone" aria-hidden="true"></div>
+              </div>
+            </div>
           </div>
 
-          <!-- Bottom Floating Bar: Availability Status & Work Badge -->
-          <div class="hero-bottom-bar">
-            <a class="hero-status-pill" href="#contact" aria-label="Available for new projects — Contact KLYVEN STUDIO" data-status-container>
-              <span class="status-pulse-wrap" aria-hidden="true">
-                <span class="status-pulse-ring"></span>
-                <span class="status-pulse-dot"></span>
-              </span>
-              <span class="status-pill-text" data-i18n="hero.status" data-status-label>Available for new projects • Mexico &amp; Worldwide</span>
-              <span class="status-pill-arrow" aria-hidden="true">→</span>
-            </a>
+          <!-- Bottom Trust / Benefits Strip (Inside Hero Card) -->
+          <div class="hero-trust-strip" aria-label="Key benefits">
+            <div class="trust-strip-bar">
+              <div class="trust-benefit-item">
+                <span class="trust-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2.5" y="3.5" width="15" height="10" rx="1.8" />
+                    <path d="M7 16.5h6M10 13.5v3" />
+                  </svg>
+                </span>
+                <div class="trust-benefit-text">
+                  <h3 class="trust-benefit-title" data-i18n="trust.item1Title">Thoughtful design</h3>
+                  <p class="trust-benefit-desc" data-i18n="trust.item1Desc">Purposeful, refined, and built around your goals.</p>
+                </div>
+              </div>
 
-            <a class="hero-selected-work-badge" href="#work" aria-label="View selected work">
-              <span class="badge-thumb" aria-hidden="true">
-                <img src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_105822_bf7c2d53-9957-4521-bbbf-7c1ab7a70130.png" alt="" />
-              </span>
-              <span class="badge-label" data-i18n="hero.selectedWorkBadge">View selected work</span>
-              <span class="badge-btn" aria-hidden="true">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4.5 11.5l7-7M5 4.5h6.5v6.5" />
-                </svg>
-              </span>
-            </a>
+              <div class="trust-benefit-item">
+                <span class="trust-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2.5 2.5 6.5 10 10.5l7.5-4-7.5-4Z" />
+                    <path d="m2.5 10 7.5 4 7.5-4" />
+                    <path d="m2.5 13.5 7.5 4 7.5-4" />
+                  </svg>
+                </span>
+                <div class="trust-benefit-text">
+                  <h3 class="trust-benefit-title" data-i18n="trust.item2Title">Seamless experiences</h3>
+                  <p class="trust-benefit-desc" data-i18n="trust.item2Desc">Fast, intuitive, and effortless across every device.</p>
+                </div>
+              </div>
+
+              <div class="trust-benefit-item">
+                <span class="trust-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5.5 14.5 14.5 5.5" />
+                    <path d="M7 5.5h7.5V13" />
+                  </svg>
+                </span>
+                <div class="trust-benefit-text">
+                  <h3 class="trust-benefit-title" data-i18n="trust.item3Title">Made for your next chapter</h3>
+                  <p class="trust-benefit-desc" data-i18n="trust.item3Desc">A lasting digital foundation for what’s ahead.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -349,37 +560,6 @@
         </div>
       </div>
 
-      <!-- Section 3: TRUST / VALUE STRIP -->
-      <section class="trust-strip-section" aria-label="Built around your business">
-        <div class="trust-strip-card">
-          <header class="trust-strip-header">
-            <h2 class="trust-strip-title" data-i18n="trust.heading">Built around your business.</h2>
-          </header>
-          <div class="trust-strip-grid">
-            <div class="trust-strip-item">
-              <span class="trust-item-num" data-i18n="trust.item1Num">01</span>
-              <h3 class="trust-item-title" data-i18n="trust.item1Title">Clear positioning</h3>
-              <p class="trust-item-desc" data-i18n="trust.item1Desc">Make what you do immediately understandable.</p>
-            </div>
-            <div class="trust-strip-item">
-              <span class="trust-item-num" data-i18n="trust.item2Num">02</span>
-              <h3 class="trust-item-title" data-i18n="trust.item2Title">Professional presence</h3>
-              <p class="trust-item-desc" data-i18n="trust.item2Desc">Give customers a reason to trust your business.</p>
-            </div>
-            <div class="trust-strip-item">
-              <span class="trust-item-num" data-i18n="trust.item3Num">03</span>
-              <h3 class="trust-item-title" data-i18n="trust.item3Title">Designed to convert</h3>
-              <p class="trust-item-desc" data-i18n="trust.item3Desc">Guide visitors toward inquiries, bookings, calls, or WhatsApp.</p>
-            </div>
-            <div class="trust-strip-item">
-              <span class="trust-item-num" data-i18n="trust.item4Num">04</span>
-              <h3 class="trust-item-title" data-i18n="trust.item4Title">Built for every screen</h3>
-              <p class="trust-item-desc" data-i18n="trust.item4Desc">A polished experience across mobile, tablet, and desktop.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Section 4: The Klyven Approach Section -->
       <section class="approach-section" id="approach" aria-label="The Klyven Approach">
         <div class="approach-inner">
@@ -388,7 +568,7 @@
             <span class="approach-kicker" data-i18n="approach.kicker">THE KLYVEN APPROACH</span>
             <h2 class="approach-title" data-i18n="approach.title" data-i18n-html="true">
               Good design gets attention.<br />
-              Clear design gets results.
+              <span class="text-gradient-blue">Clear design gets results.</span>
             </h2>
             <div class="intro-lead-wrap">
               <p class="intro-lead-text" data-i18n="approach.lead">Your website shouldn't just look professional.</p>
@@ -694,7 +874,7 @@
                 <h2 class="work-title" data-i18n="work.title" data-i18n-html="true">
                   Different businesses.<br />
                   Different problems.<br />
-                  Different solutions.
+                  <span class="text-gradient-blue">Different solutions.</span>
                 </h2>
                 <p class="work-subtitle" data-i18n="work.subtitle">Every project starts with the business — not a template.</p>
               </header>
@@ -881,7 +1061,7 @@
             <span class="section-kicker" data-i18n="redesign.kicker">WEBSITE REDESIGN</span>
             <h2 class="ba-title" data-i18n="redesign.title" data-i18n-html="true">
               Your business has evolved.<br />
-              Your website should too.
+              <span class="text-gradient-blue">Your website should too.</span>
             </h2>
             <p class="ba-subtitle" data-i18n="redesign.subtitle">
               An outdated website can make a strong business look weaker than it actually is. We rethink the structure, visual direction, messaging, and user experience to create a website that better reflects where your business is today.
@@ -1768,7 +1948,7 @@
       <section class="why-section" id="why" aria-label="Why Klyven">
         <div class="why-copy">
           <span class="section-kicker" data-i18n="why.kicker">WHY KLYVEN</span>
-          <h2 data-i18n="why.title" data-i18n-html="true">Small studio.<br />Direct collaboration.<br />Serious attention to detail.</h2>
+          <h2 data-i18n="why.title" data-i18n-html="true">Small studio.<br />Direct collaboration.<br /><span class="text-gradient-blue">Serious attention to detail.</span></h2>
           <p data-i18n="why.subtitle">You don't get passed between departments or account managers. You work directly with the people designing and building your website.</p>
           <a class="why-cta" href="#contact">
             <span data-i18n="why.cta">Start a Project →</span>
@@ -1946,19 +2126,19 @@
               <div class="proof-metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V15a1 1 0 0 1-2 0v-1.93A8 8 0 0 1 4.07 6H6a1 1 0 0 1 0 2 6 6 0 1 0 11.93 5H16a1 1 0 0 1 0-2h1.93A8 8 0 0 1 13 16.93z"/></svg>
               </div>
-              <span class="proof-metric-text" data-i18n="proof.metric1">+45% increase in WhatsApp inquiries</span>
+              <span class="proof-metric-text" data-i18n="proof.metric1" data-i18n-html="true"><span class="counter-stat" data-target="45" data-prefix="+" data-suffix="%">+45%</span> increase in WhatsApp inquiries</span>
             </div>
             <div class="proof-metric-item">
               <div class="proof-metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M10 2a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm1 11H9V9h2zm0-6H9V5h2z"/></svg>
               </div>
-              <span class="proof-metric-text" data-i18n="proof.metric2">Fast launch in under 12 business days</span>
+              <span class="proof-metric-text" data-i18n="proof.metric2" data-i18n-html="true">Fast launch in under <span class="counter-stat" data-target="12" data-suffix=" days">12 days</span></span>
             </div>
             <div class="proof-metric-item">
               <div class="proof-metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M9 2a1 1 0 0 0 0 2h2a1 1 0 1 0 0-2H9zM4 5a2 2 0 0 1 2-2 1 1 0 0 1 1 1v1h6V4a1 1 0 0 1 1-1 2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5z"/></svg>
               </div>
-              <span class="proof-metric-text" data-i18n="proof.metric3">6 services reorganized into a clearer customer journey</span>
+              <span class="proof-metric-text" data-i18n="proof.metric3" data-i18n-html="true"><span class="counter-stat" data-target="6">6</span> services reorganized into a clearer customer journey</span>
             </div>
           </div>
         </div>
@@ -2065,289 +2245,198 @@
             <p class="pricing-subtitle" data-i18n="pricing.subtitle">
               Every project is different, but you shouldn't have to contact us just to understand the general investment.
             </p>
+
+            <!-- Currency / Plan Toggle (Matching Reference) -->
+            <div class="pricing-toggle-wrap">
+              <div class="pricing-toggle" role="group" aria-label="Currency selection">
+                <button type="button" class="pricing-toggle-btn active" data-currency="mxn">
+                  <span>MXN ($)</span>
+                </button>
+                <button type="button" class="pricing-toggle-btn" data-currency="usd">
+                  <span>USD ($)</span>
+                  <span class="pricing-toggle-dot" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
           </div>
 
           <div class="pricing-grid">
             <!-- Card 1: Landing Page -->
             <article class="pricing-card spotlight-card">
-              <div class="pricing-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="16" rx="3"/>
-                  <path d="M3 9h18"/>
-                  <path d="M7 6.5h.01"/>
-                  <path d="M10 6.5h.01"/>
-                </svg>
-              </div>
-              <h3 class="pricing-card-title" data-i18n="pricing.p1Title">LANDING PAGE</h3>
-              <p class="pricing-card-desc" data-i18n="pricing.p1Desc">For a single offer, service, campaign, or business that needs a focused online presence.</p>
-
-              <div class="pricing-divider" aria-hidden="true"></div>
-
-              <div class="pricing-price-wrap">
-                <span class="price-from" data-i18n="pricing.from">From</span>
-                <span class="price-amount" data-i18n="pricing.p1Price">$1,500</span>
-                <span class="price-currency">MXN</span>
+              <div class="pricing-card-header">
+                <h3 class="pricing-card-title" data-i18n="pricing.p1Title">LANDING PAGE</h3>
+                <p class="pricing-card-desc" data-i18n="pricing.p1Desc">For a single offer, service, campaign, or business that needs a focused online presence.</p>
               </div>
 
-              <ul class="pricing-features">
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p1Feat1">One custom page</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p1Feat2">Responsive design</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p1Feat3">Clear content structure</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p1Feat4">Contact or WhatsApp integration</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p1Feat5">Domain connection assistance</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p1Feat6">Launch support</span>
-                </li>
-              </ul>
+              <!-- Inset Price Box (Matching Reference) -->
+              <div class="pricing-price-box">
+                <div class="pricing-price-row">
+                  <span class="price-amount" data-mxn="$1,500" data-usd="$150">$1,500</span>
+                  <div class="price-sub-col">
+                    <span class="price-currency">MXN</span>
+                    <span class="price-cycle" data-i18n="pricing.startingAt">one-time investment</span>
+                  </div>
+                </div>
+                <a class="pricing-btn secondary" href="#contact">
+                  <span data-i18n="pricing.p1Btn">Start a Landing Page</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
 
-              <a class="pricing-btn secondary" href="#contact">
-                <span data-i18n="pricing.p1Btn">Start a Landing Page</span>
-                <span class="btn-arrow" aria-hidden="true">→</span>
-              </a>
+              <div class="pricing-features-wrap">
+                <span class="features-label" data-i18n="pricing.featuresIncludes">Includes:</span>
+                <ul class="pricing-features">
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p1Feat1">One custom page</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p1Feat2">Responsive design</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p1Feat3">Clear content structure</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p1Feat4">Contact or WhatsApp integration</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p1Feat5">Domain connection assistance</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p1Feat6">Launch support</span>
+                  </li>
+                </ul>
+              </div>
             </article>
 
-            <!-- Card 2: Business Website (MOST POPULAR) -->
+            <!-- Card 2: Business Website (FEATURED / HERO CARD) -->
             <article class="pricing-card popular spotlight-card">
-              <div class="pricing-card-top">
-                <div class="pricing-icon popular-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m12 2 10 5-10 5L2 7l10-5Z"/>
-                    <path d="m2 17 10 5 10-5"/>
-                    <path d="m2 12 10 5 10-5"/>
-                  </svg>
+              <!-- Dark Obsidian/Navy Banner Header (Matching Reference Center Card) -->
+              <div class="pricing-hero-banner">
+                <div class="pricing-hero-banner-inner">
+                  <h3 class="pricing-card-title popular-title" data-i18n="pricing.p2Title">BUSINESS WEBSITE</h3>
+                  <span class="pricing-popular-badge" data-i18n="pricing.popularBadge">✦ MOST POPULAR</span>
                 </div>
-                <span class="pricing-popular-badge" data-i18n="pricing.popularBadge">MOST POPULAR</span>
               </div>
 
-              <h3 class="pricing-card-title" data-i18n="pricing.p2Title">BUSINESS WEBSITE</h3>
-              <p class="pricing-card-desc" data-i18n="pricing.p2Desc">For businesses that need a professional website with multiple sections and a stronger digital presence.</p>
+              <div class="pricing-card-body">
+                <p class="pricing-card-desc" data-i18n="pricing.p2Desc">For businesses that need a professional website with multiple sections and a stronger digital presence.</p>
 
-              <div class="pricing-divider" aria-hidden="true"></div>
+                <!-- Inset Price Box (Matching Reference) -->
+                <div class="pricing-price-box hero-price-box">
+                  <div class="pricing-price-row">
+                    <span class="price-amount" data-mxn="$3,000" data-usd="$300">$3,000</span>
+                    <div class="price-sub-col">
+                      <span class="price-currency">MXN</span>
+                      <span class="price-cycle" data-i18n="pricing.startingAt">one-time investment</span>
+                    </div>
+                  </div>
+                  <a class="pricing-btn primary" href="#contact">
+                    <span data-i18n="pricing.p2Btn">Build My Website</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
 
-              <div class="pricing-price-wrap">
-                <span class="price-from" data-i18n="pricing.from">From</span>
-                <span class="price-amount" data-i18n="pricing.p2Price">$3,000</span>
-                <span class="price-currency">MXN</span>
+                <div class="pricing-features-wrap">
+                  <span class="features-label" data-i18n="pricing.everythingInLanding">Everything in Landing Page, plus:</span>
+                  <ul class="pricing-features">
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat1">Custom homepage</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat2">Up to 5 core sections</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat3">Responsive design</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat4">Custom visual direction</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat5">Contact forms or WhatsApp</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat6">Service presentation</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat7">Domain connection assistance</span>
+                    </li>
+                    <li>
+                      <span class="check-icon" aria-hidden="true">✓</span>
+                      <span data-i18n="pricing.p2Feat8">Launch support</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-
-              <ul class="pricing-features">
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat1">Custom homepage</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat2">Up to 5 core sections</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat3">Responsive design</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat4">Custom visual direction</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat5">Contact forms or WhatsApp</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat6">Service presentation</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat7">Domain connection assistance</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#d7e6f7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#1d4575" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p2Feat8">Launch support</span>
-                </li>
-              </ul>
-
-              <a class="pricing-btn primary" href="#contact">
-                <span data-i18n="pricing.p2Btn">Build My Website</span>
-                <span class="btn-arrow" aria-hidden="true">→</span>
-              </a>
             </article>
 
             <!-- Card 3: Website Redesign -->
             <article class="pricing-card spotlight-card">
-              <div class="pricing-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-                  <path d="M3 3v5h5"/>
-                  <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
-                  <path d="M16 21h5v-5"/>
-                </svg>
-              </div>
-              <h3 class="pricing-card-title" data-i18n="pricing.p3Title">WEBSITE REDESIGN</h3>
-              <p class="pricing-card-desc" data-i18n="pricing.p3Desc">For businesses whose current website no longer represents the quality of their company.</p>
-
-              <div class="pricing-divider" aria-hidden="true"></div>
-
-              <div class="pricing-price-wrap">
-                <span class="price-from" data-i18n="pricing.from">From</span>
-                <span class="price-amount" data-i18n="pricing.p3Price">$4,000</span>
-                <span class="price-currency">MXN</span>
+              <div class="pricing-card-header">
+                <h3 class="pricing-card-title" data-i18n="pricing.p3Title">WEBSITE REDESIGN</h3>
+                <p class="pricing-card-desc" data-i18n="pricing.p3Desc">For businesses whose current website no longer represents the quality of their company.</p>
               </div>
 
-              <ul class="pricing-features">
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat1">Current website review</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat2">New visual direction</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat3">Information restructuring</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat4">Improved messaging hierarchy</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat5">Responsive redesign</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat6">Conversion improvements</span>
-                </li>
-                <li>
-                  <span class="check-icon" aria-hidden="true">
-                    <svg viewBox="0 0 20 20" width="16" height="16" fill="none">
-                      <circle cx="10" cy="10" r="9" fill="#e5edf7" />
-                      <path d="m6.5 10 2.5 2.5 5-5" stroke="#254b77" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span data-i18n="pricing.p3Feat7">Launch support</span>
-                </li>
-              </ul>
+              <!-- Inset Price Box (Matching Reference) -->
+              <div class="pricing-price-box">
+                <div class="pricing-price-row">
+                  <span class="price-amount" data-mxn="$4,000" data-usd="$400">$4,000</span>
+                  <div class="price-sub-col">
+                    <span class="price-currency">MXN</span>
+                    <span class="price-cycle" data-i18n="pricing.startingAt">one-time investment</span>
+                  </div>
+                </div>
+                <a class="pricing-btn secondary" href="#contact">
+                  <span data-i18n="pricing.p3Btn">Redesign My Website</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
 
-              <a class="pricing-btn secondary" href="#contact">
-                <span data-i18n="pricing.p3Btn">Redesign My Website</span>
-                <span class="btn-arrow" aria-hidden="true">→</span>
-              </a>
+              <div class="pricing-features-wrap">
+                <span class="features-label" data-i18n="pricing.featuresIncludes">Includes:</span>
+                <ul class="pricing-features">
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat1">Current website review</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat2">New visual direction</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat3">Information restructuring</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat4">Improved messaging hierarchy</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat5">Responsive redesign</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat6">Conversion improvements</span>
+                  </li>
+                  <li>
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <span data-i18n="pricing.p3Feat7">Launch support</span>
+                  </li>
+                </ul>
+              </div>
             </article>
           </div>
 
@@ -2412,7 +2501,7 @@
       <section class="extra-section cta-section" id="contact" aria-label="Final call to action">
         <div class="extra-inner narrow cta-inner">
           <span class="section-kicker" data-i18n="cta.kicker" style="color: #60a5fa; font-weight: 750; letter-spacing: 0.14em; text-transform: uppercase; font-size: 12px; margin-bottom: 12px; display: inline-block;">READY TO UPGRADE YOUR DIGITAL PRESENCE?</span>
-          <h2 class="section-title cta-title" data-i18n="cta.title">Your business deserves a website that looks as professional as the work behind it.</h2>
+          <h2 class="section-title cta-title" data-i18n="cta.title" data-i18n-html="true">Your business deserves a website that looks <span class="text-gradient-blue">as professional as your work.</span></h2>
           <p class="section-copy center-copy cta-copy" data-i18n="cta.copy">Let’s build something your business can be proud of.</p>
 
           <!-- Direct WhatsApp Contact Card -->

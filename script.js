@@ -47,14 +47,10 @@ import logoDarkUrl from './logo-dark.png';
   }
 
   settle('.hero-topbar', 80, 700, .99, '.5em');
-  lift('.hero-kicker', 220, '.6em', 520);
-  lift('.hero-title', 300, '.5em', 650);
-  lift('.hero-description', 420, '.5em', 580);
-  settle('.hero-actions', 500, 600, .98, '.4em');
-  lift('.hero-services-line', 580, '.4em', 500);
-  settle('.hero-create-card', 460, 780, .98, '.9em');
-  settle('.hero-status-pill', 600, 680, .98, '.6em');
-  settle('.hero-selected-work-badge', 620, 680, .98, '.6em');
+  lift('.hero-title', 240, '.5em', 650);
+  lift('.hero-description', 360, '.5em', 580);
+  settle('.hero-actions', 440, 600, .98, '.4em');
+  settle('.hero-devices-stage', 320, 820, .97, '.8em');
 
   Promise.all(running.map(function (a) {
     return a.finished.catch(function () {});
@@ -222,32 +218,94 @@ import logoDarkUrl from './logo-dark.png';
   var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motionPreference.matches) return;
 
+  // Scroll Progress Bar Update
+  var progressBar = document.getElementById('scroll-progress');
+  function updateScrollProgress() {
+    if (!progressBar) return;
+    var winScroll = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (winScroll / docHeight) * 100 : 0;
+    progressBar.style.width = Math.min(Math.max(pct, 0), 100) + '%';
+  }
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  // Gentle Parallax for Hero Devices
+  var devicesStage = document.querySelector('.hero-devices-stage');
+  if (devicesStage) {
+    var tabletWrap = devicesStage.querySelector('.wrap-tablet');
+    var laptopWrap = devicesStage.querySelector('.wrap-laptop');
+    var phoneWrap = devicesStage.querySelector('.wrap-phone');
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (y < 900) {
+        if (tabletWrap) tabletWrap.style.marginTop = (y * 0.08) + 'px';
+        if (laptopWrap) laptopWrap.style.marginTop = (-175 + y * 0.03) + 'px';
+        if (phoneWrap) phoneWrap.style.marginTop = (y * 0.1) + 'px';
+      }
+    }, { passive: true });
+  }
+
+  // Comprehensive Modern Reveal Selectors across the whole site
   var revealSelectors = [
+    // Hero & Benefits Strip
+    '.hero-trust-strip',
+    '.trust-benefit-item',
+
     // The Klyven Approach Section
     '.approach-header > *',
     '.approach-flow > *',
-    '.approach-pillars > *',
+    '.approach-card-wrap',
+    '.approach-connector',
     '.approach-action',
+
+    // Featured Client Project (Intransca)
+    '.featured-project-card',
+    '.featured-project-info > *',
+    '.featured-project-visual',
 
     // Selected Work Section
     '.work-header > *',
-    '.work-grid > .work-card',
+    '.work-showcase-grid > *',
+    '.work-card',
+    '.work-card-large',
+    '.work-col > *',
 
-    // How It Works / Services Section
+    // Results / Business Value Section
+    '.results-header > *',
+    '.results-grid > .result-card',
+
+    // Redesign Section (Osteria Moretti)
+    '.redesign-header > *',
+    '.redesign-split-frame',
+    '.redesign-features-grid > *',
+    '.redesign-column',
+
+    // How It Works / Process Section
     '.how-header > *',
     '.how-annot',
-    '.how-board',
+    '.how-board > *',
+    '.step-card',
     '.how-cta-row',
-
-    // Before and After Section
-    '.ba-header > *',
-    '.ba-comparison-wrap > *',
-    '.ba-features-grid > *',
 
     // Why Klyven Section
     '.why-copy > *',
     '.why-visual',
-    '.why-grid > *',
+    '.why-pillars-grid > .why-pillar-card',
+
+    // Social Proof Section
+    '.social-proof-card',
+    '.proof-quote-block',
+    '.proof-metrics-row > .proof-metric-item',
+
+    // About / Human Element Section
+    '.about-human-card',
+    '.about-human-left > *',
+    '.about-human-right > *',
+
+    // Services Section
+    '.services-header > *',
+    '.services-grid > .service-card',
 
     // Pricing Section
     '.pricing-header > *',
@@ -255,14 +313,13 @@ import logoDarkUrl from './logo-dark.png';
     '.pricing-footnote',
 
     // FAQ Section
-    '.faq-section .section-kicker',
-    '.faq-section .section-title',
-    '.faq-list > .faq-item',
+    '.faq-header > *',
+    '.faq-grid-nine > .faq-card-nine',
 
-    // CTA Final Section
+    // Final CTA & WhatsApp Card
     '.cta-inner > .cta-title',
     '.cta-inner > .cta-copy',
-    '.cta-inner > .cta-row'
+    '.whatsapp-card'
   ];
 
   document.querySelectorAll(revealSelectors.join(',')).forEach(function (element) {
@@ -271,19 +328,24 @@ import logoDarkUrl from './logo-dark.png';
 
   // Stagger delays for grid / grouped children
   var staggerContainers = [
+    '.trust-strip-bar',
     '.approach-flow',
-    '.approach-pillars',
-    '.work-grid',
-    '.ba-comparison-wrap',
-    '.ba-features-grid',
-    '.why-grid',
+    '.work-showcase-grid',
+    '.results-grid',
+    '.redesign-features-grid',
+    '.how-board',
+    '.why-pillars-grid',
+    '.proof-metrics-row',
+    '.services-grid',
     '.pricing-grid',
-    '.faq-list'
+    '.faq-grid-nine'
   ];
 
-  document.querySelectorAll(staggerContainers.join(',')).forEach(function (group) {
-    Array.prototype.forEach.call(group.children, function (item, index) {
-      item.style.setProperty('--reveal-delay', Math.min(index * 95, 320) + 'ms');
+  staggerContainers.forEach(function (selector) {
+    document.querySelectorAll(selector).forEach(function (group) {
+      Array.prototype.forEach.call(group.children, function (item, index) {
+        item.style.setProperty('--reveal-delay', Math.min(index * 85, 450) + 'ms');
+      });
     });
   });
 
@@ -307,6 +369,208 @@ import logoDarkUrl from './logo-dark.png';
 
   document.querySelectorAll('[data-reveal]').forEach(function (element) {
     revealObserver.observe(element);
+  });
+})();
+
+// ==========================================================================
+// ADVANCED SCROLL ANIMATIONS SUITE (7 ELITE FEATURES)
+// ==========================================================================
+(function () {
+  var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motionPreference.matches) return;
+
+  // 1. PROJECT DEPTH PARALLAX (3D WINDOW EFFECT)
+  var parallaxFrames = document.querySelectorAll('.work-browser-frame, .featured-project-visual, .approach-card-wrap');
+
+  // 3. PROCESS STEP ILLUMINATION
+  var howSection = document.getElementById('process');
+  var howAnnotColLeft = document.querySelector('.how-annot.annot-discover');
+  var howAnnotColPlan = document.querySelector('.how-annot.annot-plan');
+  var howAnnotColCreate = document.querySelector('.how-annot.annot-create');
+  var howAnnotColLaunch = document.querySelector('.how-annot.annot-launch');
+  var howAnnots = [howAnnotColLeft, howAnnotColPlan, howAnnotColCreate, howAnnotColLaunch];
+  var mStepHeaders = document.querySelectorAll('.mobile-step-header');
+  var boardCards = [
+    document.querySelector('.board-chat-card'),
+    document.querySelector('.board-sitemap-card'),
+    document.querySelector('.board-studio'),
+    document.querySelector('.board-launch-badge')
+  ];
+
+  // 4. SMOOTH METRIC COUNTERS
+  window.initCounterStats = function () {
+    var counterElements = document.querySelectorAll('.counter-stat');
+    if (!('IntersectionObserver' in window) || counterElements.length === 0) return;
+
+    var counterObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          observer.unobserve(el);
+          var targetVal = parseFloat(el.getAttribute('data-target') || el.textContent);
+          var prefix = el.getAttribute('data-prefix') || '';
+          var suffix = el.getAttribute('data-suffix') || '';
+          var duration = 1400; // ms
+          var startTime = performance.now();
+
+          function updateCounter(now) {
+            var elapsed = now - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            var current = targetVal * ease;
+
+            if (targetVal % 1 === 0) {
+              el.textContent = prefix + Math.round(current) + suffix;
+            } else {
+              el.textContent = prefix + current.toFixed(1) + suffix;
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              if (targetVal % 1 === 0) {
+                el.textContent = prefix + targetVal + suffix;
+              } else {
+                el.textContent = prefix + targetVal.toFixed(1) + suffix;
+              }
+            }
+          }
+          requestAnimationFrame(updateCounter);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    counterElements.forEach(function (el) {
+      counterObserver.observe(el);
+    });
+  };
+
+  window.initCounterStats();
+
+  // 5. WHY KLYVEN LIVE MOCKUP SCROLL
+  var whySection = document.getElementById('why');
+  var whySitePage = whySection ? whySection.querySelector('.site-page') : null;
+  var whyPhoneArt = whySection ? whySection.querySelector('.phone-art svg') : null;
+
+  // 6. CARD SPOTLIGHT GLOW ON SCROLL
+  var spotlightCards = document.querySelectorAll(
+    '.result-card, .service-card, .why-pillar-card, .faq-card-nine, .social-proof-card, .pricing-card'
+  );
+
+  // Centralized high-performance rAF scroll loop
+  var ticking = false;
+  function onScrollFrame() {
+    var wh = window.innerHeight;
+
+    // Feature 1: Parallax on Project Cards
+    for (var i = 0; i < parallaxFrames.length; i++) {
+      var frame = parallaxFrames[i];
+      var rect = frame.getBoundingClientRect();
+      if (rect.bottom > -80 && rect.top < wh + 80) {
+        var progress = (rect.top + rect.height * 0.5 - wh * 0.5) / wh;
+        var offset = progress * -24;
+        var img = frame.querySelector('img');
+        if (img) {
+          img.style.setProperty('--proj-parallax', offset.toFixed(1) + 'px');
+        }
+      }
+    }
+
+    // Feature 3: Process Steps
+    if (howSection) {
+      var hRect = howSection.getBoundingClientRect();
+      if (hRect.top < wh * 0.75 && hRect.bottom > wh * 0.2) {
+        var progressRatio = Math.max(0, Math.min(1, (wh * 0.65 - hRect.top) / (hRect.height * 0.75)));
+        var activeStep = Math.min(3, Math.floor(progressRatio * 4));
+
+        for (var s = 0; s < 4; s++) {
+          var isAct = (s <= activeStep);
+          if (howAnnots[s]) howAnnots[s].classList.toggle('is-step-active', isAct);
+          if (mStepHeaders[s]) mStepHeaders[s].classList.toggle('is-step-active', isAct);
+          if (boardCards[s]) boardCards[s].classList.toggle('is-step-active', isAct);
+        }
+      }
+    }
+
+    // Feature 5: Why Klyven Live Mockup Scroll
+    if (whySection && (whySitePage || whyPhoneArt)) {
+      var wRect = whySection.getBoundingClientRect();
+      if (wRect.bottom > 0 && wRect.top < wh) {
+        var wRatio = Math.max(0, Math.min(1, (wh - wRect.top) / (wh + wRect.height)));
+        if (whySitePage) {
+          whySitePage.style.transform = 'translateY(' + (-wRatio * 28).toFixed(1) + 'px)';
+        }
+        if (whyPhoneArt) {
+          whyPhoneArt.style.transform = 'translateY(' + (-wRatio * 18).toFixed(1) + 'px) scale(1.04)';
+        }
+      }
+    }
+
+    // Feature 6: Card Spotlight Sheen on Scroll
+    for (var c = 0; c < spotlightCards.length; c++) {
+      var card = spotlightCards[c];
+      var cRect = card.getBoundingClientRect();
+      if (cRect.bottom > 0 && cRect.top < wh) {
+        var distFromCenter = Math.abs((cRect.top + cRect.height * 0.5) - wh * 0.5);
+        var glow = Math.max(0, 1 - distFromCenter / (wh * 0.45));
+        card.style.setProperty('--card-spot-glow', glow.toFixed(2));
+      } else {
+        card.style.setProperty('--card-spot-glow', '0');
+      }
+    }
+
+    ticking = false;
+  }
+
+  function requestScrollTick() {
+    if (!ticking) {
+      requestAnimationFrame(onScrollFrame);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestScrollTick, { passive: true });
+  window.addEventListener('resize', requestScrollTick, { passive: true });
+  requestScrollTick();
+})();
+
+// ==========================================================================
+// PRICING CURRENCY TOGGLE (MXN / USD)
+// ==========================================================================
+(function () {
+  var toggleBtns = document.querySelectorAll('.pricing-toggle-btn');
+  if (!toggleBtns.length) return;
+
+  var currentCurrency = 'mxn';
+
+  toggleBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var selected = this.getAttribute('data-currency');
+      if (selected === currentCurrency) return;
+
+      currentCurrency = selected;
+      toggleBtns.forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+
+      var priceElements = document.querySelectorAll('.pricing-price-box .price-amount');
+      var currencyLabels = document.querySelectorAll('.pricing-price-box .price-currency');
+
+      priceElements.forEach(function (el) {
+        var targetPrice = selected === 'usd' ? el.getAttribute('data-usd') : el.getAttribute('data-mxn');
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(-4px)';
+        setTimeout(function () {
+          el.textContent = targetPrice;
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 140);
+      });
+
+      currencyLabels.forEach(function (lbl) {
+        lbl.textContent = selected === 'usd' ? 'USD' : 'MXN';
+      });
+    });
   });
 })();
 
@@ -359,6 +623,7 @@ import logoDarkUrl from './logo-dark.png';
     });
     setTimeout(function () {
       window.dispatchEvent(new Event('resize'));
+      if (window.initCounterStats) window.initCounterStats();
     }, 60);
 
     // Sync all unified language buttons (.lang-btn)
@@ -1378,20 +1643,22 @@ import logoDarkUrl from './logo-dark.png';
     });
 
     var animFrame = null;
-    function animateSplit(target) {
+    function animateSplit(target, customDuration, onComplete) {
       if (animFrame) cancelAnimationFrame(animFrame);
       var current = parseFloat(viewport.style.getPropertyValue('--ba-split')) || Number(rangeInput.value) || 50;
       var startTime = performance.now();
-      var duration = 380;
+      var duration = customDuration || 380;
 
       function step(now) {
         var elapsed = now - startTime;
         var progress = Math.min(elapsed / duration, 1);
-        var ease = 1 - Math.pow(1 - progress, 3);
+        var ease = 0.5 - Math.cos(progress * Math.PI) / 2;
         var currentVal = current + (target - current) * ease;
         updateSplit(currentVal);
         if (progress < 1) {
           animFrame = requestAnimationFrame(step);
+        } else if (onComplete) {
+          onComplete();
         }
       }
       animFrame = requestAnimationFrame(step);
@@ -1404,8 +1671,45 @@ import logoDarkUrl from './logo-dark.png';
       });
     });
 
+    // Autopreview Teaser: Sweeps automatically when scrolled into view
+    var hasAutoPreviewed = false;
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var autoPreviewObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !hasAutoPreviewed && !isDragging) {
+            hasAutoPreviewed = true;
+            autoPreviewObserver.unobserve(entry.target);
+
+            setTimeout(function () {
+              if (isDragging) return;
+              // Phase 1: Sweep left to 30%
+              animateSplit(30, 650, function () {
+                if (isDragging) return;
+                setTimeout(function () {
+                  if (isDragging) return;
+                  // Phase 2: Sweep right to 70%
+                  animateSplit(70, 720, function () {
+                    if (isDragging) return;
+                    setTimeout(function () {
+                      if (isDragging) return;
+                      // Phase 3: Settle smoothly back at 50%
+                      animateSplit(50, 580);
+                    }, 220);
+                  });
+                }, 220);
+              });
+            }, 380);
+          }
+        });
+      }, { threshold: 0.22 });
+
+      autoPreviewObserver.observe(viewport);
+    }
+
     var isDragging = false;
     function onPointerDown(e) {
+      if (animFrame) cancelAnimationFrame(animFrame);
+      hasAutoPreviewed = true;
       // Allow full user interaction with any child buttons, inputs, pills, tabs
       if (e.target.closest('button, input, select, textarea, a, .orion-level-tab, .orion-filter-pill, .orion-node-btn, .orion-nav-circle-btn, .orion-search-btn, .orion-circle-action-btn, .simple-btn, .simple-apply-btn, .simple-search-btn, .orion-salary-card, .orion-input')) {
         return;
@@ -2175,6 +2479,51 @@ import logoDarkUrl from './logo-dark.png';
     setInterval(renderClockAndStatus, 1000);
   }
 
+  // ==========================================================================
+  // ANIMATION 4: MAGNETIC CURSOR BUTTON MICRO-INTERACTIONS
+  // ==========================================================================
+  function initMagneticButtons() {
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var magneticButtons = document.querySelectorAll(
+      '.hero-btn-chapter, .hero-btn-explore, .dock-contact, .hero-topbar-cta, .whatsapp-cta-btn, .theme-toggle-btn, .lang-btn, .ba-cta, .final-cta'
+    );
+
+    magneticButtons.forEach(function (btn) {
+      btn.classList.add('is-magnetic');
+
+      btn.addEventListener('mousemove', function (e) {
+        var rect = btn.getBoundingClientRect();
+        var x = e.clientX - (rect.left + rect.width / 2);
+        var y = e.clientY - (rect.top + rect.height / 2);
+
+        var moveX = (x * 0.24).toFixed(1);
+        var moveY = (y * 0.24).toFixed(1);
+
+        btn.style.transition = 'transform 0.1s ease-out';
+        btn.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
+
+        var innerChild = btn.querySelector('span, svg');
+        if (innerChild) {
+          innerChild.style.transition = 'transform 0.1s ease-out';
+          innerChild.style.transform = 'translate(' + (moveX * 0.35).toFixed(1) + 'px, ' + (moveY * 0.35).toFixed(1) + 'px)';
+        }
+      });
+
+      btn.addEventListener('mouseleave', function () {
+        btn.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+        btn.style.transform = 'translate(0px, 0px)';
+
+        var innerChild = btn.querySelector('span, svg');
+        if (innerChild) {
+          innerChild.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+          innerChild.style.transform = 'translate(0px, 0px)';
+        }
+      });
+    });
+  }
+
   initTextScramble();
   initBeforeAfterSlider();
   initOrionLiveApp();
@@ -2182,6 +2531,7 @@ import logoDarkUrl from './logo-dark.png';
   initNorthwoodProjects();
   initLinearSpotlightGlow();
   initStudioLiveClock();
+  initMagneticButtons();
 })();
 
 
